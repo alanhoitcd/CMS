@@ -1,0 +1,10 @@
+D:\_DE_TAI_\CMS_HuyenAnh\CMS\bin\Debug\CMS.exe.config
+D:\_DE_TAI_\CMS_HuyenAnh\CMS\bin\Debug\CMS.exe
+D:\_DE_TAI_\CMS_HuyenAnh\CMS\bin\Debug\CMS.pdb
+D:\_DE_TAI_\CMS_HuyenAnh\CMS\obj\Debug\CMS.csproj.AssemblyReference.cache
+D:\_DE_TAI_\CMS_HuyenAnh\CMS\obj\Debug\CMS.Properties.Resources.resources
+D:\_DE_TAI_\CMS_HuyenAnh\CMS\obj\Debug\CMS.csproj.GenerateResource.cache
+D:\_DE_TAI_\CMS_HuyenAnh\CMS\obj\Debug\CMS.csproj.CoreCompileInputs.cache
+D:\_DE_TAI_\CMS_HuyenAnh\CMS\obj\Debug\CMS.exe
+D:\_DE_TAI_\CMS_HuyenAnh\CMS\obj\Debug\CMS.pdb
+D:\_DE_TAI_\CMS_HuyenAnh\CMS\obj\Debug\CMS.frmMainForm.resources
