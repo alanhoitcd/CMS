@@ -28,38 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainForm));
             this.menuStripMain = new System.Windows.Forms.MenuStrip();
-            this.codeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.qUẢNLÝGÌĐÓToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.qUẢNLÝGÌĐÓToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.qUẢNLÝGÌĐÓToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.qUẢNLÝGÌĐÓToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.qUẢNLÝGÌĐÓToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiLogin = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiLogout = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiChangePassword = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiManagement = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiManagePatient = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiManageDoctors = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiManageAppointments = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiManageMedicineInventory = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiPatientExamination = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiManageExaminationHistory = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiManagePrescriptions = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiReports = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiPatientListReport = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiAppointmentScheduleReport = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiInventoryAndMedicineRevenueReport = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiSystem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiManageUserAccounts = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiViewActivityLog = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiBackupandRestoreDatabase = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiAboutSoftware = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiUserGuide = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiContactSupport = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlHead = new System.Windows.Forms.Panel();
             this.btnLang = new Guna.UI2.WinForms.Guna2Button();
             this.btnScreenMode = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.lblLogan1 = new System.Windows.Forms.Label();
-            this.lblLogan2 = new System.Windows.Forms.Label();
-            this.đăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýBệnhNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýBácSĩToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýLịchHẹnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýKhoThuốcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lịchSửKhámToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.đơnThuốcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.báoCáoDanhSáchBệnhNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.báoCáoLịchHẹnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.báoCáoTồnKhoVàTiêuThụThuốcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýTàiKhoảnNgườiDùngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xemNhậtKýHoạtĐộngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saoLưuVàKhôiPhụcDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thôngTinVềPhầnMềmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hướngDẫnSửDụngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.liênHệHỗTrợToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblLogan = new System.Windows.Forms.Label();
             this.menuStripMain.SuspendLayout();
             this.pnlHead.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -73,77 +73,191 @@
             this.menuStripMain.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStripMain.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.codeToolStripMenuItem,
-            this.qUẢNLÝGÌĐÓToolStripMenuItem,
-            this.qUẢNLÝGÌĐÓToolStripMenuItem1,
-            this.qUẢNLÝGÌĐÓToolStripMenuItem2,
-            this.qUẢNLÝGÌĐÓToolStripMenuItem3,
-            this.qUẢNLÝGÌĐÓToolStripMenuItem4});
+            this.tsmiFile,
+            this.tsmiManagement,
+            this.tsmiPatientExamination,
+            this.tsmiReports,
+            this.tsmiSystem,
+            this.tsmiHelp});
             this.menuStripMain.Location = new System.Drawing.Point(54, 4);
             this.menuStripMain.Name = "menuStripMain";
             this.menuStripMain.Size = new System.Drawing.Size(1000, 40);
             this.menuStripMain.TabIndex = 0;
             // 
-            // codeToolStripMenuItem
+            // tsmiFile
             // 
-            this.codeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.đăngNhậpToolStripMenuItem,
-            this.đăngXuấtToolStripMenuItem,
-            this.đổiMậtKhẩuToolStripMenuItem,
-            this.thoátToolStripMenuItem});
-            this.codeToolStripMenuItem.Name = "codeToolStripMenuItem";
-            this.codeToolStripMenuItem.Size = new System.Drawing.Size(55, 36);
-            this.codeToolStripMenuItem.Text = "File";
+            this.tsmiFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiLogin,
+            this.tsmiLogout,
+            this.tsmiChangePassword,
+            this.tsmiExit});
+            this.tsmiFile.Name = "tsmiFile";
+            this.tsmiFile.Size = new System.Drawing.Size(55, 36);
+            this.tsmiFile.Text = "File";
             // 
-            // qUẢNLÝGÌĐÓToolStripMenuItem
+            // tsmiLogin
             // 
-            this.qUẢNLÝGÌĐÓToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.quảnLýBệnhNhânToolStripMenuItem,
-            this.quảnLýBácSĩToolStripMenuItem,
-            this.quảnLýLịchHẹnToolStripMenuItem,
-            this.quảnLýKhoThuốcToolStripMenuItem});
-            this.qUẢNLÝGÌĐÓToolStripMenuItem.Name = "qUẢNLÝGÌĐÓToolStripMenuItem";
-            this.qUẢNLÝGÌĐÓToolStripMenuItem.Size = new System.Drawing.Size(90, 36);
-            this.qUẢNLÝGÌĐÓToolStripMenuItem.Text = "Quản lý";
+            this.tsmiLogin.Name = "tsmiLogin";
+            this.tsmiLogin.Size = new System.Drawing.Size(243, 28);
+            this.tsmiLogin.Text = "Log in";
             // 
-            // qUẢNLÝGÌĐÓToolStripMenuItem1
+            // tsmiLogout
             // 
-            this.qUẢNLÝGÌĐÓToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lịchSửKhámToolStripMenuItem,
-            this.đơnThuốcToolStripMenuItem});
-            this.qUẢNLÝGÌĐÓToolStripMenuItem1.Name = "qUẢNLÝGÌĐÓToolStripMenuItem1";
-            this.qUẢNLÝGÌĐÓToolStripMenuItem1.Size = new System.Drawing.Size(118, 36);
-            this.qUẢNLÝGÌĐÓToolStripMenuItem1.Text = "Khám bệnh";
+            this.tsmiLogout.Name = "tsmiLogout";
+            this.tsmiLogout.Size = new System.Drawing.Size(243, 28);
+            this.tsmiLogout.Text = "Log Out";
             // 
-            // qUẢNLÝGÌĐÓToolStripMenuItem2
+            // tsmiChangePassword
             // 
-            this.qUẢNLÝGÌĐÓToolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.báoCáoDanhSáchBệnhNhânToolStripMenuItem,
-            this.báoCáoLịchHẹnToolStripMenuItem,
-            this.báoCáoTồnKhoVàTiêuThụThuốcToolStripMenuItem});
-            this.qUẢNLÝGÌĐÓToolStripMenuItem2.Name = "qUẢNLÝGÌĐÓToolStripMenuItem2";
-            this.qUẢNLÝGÌĐÓToolStripMenuItem2.Size = new System.Drawing.Size(91, 36);
-            this.qUẢNLÝGÌĐÓToolStripMenuItem2.Text = "Báo cáo";
+            this.tsmiChangePassword.Name = "tsmiChangePassword";
+            this.tsmiChangePassword.Size = new System.Drawing.Size(243, 28);
+            this.tsmiChangePassword.Text = "Change Password";
             // 
-            // qUẢNLÝGÌĐÓToolStripMenuItem3
+            // tsmiExit
             // 
-            this.qUẢNLÝGÌĐÓToolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.quảnLýTàiKhoảnNgườiDùngToolStripMenuItem,
-            this.xemNhậtKýHoạtĐộngToolStripMenuItem,
-            this.saoLưuVàKhôiPhụcDatabaseToolStripMenuItem});
-            this.qUẢNLÝGÌĐÓToolStripMenuItem3.Name = "qUẢNLÝGÌĐÓToolStripMenuItem3";
-            this.qUẢNLÝGÌĐÓToolStripMenuItem3.Size = new System.Drawing.Size(101, 36);
-            this.qUẢNLÝGÌĐÓToolStripMenuItem3.Text = "Hệ thống";
+            this.tsmiExit.Name = "tsmiExit";
+            this.tsmiExit.Size = new System.Drawing.Size(243, 28);
+            this.tsmiExit.Text = "Exit";
             // 
-            // qUẢNLÝGÌĐÓToolStripMenuItem4
+            // tsmiManagement
             // 
-            this.qUẢNLÝGÌĐÓToolStripMenuItem4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thôngTinVềPhầnMềmToolStripMenuItem,
-            this.hướngDẫnSửDụngToolStripMenuItem,
-            this.liênHệHỗTrợToolStripMenuItem});
-            this.qUẢNLÝGÌĐÓToolStripMenuItem4.Name = "qUẢNLÝGÌĐÓToolStripMenuItem4";
-            this.qUẢNLÝGÌĐÓToolStripMenuItem4.Size = new System.Drawing.Size(96, 36);
-            this.qUẢNLÝGÌĐÓToolStripMenuItem4.Text = "Trợ giúp";
+            this.tsmiManagement.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiManagePatient,
+            this.tsmiManageDoctors,
+            this.tsmiManageAppointments,
+            this.tsmiManageMedicineInventory});
+            this.tsmiManagement.Name = "tsmiManagement";
+            this.tsmiManagement.Size = new System.Drawing.Size(134, 36);
+            this.tsmiManagement.Text = "Management";
+            // 
+            // tsmiManagePatient
+            // 
+            this.tsmiManagePatient.Name = "tsmiManagePatient";
+            this.tsmiManagePatient.Size = new System.Drawing.Size(331, 28);
+            this.tsmiManagePatient.Text = "Manage Patients";
+            // 
+            // tsmiManageDoctors
+            // 
+            this.tsmiManageDoctors.Name = "tsmiManageDoctors";
+            this.tsmiManageDoctors.Size = new System.Drawing.Size(331, 28);
+            this.tsmiManageDoctors.Text = "Manage Doctors";
+            // 
+            // tsmiManageAppointments
+            // 
+            this.tsmiManageAppointments.Name = "tsmiManageAppointments";
+            this.tsmiManageAppointments.Size = new System.Drawing.Size(331, 28);
+            this.tsmiManageAppointments.Text = "Manage Appointments";
+            // 
+            // tsmiManageMedicineInventory
+            // 
+            this.tsmiManageMedicineInventory.Name = "tsmiManageMedicineInventory";
+            this.tsmiManageMedicineInventory.Size = new System.Drawing.Size(331, 28);
+            this.tsmiManageMedicineInventory.Text = "Manage Medicine Inventory";
+            // 
+            // tsmiPatientExamination
+            // 
+            this.tsmiPatientExamination.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiManageExaminationHistory,
+            this.tsmiManagePrescriptions});
+            this.tsmiPatientExamination.Name = "tsmiPatientExamination";
+            this.tsmiPatientExamination.Size = new System.Drawing.Size(195, 36);
+            this.tsmiPatientExamination.Text = "Patient Examination";
+            // 
+            // tsmiManageExaminationHistory
+            // 
+            this.tsmiManageExaminationHistory.Name = "tsmiManageExaminationHistory";
+            this.tsmiManageExaminationHistory.Size = new System.Drawing.Size(340, 28);
+            this.tsmiManageExaminationHistory.Text = "Manage Examination History";
+            // 
+            // tsmiManagePrescriptions
+            // 
+            this.tsmiManagePrescriptions.Name = "tsmiManagePrescriptions";
+            this.tsmiManagePrescriptions.Size = new System.Drawing.Size(340, 28);
+            this.tsmiManagePrescriptions.Text = "Manage Prescriptions";
+            // 
+            // tsmiReports
+            // 
+            this.tsmiReports.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiPatientListReport,
+            this.tsmiAppointmentScheduleReport,
+            this.tsmiInventoryAndMedicineRevenueReport});
+            this.tsmiReports.Name = "tsmiReports";
+            this.tsmiReports.Size = new System.Drawing.Size(91, 36);
+            this.tsmiReports.Text = "Reports";
+            // 
+            // tsmiPatientListReport
+            // 
+            this.tsmiPatientListReport.Name = "tsmiPatientListReport";
+            this.tsmiPatientListReport.Size = new System.Drawing.Size(436, 28);
+            this.tsmiPatientListReport.Text = "Patient List Report";
+            // 
+            // tsmiAppointmentScheduleReport
+            // 
+            this.tsmiAppointmentScheduleReport.Name = "tsmiAppointmentScheduleReport";
+            this.tsmiAppointmentScheduleReport.Size = new System.Drawing.Size(436, 28);
+            this.tsmiAppointmentScheduleReport.Text = "Appointment Schedule Report";
+            // 
+            // tsmiInventoryAndMedicineRevenueReport
+            // 
+            this.tsmiInventoryAndMedicineRevenueReport.Name = "tsmiInventoryAndMedicineRevenueReport";
+            this.tsmiInventoryAndMedicineRevenueReport.Size = new System.Drawing.Size(436, 28);
+            this.tsmiInventoryAndMedicineRevenueReport.Text = "Inventory and Medicine Revenue Report";
+            // 
+            // tsmiSystem
+            // 
+            this.tsmiSystem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiManageUserAccounts,
+            this.tsmiViewActivityLog,
+            this.tsmiBackupandRestoreDatabase});
+            this.tsmiSystem.Name = "tsmiSystem";
+            this.tsmiSystem.Size = new System.Drawing.Size(85, 36);
+            this.tsmiSystem.Text = "System";
+            // 
+            // tsmiManageUserAccounts
+            // 
+            this.tsmiManageUserAccounts.Name = "tsmiManageUserAccounts";
+            this.tsmiManageUserAccounts.Size = new System.Drawing.Size(348, 28);
+            this.tsmiManageUserAccounts.Text = "Manage User Accounts";
+            // 
+            // tsmiViewActivityLog
+            // 
+            this.tsmiViewActivityLog.Name = "tsmiViewActivityLog";
+            this.tsmiViewActivityLog.Size = new System.Drawing.Size(348, 28);
+            this.tsmiViewActivityLog.Text = "View Activity Log";
+            // 
+            // tsmiBackupandRestoreDatabase
+            // 
+            this.tsmiBackupandRestoreDatabase.Name = "tsmiBackupandRestoreDatabase";
+            this.tsmiBackupandRestoreDatabase.Size = new System.Drawing.Size(348, 28);
+            this.tsmiBackupandRestoreDatabase.Text = "Backup and Restore Database";
+            // 
+            // tsmiHelp
+            // 
+            this.tsmiHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiAboutSoftware,
+            this.tsmiUserGuide,
+            this.tsmiContactSupport});
+            this.tsmiHelp.Name = "tsmiHelp";
+            this.tsmiHelp.Size = new System.Drawing.Size(64, 36);
+            this.tsmiHelp.Text = "Help";
+            // 
+            // tsmiAboutSoftware
+            // 
+            this.tsmiAboutSoftware.Name = "tsmiAboutSoftware";
+            this.tsmiAboutSoftware.Size = new System.Drawing.Size(232, 28);
+            this.tsmiAboutSoftware.Text = "About Software";
+            // 
+            // tsmiUserGuide
+            // 
+            this.tsmiUserGuide.Name = "tsmiUserGuide";
+            this.tsmiUserGuide.Size = new System.Drawing.Size(232, 28);
+            this.tsmiUserGuide.Text = "User Guide";
+            // 
+            // tsmiContactSupport
+            // 
+            this.tsmiContactSupport.Name = "tsmiContactSupport";
+            this.tsmiContactSupport.Size = new System.Drawing.Size(232, 28);
+            this.tsmiContactSupport.Text = "Contact Support";
             // 
             // pnlHead
             // 
@@ -203,7 +317,7 @@
             // 
             // pictureBoxLogo
             // 
-            this.pictureBoxLogo.BackgroundImage = global::CMS.Properties.Resources.logo;
+            this.pictureBoxLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.BackgroundImage")));
             this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxLogo.Location = new System.Drawing.Point(11, 4);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
@@ -211,156 +325,28 @@
             this.pictureBoxLogo.TabIndex = 2;
             this.pictureBoxLogo.TabStop = false;
             // 
-            // lblLogan1
+            // lblLogan
             // 
-            this.lblLogan1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblLogan1.BackColor = System.Drawing.Color.Transparent;
-            this.lblLogan1.Font = new System.Drawing.Font("Times New Roman", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogan1.ForeColor = System.Drawing.Color.DeepPink;
-            this.lblLogan1.Location = new System.Drawing.Point(0, 88);
-            this.lblLogan1.Name = "lblLogan1";
-            this.lblLogan1.Size = new System.Drawing.Size(1440, 83);
-            this.lblLogan1.TabIndex = 2;
-            this.lblLogan1.Text = "Sức khỏe của bạn..";
-            this.lblLogan1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblLogan2
-            // 
-            this.lblLogan2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblLogan2.BackColor = System.Drawing.Color.Transparent;
-            this.lblLogan2.Font = new System.Drawing.Font("Times New Roman", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogan2.ForeColor = System.Drawing.Color.DeepPink;
-            this.lblLogan2.Location = new System.Drawing.Point(0, 661);
-            this.lblLogan2.Name = "lblLogan2";
-            this.lblLogan2.Size = new System.Drawing.Size(1440, 83);
-            this.lblLogan2.TabIndex = 3;
-            this.lblLogan2.Text = "là hạnh phúc của chúng tôi!";
-            this.lblLogan2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // đăngNhậpToolStripMenuItem
-            // 
-            this.đăngNhậpToolStripMenuItem.Name = "đăngNhậpToolStripMenuItem";
-            this.đăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
-            this.đăngNhậpToolStripMenuItem.Text = "Đăng nhập";
-            // 
-            // đăngXuấtToolStripMenuItem
-            // 
-            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
-            this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
-            // 
-            // đổiMậtKhẩuToolStripMenuItem
-            // 
-            this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
-            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
-            this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi mật khẩu";
-            // 
-            // thoátToolStripMenuItem
-            // 
-            this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
-            this.thoátToolStripMenuItem.Text = "Thoát";
-            // 
-            // quảnLýBệnhNhânToolStripMenuItem
-            // 
-            this.quảnLýBệnhNhânToolStripMenuItem.Name = "quảnLýBệnhNhânToolStripMenuItem";
-            this.quảnLýBệnhNhânToolStripMenuItem.Size = new System.Drawing.Size(253, 28);
-            this.quảnLýBệnhNhânToolStripMenuItem.Text = "Quản lý Bệnh nhân";
-            // 
-            // quảnLýBácSĩToolStripMenuItem
-            // 
-            this.quảnLýBácSĩToolStripMenuItem.Name = "quảnLýBácSĩToolStripMenuItem";
-            this.quảnLýBácSĩToolStripMenuItem.Size = new System.Drawing.Size(253, 28);
-            this.quảnLýBácSĩToolStripMenuItem.Text = "Quản lý Bác sĩ";
-            // 
-            // quảnLýLịchHẹnToolStripMenuItem
-            // 
-            this.quảnLýLịchHẹnToolStripMenuItem.Name = "quảnLýLịchHẹnToolStripMenuItem";
-            this.quảnLýLịchHẹnToolStripMenuItem.Size = new System.Drawing.Size(253, 28);
-            this.quảnLýLịchHẹnToolStripMenuItem.Text = "Quản lý Lịch hẹn";
-            // 
-            // quảnLýKhoThuốcToolStripMenuItem
-            // 
-            this.quảnLýKhoThuốcToolStripMenuItem.Name = "quảnLýKhoThuốcToolStripMenuItem";
-            this.quảnLýKhoThuốcToolStripMenuItem.Size = new System.Drawing.Size(253, 28);
-            this.quảnLýKhoThuốcToolStripMenuItem.Text = "Quản lý Kho thuốc";
-            // 
-            // lịchSửKhámToolStripMenuItem
-            // 
-            this.lịchSửKhámToolStripMenuItem.Name = "lịchSửKhámToolStripMenuItem";
-            this.lịchSửKhámToolStripMenuItem.Size = new System.Drawing.Size(275, 28);
-            this.lịchSửKhámToolStripMenuItem.Text = "Quản lý lịch sử khám ";
-            // 
-            // đơnThuốcToolStripMenuItem
-            // 
-            this.đơnThuốcToolStripMenuItem.Name = "đơnThuốcToolStripMenuItem";
-            this.đơnThuốcToolStripMenuItem.Size = new System.Drawing.Size(275, 28);
-            this.đơnThuốcToolStripMenuItem.Text = "Quản lý đơn thuốc ";
-            // 
-            // báoCáoDanhSáchBệnhNhânToolStripMenuItem
-            // 
-            this.báoCáoDanhSáchBệnhNhânToolStripMenuItem.Name = "báoCáoDanhSáchBệnhNhânToolStripMenuItem";
-            this.báoCáoDanhSáchBệnhNhânToolStripMenuItem.Size = new System.Drawing.Size(378, 28);
-            this.báoCáoDanhSáchBệnhNhânToolStripMenuItem.Text = "Báo cáo danh sách bệnh nhân";
-            // 
-            // báoCáoLịchHẹnToolStripMenuItem
-            // 
-            this.báoCáoLịchHẹnToolStripMenuItem.Name = "báoCáoLịchHẹnToolStripMenuItem";
-            this.báoCáoLịchHẹnToolStripMenuItem.Size = new System.Drawing.Size(378, 28);
-            this.báoCáoLịchHẹnToolStripMenuItem.Text = "Báo cáo lịch hẹn";
-            // 
-            // báoCáoTồnKhoVàTiêuThụThuốcToolStripMenuItem
-            // 
-            this.báoCáoTồnKhoVàTiêuThụThuốcToolStripMenuItem.Name = "báoCáoTồnKhoVàTiêuThụThuốcToolStripMenuItem";
-            this.báoCáoTồnKhoVàTiêuThụThuốcToolStripMenuItem.Size = new System.Drawing.Size(378, 28);
-            this.báoCáoTồnKhoVàTiêuThụThuốcToolStripMenuItem.Text = "Báo cáo tồn kho và tiêu thụ thuốc ";
-            // 
-            // quảnLýTàiKhoảnNgườiDùngToolStripMenuItem
-            // 
-            this.quảnLýTàiKhoảnNgườiDùngToolStripMenuItem.Name = "quảnLýTàiKhoảnNgườiDùngToolStripMenuItem";
-            this.quảnLýTàiKhoảnNgườiDùngToolStripMenuItem.Size = new System.Drawing.Size(352, 28);
-            this.quảnLýTàiKhoảnNgườiDùngToolStripMenuItem.Text = "Quản lý tài khoản người dùng ";
-            // 
-            // xemNhậtKýHoạtĐộngToolStripMenuItem
-            // 
-            this.xemNhậtKýHoạtĐộngToolStripMenuItem.Name = "xemNhậtKýHoạtĐộngToolStripMenuItem";
-            this.xemNhậtKýHoạtĐộngToolStripMenuItem.Size = new System.Drawing.Size(352, 28);
-            this.xemNhậtKýHoạtĐộngToolStripMenuItem.Text = "Xem nhật ký hoạt động ";
-            // 
-            // saoLưuVàKhôiPhụcDatabaseToolStripMenuItem
-            // 
-            this.saoLưuVàKhôiPhụcDatabaseToolStripMenuItem.Name = "saoLưuVàKhôiPhụcDatabaseToolStripMenuItem";
-            this.saoLưuVàKhôiPhụcDatabaseToolStripMenuItem.Size = new System.Drawing.Size(352, 28);
-            this.saoLưuVàKhôiPhụcDatabaseToolStripMenuItem.Text = "Sao lưu và khôi phục database ";
-            // 
-            // thôngTinVềPhầnMềmToolStripMenuItem
-            // 
-            this.thôngTinVềPhầnMềmToolStripMenuItem.Name = "thôngTinVềPhầnMềmToolStripMenuItem";
-            this.thôngTinVềPhầnMềmToolStripMenuItem.Size = new System.Drawing.Size(294, 28);
-            this.thôngTinVềPhầnMềmToolStripMenuItem.Text = "Thông tin về phần mềm ";
-            // 
-            // hướngDẫnSửDụngToolStripMenuItem
-            // 
-            this.hướngDẫnSửDụngToolStripMenuItem.Name = "hướngDẫnSửDụngToolStripMenuItem";
-            this.hướngDẫnSửDụngToolStripMenuItem.Size = new System.Drawing.Size(294, 28);
-            this.hướngDẫnSửDụngToolStripMenuItem.Text = "Hướng dẫn sử dụng";
-            // 
-            // liênHệHỗTrợToolStripMenuItem
-            // 
-            this.liênHệHỗTrợToolStripMenuItem.Name = "liênHệHỗTrợToolStripMenuItem";
-            this.liênHệHỗTrợToolStripMenuItem.Size = new System.Drawing.Size(294, 28);
-            this.liênHệHỗTrợToolStripMenuItem.Text = "Liên hệ hỗ trợ ";
+            this.lblLogan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblLogan.BackColor = System.Drawing.Color.Transparent;
+            this.lblLogan.Font = new System.Drawing.Font("Times New Roman", 40F, System.Drawing.FontStyle.Bold);
+            this.lblLogan.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblLogan.Location = new System.Drawing.Point(0, 670);
+            this.lblLogan.Name = "lblLogan";
+            this.lblLogan.Size = new System.Drawing.Size(1440, 131);
+            this.lblLogan.TabIndex = 2;
+            this.lblLogan.Text = "Nơi sức khỏe bắt đầu, công nghệ dẫn lối";
+            this.lblLogan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BackgroundImage = global::CMS.Properties.Resources.logo1;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1440, 810);
-            this.Controls.Add(this.lblLogan2);
-            this.Controls.Add(this.lblLogan1);
+            this.Controls.Add(this.lblLogan);
             this.Controls.Add(this.pnlHead);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -381,37 +367,36 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStripMain;
-        private System.Windows.Forms.ToolStripMenuItem codeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiFile;
         private System.Windows.Forms.Panel pnlHead;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
-        private System.Windows.Forms.ToolStripMenuItem qUẢNLÝGÌĐÓToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem qUẢNLÝGÌĐÓToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem qUẢNLÝGÌĐÓToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem qUẢNLÝGÌĐÓToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem qUẢNLÝGÌĐÓToolStripMenuItem4;
-        private System.Windows.Forms.Label lblLogan1;
-        private System.Windows.Forms.Label lblLogan2;
+        private System.Windows.Forms.ToolStripMenuItem tsmiManagement;
+        private System.Windows.Forms.ToolStripMenuItem tsmiPatientExamination;
+        private System.Windows.Forms.ToolStripMenuItem tsmiReports;
+        private System.Windows.Forms.ToolStripMenuItem tsmiSystem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiHelp;
+        private System.Windows.Forms.Label lblLogan;
         private Guna.UI2.WinForms.Guna2Button btnScreenMode;
         private Guna.UI2.WinForms.Guna2Button btnLang;
-        private System.Windows.Forms.ToolStripMenuItem đăngNhậpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quảnLýBệnhNhânToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quảnLýBácSĩToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quảnLýLịchHẹnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quảnLýKhoThuốcToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem lịchSửKhámToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đơnThuốcToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem báoCáoDanhSáchBệnhNhânToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem báoCáoLịchHẹnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem báoCáoTồnKhoVàTiêuThụThuốcToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quảnLýTàiKhoảnNgườiDùngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem xemNhậtKýHoạtĐộngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saoLưuVàKhôiPhụcDatabaseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thôngTinVềPhầnMềmToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hướngDẫnSửDụngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem liênHệHỗTrợToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiLogin;
+        private System.Windows.Forms.ToolStripMenuItem tsmiLogout;
+        private System.Windows.Forms.ToolStripMenuItem tsmiChangePassword;
+        private System.Windows.Forms.ToolStripMenuItem tsmiExit;
+        private System.Windows.Forms.ToolStripMenuItem tsmiManagePatient;
+        private System.Windows.Forms.ToolStripMenuItem tsmiManageDoctors;
+        private System.Windows.Forms.ToolStripMenuItem tsmiManageAppointments;
+        private System.Windows.Forms.ToolStripMenuItem tsmiManageMedicineInventory;
+        private System.Windows.Forms.ToolStripMenuItem tsmiManageExaminationHistory;
+        private System.Windows.Forms.ToolStripMenuItem tsmiManagePrescriptions;
+        private System.Windows.Forms.ToolStripMenuItem tsmiPatientListReport;
+        private System.Windows.Forms.ToolStripMenuItem tsmiAppointmentScheduleReport;
+        private System.Windows.Forms.ToolStripMenuItem tsmiInventoryAndMedicineRevenueReport;
+        private System.Windows.Forms.ToolStripMenuItem tsmiManageUserAccounts;
+        private System.Windows.Forms.ToolStripMenuItem tsmiViewActivityLog;
+        private System.Windows.Forms.ToolStripMenuItem tsmiBackupandRestoreDatabase;
+        private System.Windows.Forms.ToolStripMenuItem tsmiAboutSoftware;
+        private System.Windows.Forms.ToolStripMenuItem tsmiUserGuide;
+        private System.Windows.Forms.ToolStripMenuItem tsmiContactSupport;
     }
 }
 

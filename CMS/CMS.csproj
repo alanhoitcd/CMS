@@ -98,14 +98,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="IMG\background.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="DAO\" />
     <Folder Include="MODEL\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="IMG\background.png" />
     <Content Include="IMG\iconDarkMode.png" />
     <Content Include="IMG\iconLightMode.png" />
     <Content Include="IMG\iconUSA.png" />

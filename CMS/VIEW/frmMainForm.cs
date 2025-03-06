@@ -46,15 +46,13 @@ namespace CMS
             {
                 statusLangENG = true;
                 btnLang.Image = Image.FromFile(@"D:\_DE_TAI_\CMS\CMS\IMG\iconVietNam.png");
-                lblLogan1.Text = "Your health..";
-                lblLogan2.Text = "is our happiness";
+                lblLogan.Text = "Where health begins, technology leads the way";
             }
             else
             {
                 statusLangENG = false;
                 btnLang.Image = Image.FromFile(@"D:\_DE_TAI_\CMS\CMS\IMG\iconUSA.png");
-                lblLogan1.Text = "Sức khỏe của bạn..";
-                lblLogan2.Text = "là hạnh phúc của chúng tôi!";
+                lblLogan.Text = "Nơi sức khỏe bắt đầu, công nghệ dẫn lối";
             }
         }
     }
