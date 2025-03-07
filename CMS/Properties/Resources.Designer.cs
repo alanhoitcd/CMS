@@ -61,11 +61,21 @@ namespace CMS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static System.Drawing.Bitmap iconDarkMode {
+        internal static byte[] iconDarkMode {
             get {
                 object obj = ResourceManager.GetObject("iconDarkMode", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconDarkMode_ {
+            get {
+                object obj = ResourceManager.GetObject("iconDarkMode_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -81,21 +91,31 @@ namespace CMS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static System.Drawing.Bitmap iconUSA {
+        internal static byte[] iconUSA {
             get {
                 object obj = ResourceManager.GetObject("iconUSA", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] iconVietNam {
+            get {
+                object obj = ResourceManager.GetObject("iconVietNam", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap iconVietNam {
+        internal static System.Drawing.Bitmap iconVietNam_ {
             get {
-                object obj = ResourceManager.GetObject("iconVietNam", resourceCulture);
+                object obj = ResourceManager.GetObject("iconVietNam_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

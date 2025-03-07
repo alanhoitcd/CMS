@@ -118,6 +118,7 @@
             this.tsmiExit.Name = "tsmiExit";
             this.tsmiExit.Size = new System.Drawing.Size(243, 28);
             this.tsmiExit.Text = "Exit";
+            this.tsmiExit.Click += new System.EventHandler(this.tsmiExit_Click);
             // 
             // tsmiManagement
             // 
@@ -285,7 +286,7 @@
             this.btnLang.FillColor = System.Drawing.Color.Transparent;
             this.btnLang.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
             this.btnLang.ForeColor = System.Drawing.Color.Black;
-            this.btnLang.Image = global::CMS.Properties.Resources.iconUSA;
+            this.btnLang.Image = global::CMS.Properties.Resources.iconVietNam_;
             this.btnLang.ImageSize = new System.Drawing.Size(30, 30);
             this.btnLang.Location = new System.Drawing.Point(1106, 5);
             this.btnLang.Name = "btnLang";
@@ -306,7 +307,7 @@
             this.btnScreenMode.FillColor = System.Drawing.Color.Transparent;
             this.btnScreenMode.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
             this.btnScreenMode.ForeColor = System.Drawing.Color.Black;
-            this.btnScreenMode.Image = global::CMS.Properties.Resources.iconDarkMode;
+            this.btnScreenMode.Image = global::CMS.Properties.Resources.iconDarkMode_;
             this.btnScreenMode.ImageSize = new System.Drawing.Size(30, 30);
             this.btnScreenMode.Location = new System.Drawing.Point(1060, 4);
             this.btnScreenMode.Name = "btnScreenMode";
@@ -335,7 +336,7 @@
             this.lblLogan.Name = "lblLogan";
             this.lblLogan.Size = new System.Drawing.Size(1440, 131);
             this.lblLogan.TabIndex = 2;
-            this.lblLogan.Text = "Nơi sức khỏe bắt đầu, công nghệ dẫn lối";
+            this.lblLogan.Text = "Where health begins, technology leads the way";
             this.lblLogan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmMainForm
