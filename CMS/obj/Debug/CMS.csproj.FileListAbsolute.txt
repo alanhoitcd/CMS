@@ -21,3 +21,16 @@ D:\_DE_TAI_\CMS\CMS\obj\Debug\CMS.exe
 D:\_DE_TAI_\CMS\CMS\obj\Debug\CMS.pdb
 D:\_DE_TAI_\CMS\CMS\bin\Debug\Guna.UI2.dll
 D:\_DE_TAI_\CMS\CMS\obj\Debug\CMS.csproj.Up2Date
+D:\_HuyenAnh_\_DuAn_\CMS\CMS\bin\Debug\CMS.exe.config
+D:\_HuyenAnh_\_DuAn_\CMS\CMS\bin\Debug\CMS.exe
+D:\_HuyenAnh_\_DuAn_\CMS\CMS\bin\Debug\CMS.pdb
+D:\_HuyenAnh_\_DuAn_\CMS\CMS\bin\Debug\Guna.UI2.dll
+D:\_HuyenAnh_\_DuAn_\CMS\CMS\obj\Debug\CMS.csproj.AssemblyReference.cache
+D:\_HuyenAnh_\_DuAn_\CMS\CMS\obj\Debug\CMS.Properties.Resources.resources
+D:\_HuyenAnh_\_DuAn_\CMS\CMS\obj\Debug\CMS.VIEW.frmLogin.resources
+D:\_HuyenAnh_\_DuAn_\CMS\CMS\obj\Debug\CMS.frmMainForm.resources
+D:\_HuyenAnh_\_DuAn_\CMS\CMS\obj\Debug\CMS.csproj.GenerateResource.cache
+D:\_HuyenAnh_\_DuAn_\CMS\CMS\obj\Debug\CMS.csproj.CoreCompileInputs.cache
+D:\_HuyenAnh_\_DuAn_\CMS\CMS\obj\Debug\CMS.csproj.Up2Date
+D:\_HuyenAnh_\_DuAn_\CMS\CMS\obj\Debug\CMS.exe
+D:\_HuyenAnh_\_DuAn_\CMS\CMS\obj\Debug\CMS.pdb
