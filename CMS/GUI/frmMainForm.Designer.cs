@@ -319,6 +319,7 @@
             this.btnLang.Animated = true;
             this.btnLang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnLang.BorderRadius = 20;
+            this.btnLang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnLang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnLang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -341,6 +342,7 @@
             this.btnScreenMode.Animated = true;
             this.btnScreenMode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnScreenMode.BorderRadius = 20;
+            this.btnScreenMode.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnScreenMode.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnScreenMode.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnScreenMode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));

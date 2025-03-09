@@ -63,6 +63,91 @@ namespace CMS
             }
         }
 
+        private void frmMainForm_Load_()//hàm khi form chạy
+        {
+            //thiết lập các icon cho toolmenustrip File item
+            using (MemoryStream ms = new MemoryStream(Properties.Resources.iconLogin))
+            {
+                tsmiLogin.Image = Image.FromStream(ms);
+            }
+            using (MemoryStream ms = new MemoryStream(Properties.Resources.iconLogout))
+            {
+                tsmiLogout.Image = Image.FromStream(ms);
+            }
+            using (MemoryStream ms = new MemoryStream(Properties.Resources.iconChangePassword))
+            {
+                tsmiChangePassword.Image = Image.FromStream(ms);
+            }
+            using (MemoryStream ms = new MemoryStream(Properties.Resources.iconExit))
+            {
+                tsmiExit.Image = Image.FromStream(ms);
+            }
+            //thiết lập các icon cho toolmenustrip Menagement item
+            using (MemoryStream ms = new MemoryStream(Properties.Resources.iconManagePatients))
+            {
+                tsmiManagePatient.Image = Image.FromStream(ms);
+            }
+            using (MemoryStream ms = new MemoryStream(Properties.Resources.iconManageDoctors))
+            {
+                tsmiManageDoctors.Image = Image.FromStream(ms);
+            }
+            using (MemoryStream ms = new MemoryStream(Properties.Resources.iconManageAppointments))
+            {
+                tsmiManageAppointments.Image = Image.FromStream(ms);
+            }
+            using (MemoryStream ms = new MemoryStream(Properties.Resources.iconManageMedicineInventory))
+            {
+                tsmiManageMedicineInventory.Image = Image.FromStream(ms);
+            }
+            //thiết lập các icon cho toolmenustrip Patient Examination item
+            using (MemoryStream ms = new MemoryStream(Properties.Resources.iconManageExaminationHistory))
+            {
+                tsmiManageExaminationHistory.Image = Image.FromStream(ms);
+            }
+            using (MemoryStream ms = new MemoryStream(Properties.Resources.iconManagePrescription))
+            {
+                tsmiManagePrescriptions.Image = Image.FromStream(ms);
+            }
+            //thiết lập các icon cho toolmenustrip report item
+            using (MemoryStream ms = new MemoryStream(Properties.Resources.iconPatientListReport))
+            {
+                tsmiPatientListReport.Image = Image.FromStream(ms);
+            }
+            using (MemoryStream ms = new MemoryStream(Properties.Resources.iconAppointmentScheduleReport))
+            {
+                tsmiAppointmentScheduleReport.Image = Image.FromStream(ms);
+            }
+            using (MemoryStream ms = new MemoryStream(Properties.Resources.iconInventoryandMedicineRevenueReport))
+            {
+                tsmiInventoryAndMedicineRevenueReport.Image = Image.FromStream(ms);
+            }
+            //thiết lập các icon cho toolmenustrip System item
+            using (MemoryStream ms = new MemoryStream(Properties.Resources.iconManageUserAccounts))
+            {
+                tsmiManageUserAccounts.Image = Image.FromStream(ms);
+            }
+            using (MemoryStream ms = new MemoryStream(Properties.Resources.iconViewActivityLog))
+            {
+                tsmiViewActivityLog.Image = Image.FromStream(ms);
+            }
+            using (MemoryStream ms = new MemoryStream(Properties.Resources.iconBackupandRestoreDatabase))
+            {
+                tsmiBackupandRestoreDatabase.Image = Image.FromStream(ms);
+            }
+            //thiết lập các icon cho toolmenustrip help item
+            using (MemoryStream ms = new MemoryStream(Properties.Resources.iconAboutSoftware))
+            {
+                tsmiAboutSoftware.Image = Image.FromStream(ms);
+            }
+            using (MemoryStream ms = new MemoryStream(Properties.Resources.iconUserGuide))
+            {
+                tsmiUserGuide.Image = Image.FromStream(ms);
+            }
+            using (MemoryStream ms = new MemoryStream(Properties.Resources.iconContactSupport))
+            {
+                tsmiContactSupport.Image = Image.FromStream(ms);
+            }
+        }
         //********************************************************************************************//
         public frmMainForm()
         {
@@ -71,7 +156,7 @@ namespace CMS
 
         private void frmMainForm_Load(object sender, EventArgs e)
         {
-
+            frmMainForm_Load_();
         }
 
         private void btnScreenMode_Click(object sender, EventArgs e)
