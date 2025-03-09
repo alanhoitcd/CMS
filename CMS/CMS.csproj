@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\sqlDatabase.cs" />
     <Compile Include="GUI\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,8 +97,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <Folder Include="BLL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DAL\fileQuerySQL\CMS.sql" />
     <Content Include="IMG\iconAboutSoftware.png" />
     <Content Include="IMG\iconAppointmentScheduleReport.png" />
     <Content Include="IMG\iconBackupandRestoreDatabase.png" />
