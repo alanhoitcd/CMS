@@ -103,6 +103,7 @@
             this.tsmiLogin.Name = "tsmiLogin";
             this.tsmiLogin.Size = new System.Drawing.Size(243, 28);
             this.tsmiLogin.Text = "Log In";
+            this.tsmiLogin.Click += new System.EventHandler(this.tsmiLogin_Click);
             // 
             // tsmiLogout
             // 

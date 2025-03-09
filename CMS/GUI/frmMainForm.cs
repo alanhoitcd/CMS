@@ -1,4 +1,5 @@
-﻿using Guna.UI2.WinForms;
+﻿using CMS.VIEW;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -172,6 +173,13 @@ namespace CMS
         private void tsmiExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void tsmiLogin_Click(object sender, EventArgs e)
+        {
+            frmLogin f = new frmLogin();
+            this.Hide();
+            f.ShowDialog();
         }
     }
 }

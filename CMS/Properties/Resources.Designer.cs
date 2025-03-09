@@ -103,6 +103,16 @@ namespace CMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] iconClose {
+            get {
+                object obj = ResourceManager.GetObject("iconClose", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] iconContactSupport {
             get {
                 object obj = ResourceManager.GetObject("iconContactSupport", resourceCulture);

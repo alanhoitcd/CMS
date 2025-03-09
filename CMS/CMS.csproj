@@ -106,6 +106,7 @@
     <Content Include="IMG\iconAppointmentScheduleReport.png" />
     <Content Include="IMG\iconBackupandRestoreDatabase.png" />
     <Content Include="IMG\iconChangePassword.png" />
+    <Content Include="IMG\iconClose.png" />
     <Content Include="IMG\iconContactSupport.png" />
     <Content Include="IMG\iconDarkMode.png" />
     <Content Include="IMG\iconExit.png" />

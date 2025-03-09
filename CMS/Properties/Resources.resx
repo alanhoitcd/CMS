@@ -196,4 +196,7 @@
   <data name="iconAboutSoftware" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\IMG\iconAboutSoftware.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="iconClose" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\iconClose.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
