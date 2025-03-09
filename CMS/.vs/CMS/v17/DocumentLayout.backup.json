@@ -1,10 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\_HuyenAnh_\\_DuAn_\\CMS\\CMS\\",
+  "WorkspaceRootPath": "D:\\_DE_TAI_\\CMS\\CMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|d:\\_huyenanh_\\_duan_\\cms\\cms\\view\\frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|d:\\_de_tai_\\cms\\cms\\view\\frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:view\\frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|d:\\_de_tai_\\cms\\cms\\view\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:view\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,18 +18,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmLogin.cs [Design]",
+              "DocumentMoniker": "D:\\_DE_TAI_\\CMS\\CMS\\VIEW\\frmLogin.cs",
+              "RelativeDocumentMoniker": "VIEW\\frmLogin.cs",
+              "ToolTip": "D:\\_DE_TAI_\\CMS\\CMS\\VIEW\\frmLogin.cs [Design]",
+              "RelativeToolTip": "VIEW\\frmLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T02:14:33.348Z",
+              "EditorCaption": " [Design]"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "frmMainForm.cs [Design]",
-              "DocumentMoniker": "D:\\_HuyenAnh_\\_DuAn_\\CMS\\CMS\\VIEW\\frmMainForm.cs",
+              "DocumentMoniker": "D:\\_DE_TAI_\\CMS\\CMS\\VIEW\\frmMainForm.cs",
               "RelativeDocumentMoniker": "VIEW\\frmMainForm.cs",
-              "ToolTip": "D:\\_HuyenAnh_\\_DuAn_\\CMS\\CMS\\VIEW\\frmMainForm.cs [Design]",
+              "ToolTip": "D:\\_DE_TAI_\\CMS\\CMS\\VIEW\\frmMainForm.cs [Design]",
               "RelativeToolTip": "VIEW\\frmMainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T12:52:40.45Z",
+              "WhenOpened": "2025-03-09T02:14:18.384Z",
               "EditorCaption": " [Design]"
             }
           ]
