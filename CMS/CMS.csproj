@@ -102,10 +102,29 @@
     <Folder Include="MODEL\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="IMG\iconAboutSoftware.png" />
+    <Content Include="IMG\iconAppointmentScheduleReport.png" />
+    <Content Include="IMG\iconBackupandRestoreDatabase.png" />
+    <Content Include="IMG\iconChangePassword.png" />
+    <Content Include="IMG\iconContactSupport.png" />
     <Content Include="IMG\iconDarkMode.png" />
+    <Content Include="IMG\iconExit.png" />
+    <Content Include="IMG\iconInventoryandMedicineRevenueReport.png" />
     <Content Include="IMG\iconLightMode.png" />
+    <Content Include="IMG\iconLogin.png" />
+    <Content Include="IMG\iconLogout.png" />
+    <Content Include="IMG\iconManageAppointments.png" />
+    <Content Include="IMG\iconManageDoctors.png" />
+    <Content Include="IMG\iconManageExaminationHistory.png" />
+    <Content Include="IMG\iconManageMedicineInventory.png" />
+    <Content Include="IMG\iconManagePatients.png" />
+    <Content Include="IMG\iconManagePrescription.png" />
+    <Content Include="IMG\iconManageUserAccounts.png" />
+    <Content Include="IMG\iconPatientListReport.png" />
     <Content Include="IMG\iconUSA.png" />
+    <Content Include="IMG\iconUserGuide.png" />
     <Content Include="IMG\iconVietNam.png" />
+    <Content Include="IMG\iconViewActivityLog.png" />
     <Content Include="IMG\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -139,4 +139,61 @@
   <data name="iconUSA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\IMG\iconUSA.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="iconLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\iconLogin.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="iconLogout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\iconLogout.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="iconChangePassword" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\iconChangePassword.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="iconExit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\iconExit.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="iconManageMedicineInventory" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconManageMedicineInventory.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="iconManageAppointments" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconManageAppointments.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="iconManageDoctors" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconManageDoctors.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="iconManagePatients" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconManagePatients.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="iconManageExaminationHistory" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\iconManageExaminationHistory.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="iconManagePrescription" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\iconManagePrescription.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="iconPatientListReport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\iconPatientListReport.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="iconAppointmentScheduleReport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\iconAppointmentScheduleReport.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="iconInventoryandMedicineRevenueReport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\iconInventoryandMedicineRevenueReport.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="iconViewActivityLog" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\iconViewActivityLog.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="iconBackupandRestoreDatabase" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\iconBackupandRestoreDatabase.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="iconManageUserAccounts" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\iconManageUserAccounts.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="iconUserGuide" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\iconUserGuide.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="iconContactSupport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\iconContactSupport.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="iconAboutSoftware" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\IMG\iconAboutSoftware.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

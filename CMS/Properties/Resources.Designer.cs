@@ -63,6 +63,56 @@ namespace CMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] iconAboutSoftware {
+            get {
+                object obj = ResourceManager.GetObject("iconAboutSoftware", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] iconAppointmentScheduleReport {
+            get {
+                object obj = ResourceManager.GetObject("iconAppointmentScheduleReport", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] iconBackupandRestoreDatabase {
+            get {
+                object obj = ResourceManager.GetObject("iconBackupandRestoreDatabase", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] iconChangePassword {
+            get {
+                object obj = ResourceManager.GetObject("iconChangePassword", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] iconContactSupport {
+            get {
+                object obj = ResourceManager.GetObject("iconContactSupport", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] iconDarkMode {
             get {
                 object obj = ResourceManager.GetObject("iconDarkMode", resourceCulture);
@@ -83,6 +133,26 @@ namespace CMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] iconExit {
+            get {
+                object obj = ResourceManager.GetObject("iconExit", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] iconInventoryandMedicineRevenueReport {
+            get {
+                object obj = ResourceManager.GetObject("iconInventoryandMedicineRevenueReport", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] iconLightMode {
             get {
                 object obj = ResourceManager.GetObject("iconLightMode", resourceCulture);
@@ -93,9 +163,119 @@ namespace CMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] iconLogin {
+            get {
+                object obj = ResourceManager.GetObject("iconLogin", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] iconLogout {
+            get {
+                object obj = ResourceManager.GetObject("iconLogout", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] iconManageAppointments {
+            get {
+                object obj = ResourceManager.GetObject("iconManageAppointments", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] iconManageDoctors {
+            get {
+                object obj = ResourceManager.GetObject("iconManageDoctors", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] iconManageExaminationHistory {
+            get {
+                object obj = ResourceManager.GetObject("iconManageExaminationHistory", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] iconManageMedicineInventory {
+            get {
+                object obj = ResourceManager.GetObject("iconManageMedicineInventory", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] iconManagePatients {
+            get {
+                object obj = ResourceManager.GetObject("iconManagePatients", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] iconManagePrescription {
+            get {
+                object obj = ResourceManager.GetObject("iconManagePrescription", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] iconManageUserAccounts {
+            get {
+                object obj = ResourceManager.GetObject("iconManageUserAccounts", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] iconPatientListReport {
+            get {
+                object obj = ResourceManager.GetObject("iconPatientListReport", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] iconUSA {
             get {
                 object obj = ResourceManager.GetObject("iconUSA", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] iconUserGuide {
+            get {
+                object obj = ResourceManager.GetObject("iconUserGuide", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -117,6 +297,16 @@ namespace CMS.Properties {
             get {
                 object obj = ResourceManager.GetObject("iconVietNam_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] iconViewActivityLog {
+            get {
+                object obj = ResourceManager.GetObject("iconViewActivityLog", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
