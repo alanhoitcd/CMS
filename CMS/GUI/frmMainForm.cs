@@ -64,7 +64,7 @@ namespace CMS
             }
         }
 
-        private void frmMainForm_Load_()//hàm khi form chạy
+        private void frmMainForm_Load_(bool on)//hàm khi form chạy
         {
             //thiết lập các icon cho toolmenustrip File item
             using (MemoryStream ms = new MemoryStream(Properties.Resources.iconLogin))
@@ -148,6 +148,18 @@ namespace CMS
             {
                 tsmiContactSupport.Image = Image.FromStream(ms);
             }
+            //Ẩn các menustrip
+            tsmiLogout.Enabled = on;
+            tsmiChangePassword.Enabled = on;
+            tsmiManagement.Enabled = on;
+            tsmiChangePassword.Enabled = on;
+            tsmiPatientExamination.Enabled = on;
+            tsmiChangePassword.Enabled = on;
+            tsmiReports.Enabled = on;
+            tsmiChangePassword.Enabled = on;
+            tsmiManageUserAccounts.Enabled = on;
+            tsmiChangePassword.Enabled = on;
+
         }
         //********************************************************************************************//
         public frmMainForm()
@@ -157,7 +169,7 @@ namespace CMS
 
         private void frmMainForm_Load(object sender, EventArgs e)
         {
-            frmMainForm_Load_();
+            frmMainForm_Load_(false);
         }
 
         private void btnScreenMode_Click(object sender, EventArgs e)
@@ -178,8 +190,19 @@ namespace CMS
         private void tsmiLogin_Click(object sender, EventArgs e)
         {
             frmLogin f = new frmLogin();
-            this.Hide();
-            f.ShowDialog();
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                frmMainForm_Load_(true);
+            }
+            else
+            {
+                frmMainForm_Load_(false);
+            }
+        }
+
+        private void tsmiLogout_Click(object sender, EventArgs e)
+        {
+            frmMainForm_Load_(false);
         }
     }
 }

@@ -34,3 +34,4 @@ D:\_HuyenAnh_\_DuAn_\CMS\CMS\obj\Debug\CMS.csproj.CoreCompileInputs.cache
 D:\_HuyenAnh_\_DuAn_\CMS\CMS\obj\Debug\CMS.csproj.Up2Date
 D:\_HuyenAnh_\_DuAn_\CMS\CMS\obj\Debug\CMS.exe
 D:\_HuyenAnh_\_DuAn_\CMS\CMS\obj\Debug\CMS.pdb
+D:\_HuyenAnh_\_DuAn_\CMS\CMS\obj\Debug\CMS.GUI.frmCreateAccount.resources
