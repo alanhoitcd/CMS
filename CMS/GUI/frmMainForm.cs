@@ -13,6 +13,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Guna.UI2.WinForms.Suite.Descriptions;
 
+/*1. Presentation Layer (Lớp giao diện)
+Mô tả: Đây là lớp mà người dùng tương tác trực tiếp, bao gồm các form, button, textbox, datagridview, v.v. 
+trong WinForms. Lớp này chịu trách nhiệm hiển thị dữ liệu, nhận đầu vào từ người dùng và gửi yêu cầu đến lớp Business Logic Layer.
+Nhiệm vụ chính:
+Hiển thị dữ liệu từ các đối tượng mô hình (Model) lên giao diện (ví dụ: danh sách bệnh nhân, thông tin lịch hẹn).
+Xử lý sự kiện người dùng (click button, nhập liệu).
+Gọi các phương thức từ Business Logic Layer để xử lý yêu cầu.
+Các hàm/nhiệm vụ cụ thể:
+LoadData(): Tải dữ liệu (ví dụ: danh sách bệnh nhân) lên DataGridView.
+SaveButton_Click(): Gọi hàm lưu dữ liệu từ Business Layer khi người dùng nhấn nút "Lưu".
+ValidateInput(): Kiểm tra dữ liệu đầu vào cơ bản (ví dụ: tên bệnh nhân không được để trống) trước khi gửi sang Business Layer.
+ShowErrorMessage(): Hiển thị thông báo lỗi nếu có từ các lớp khác.*/
 namespace CMS
 {
     public partial class frmMainForm : Form

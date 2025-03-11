@@ -52,7 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BacSi_BLL.cs" />
+    <Compile Include="BLL\NguoiDung_BLL.cs" />
+    <Compile Include="DAL\NguoiDung_DAL.cs" />
     <Compile Include="DAL\sqlDatabase.cs" />
+    <Compile Include="DML\BacSi_DML.cs" />
+    <Compile Include="DML\NguoiDung_DML.cs" />
     <Compile Include="GUI\frmCreateAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,9 +111,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BLL\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="IMG\iconAboutSoftware.png" />
     <Content Include="IMG\iconAppointmentScheduleReport.png" />
