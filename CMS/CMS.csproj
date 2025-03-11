@@ -110,7 +110,6 @@
     <Folder Include="BLL\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DAL\fileQuerySQL\CMS.sql" />
     <Content Include="IMG\iconAboutSoftware.png" />
     <Content Include="IMG\iconAppointmentScheduleReport.png" />
     <Content Include="IMG\iconBackupandRestoreDatabase.png" />
