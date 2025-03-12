@@ -1,4 +1,5 @@
-﻿using CMS.GUI;
+﻿using CMS.BLL;
+using CMS.GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,31 +44,28 @@ namespace CMS.VIEW
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            //code button dang nhap
-
-            if (txtUserName.Text.Equals("admin"))
+            NguoiDung_BLL NguoiDung_BLL_ = new NguoiDung_BLL();
+            if (NguoiDung_BLL_.checkUser(txtUserName.Text)) //kiểm tra id có trong database chưa
             {
-                if (txtUserName.Text.Equals("admin"))
+                if (NguoiDung_BLL_.checkPassword(txtUserName.Text, txtPassword.Text)) //kiểm tra mật khẩu đúng
                 {
-                    if (txtPassword.Text.Equals("admin"))
+                    MessageBox.Show("Đăng nhập thành công", "Thông báo");
+                    this.DialogResult = DialogResult.OK;
+                    countSaiPass = 0;
+                }
+                else
+                {
+                    if (countSaiPass <= 2)
                     {
-                        MessageBox.Show("Đăng nhập thành công", "Thông báo");
-                        this.DialogResult = DialogResult.OK;
-                    }
-                    else
-                    {
-                        if (countSaiPass <= 2)
+                        MessageBox.Show("sai password " + (countSaiPass + 1) + " lần", "Thông Báo");
+                        countSaiPass++;
+                        txtPassword.ResetText();
+                        if (countSaiPass == 3)
                         {
-                            MessageBox.Show("sai password " + (countSaiPass + 1) + " lần", "Thông Báo");
-                            countSaiPass++;
-                            txtPassword.ResetText();
-                            if (countSaiPass == 3)
-                            {
-                                //txtPassword.Enabled = false;
-                                MessageBox.Show("Đã nhập sai 3 lần, thoát app, byeeeeeeeeeeee", "Thông Báo");
-                                this.DialogResult = DialogResult.Cancel;
-                                Application.Exit();
-                            }
+                            txtPassword.Enabled = false;
+                            MessageBox.Show("Đã nhập sai 3 lần, thoát app, byeeeeeeeeeeee", "Thông Báo");
+                            this.DialogResult = DialogResult.Cancel;
+                            Application.Exit();
                         }
                     }
                 }
@@ -83,79 +81,13 @@ namespace CMS.VIEW
                     frm.ShowDialog();
                 }
             }
+        }
 
-            //if(txtUser.Text.Equals(txtPassword.Text))
-            //{
-            //    this.DialogResult = DialogResult.OK;
-            //    //Form1 form1 = new Form1();
-            //    //form1.ShowDialog();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Không đúng tên người dùng/mật khẩu !!!");
-            //    this.DialogResult = DialogResult.Cancel;
-            //}
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmCreateAccount f = new frmCreateAccount();
+            f.ShowDialog();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            //if (txtUserName.Text.Equals(txtPassword.Text))
-            //{
-            //    //modelUsers ad = new modelUsers();
-            //    //ad.UserName = txtUser.Text;
-            //    //modelUsers k = dao_users.selectByID(ad);
-            //    if (txtUserName.Text != txtPassword.Text)
-            //    {
-            //        if (txtUserName.Text.Equals(txtPassword.Text))
-            //        {
-            //            MessageBox.Show("Đăng nhập thành công", "Thông báo");
-            //            //userLogin = txtUser.Text;
-            //            this.DialogResult = DialogResult.OK;
-            //        }
-            //        else
-            //        {
-            //            if (countSaiPass < 2)
-            //            {
-            //                MessageBox.Show("sai password " + (countSaiPass + 1) + " lần", "Thông Báo");
-            //                countSaiPass++;
-            //                txtPassword.ResetText();
-            //                if (countSaiPass == 2)
-            //                {
-            //                    txtPassword.Enabled = false;
-            //                    MessageBox.Show("Đã nhập sai 3 lần, thoát app, byeeeeeeeeeeee", "Thông Báo");
-            //                    this.DialogResult = DialogResult.Cancel;
-            //                    Application.Exit();
-            //                }
-            //            }
-            //        }
-            //    }
-            //}
-            //else
-            //{
-            //    txtUserName.ResetText();
-            //    txtPassword.ResetText();
-            //    if (MessageBox.Show("user " + txtUserName.Text + " không đúng, bạn có muốn tạo user mới không?", "THÔNG BÁO", MessageBoxButtons.YesNoCancel) == DialogResult.Yes)
-            //    {
-            //        this.Hide();
-            //        frmCreateAccount frm = new frmCreateAccount();
-            //        frm.ShowDialog();
-            //    }
-            //}
         }
     }
 }

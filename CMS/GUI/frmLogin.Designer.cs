@@ -93,10 +93,11 @@
             this.linkLabel1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.Location = new System.Drawing.Point(208, 333);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(142, 16);
+            this.linkLabel1.Size = new System.Drawing.Size(175, 19);
             this.linkLabel1.TabIndex = 8;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Don\'t have an account?";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // llblForgotPassword
             // 
@@ -104,7 +105,7 @@
             this.llblForgotPassword.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llblForgotPassword.Location = new System.Drawing.Point(23, 333);
             this.llblForgotPassword.Name = "llblForgotPassword";
-            this.llblForgotPassword.Size = new System.Drawing.Size(109, 16);
+            this.llblForgotPassword.Size = new System.Drawing.Size(138, 19);
             this.llblForgotPassword.TabIndex = 6;
             this.llblForgotPassword.TabStop = true;
             this.llblForgotPassword.Text = "Forgot Password?";
@@ -194,7 +195,7 @@
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(720, 405);

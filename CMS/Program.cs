@@ -1,4 +1,5 @@
-﻿using CMS.VIEW;
+﻿using CMS.GUI;
+using CMS.VIEW;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace CMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMainForm());
+            Application.Run(new frmTest());
         }
     }
 }

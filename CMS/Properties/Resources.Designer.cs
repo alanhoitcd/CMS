@@ -321,6 +321,26 @@ namespace CMS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] imgfrmCreateAccount {
+            get {
+                object obj = ResourceManager.GetObject("imgfrmCreateAccount", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] imgfrmLoginForm {
+            get {
+                object obj = ResourceManager.GetObject("imgfrmLoginForm", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap logo {

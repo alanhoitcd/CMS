@@ -25,24 +25,47 @@ namespace CMS.DAL
         DeletePatient(): Xóa bệnh nhân khỏi database.
         GetAllAppointments(): Lấy toàn bộ danh sách lịch hẹn từ database để trả về dưới dạng danh sách Model.*/
 
-        public int CheckUser(int id_nguoi_dung)
+        public int checkUser(string ten_nguoi_dung)
         {
             try
             {
                 using (SqlConnection c = new SqlConnection(DAL.sqlDatabase.getConnectString()))
                 {
                     c.Open();
-                    string query = "SELECT COUNT(ten_nguoi_dung) FROM nguoi_dung WHERE id_nguoi_dung = @id_nguoi_dung";
+                    string query = "select count(ten_nguoi_dung) from nguoi_dung where ten_nguoi_dung = @ten_nguoi_dung";
                     using (SqlCommand cmd = new SqlCommand(query, c))
                     {
-                        cmd.Parameters.Add("@id_nguoi_dung", SqlDbType.Int).Value = id_nguoi_dung; // Sửa kiểu dữ liệu
+                        cmd.Parameters.Add("@ten_nguoi_dung", SqlDbType.VarChar).Value = ten_nguoi_dung; // Sửa kiểu dữ liệu
                         return (int)cmd.ExecuteScalar(); // Trả về kết quả trực tiếp
                     }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi NguoiDung_DAL: " + ex.Message);
+                Console.WriteLine("Lỗi class NguoiDung_DAL function checkUser: " + ex.Message);
+                return 0;
+            }
+        }
+
+        public int checkPassword(string ten_nguoi_dung, string mat_khau)
+        {
+            try
+            {
+                using (SqlConnection c = new SqlConnection(DAL.sqlDatabase.getConnectString()))
+                {
+                    c.Open();
+                    string query = "select count(ten_nguoi_dung) from nguoi_dung where ten_nguoi_dung = @ten_nguoi_dung and mat_khau = @mat_khau";
+                    using (SqlCommand cmd = new SqlCommand(query, c))
+                    {
+                        cmd.Parameters.Add("@ten_nguoi_dung", SqlDbType.VarChar).Value = ten_nguoi_dung; // Sửa kiểu dữ liệu
+                        cmd.Parameters.Add("@mat_khau", SqlDbType.VarChar).Value = mat_khau;
+                        return (int)cmd.ExecuteScalar(); // Trả về kết quả trực tiếp số lượng dòng kết quả
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi class NguoiDung_DAL function checkPassword(): " + ex.Message);
                 return 0;
             }
         }

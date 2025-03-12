@@ -48,3 +48,4 @@ INSERT INTO nguoi_dung (ten_nguoi_dung, mat_khau, ho_va_ten, quyen, id_bac_si, s
 INSERT INTO nguoi_dung (ten_nguoi_dung, mat_khau, ho_va_ten, quyen, id_bac_si, so_dien_thoai, email, trang_thai) VALUES ('caoxuani', 'password567', N'Cao Xuân Ích', 1, 9, '0989999999', 'caoxuani@example.com', 0);
 INSERT INTO nguoi_dung (ten_nguoi_dung, mat_khau, ho_va_ten, quyen, id_bac_si, so_dien_thoai, email, trang_thai) VALUES ('dothik', 'secure123', N'Đỗ Thị Kim', 3, 10, '0990000000', 'dothik@example.com', 1);
 
+select * from bac_si
