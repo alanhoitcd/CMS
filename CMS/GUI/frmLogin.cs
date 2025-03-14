@@ -30,6 +30,11 @@ namespace CMS.VIEW
             txtPassword.Text = "admin";
             txtUserName.Text = "admin";
 
+            //chèn ảnh 
+            using (MemoryStream ms = new MemoryStream(Properties.Resources.imgfrmLoginForm))
+            {
+                ptbLogin.Image = Image.FromStream(ms);
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)

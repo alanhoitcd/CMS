@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ptbLogin = new System.Windows.Forms.PictureBox();
             this.panel = new System.Windows.Forms.Panel();
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -38,18 +38,19 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblLogin = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogin)).BeginInit();
             this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // ptbLogin
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(278, 380);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.ptbLogin.BackColor = System.Drawing.Color.White;
+            this.ptbLogin.Location = new System.Drawing.Point(13, 13);
+            this.ptbLogin.Name = "ptbLogin";
+            this.ptbLogin.Size = new System.Drawing.Size(278, 380);
+            this.ptbLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbLogin.TabIndex = 1;
+            this.ptbLogin.TabStop = false;
             // 
             // panel
             // 
@@ -199,14 +200,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(720, 405);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.ptbLogin);
             this.Controls.Add(this.panel);
             this.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmLogin_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogin)).EndInit();
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             this.ResumeLayout(false);
@@ -214,7 +215,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ptbLogin;
         private System.Windows.Forms.Panel panel;
         private Guna.UI2.WinForms.Guna2CircleButton btnClose;
         private System.Windows.Forms.LinkLabel linkLabel1;
