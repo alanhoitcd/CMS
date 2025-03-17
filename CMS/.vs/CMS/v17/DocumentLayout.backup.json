@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "D:\\_DE_TAI_\\CMS\\CMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|d:\\_de_tai_\\cms\\cms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|d:\\_de_tai_\\cms\\cms\\gui\\frmcreateaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:gui\\frmcreateaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|d:\\_de_tai_\\cms\\cms\\gui\\frmcreateaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|D:\\_DE_TAI_\\CMS\\CMS\\gui\\frmcreateaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:gui\\frmcreateaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|d:\\_de_tai_\\cms\\cms\\gui\\frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:gui\\frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|d:\\_de_tai_\\cms\\cms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,12 +31,37 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "frmCreateAccount.cs",
+              "DocumentMoniker": "D:\\_DE_TAI_\\CMS\\CMS\\GUI\\frmCreateAccount.cs",
+              "RelativeDocumentMoniker": "GUI\\frmCreateAccount.cs",
+              "ToolTip": "D:\\_DE_TAI_\\CMS\\CMS\\GUI\\frmCreateAccount.cs",
+              "RelativeToolTip": "GUI\\frmCreateAccount.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T00:19:34.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmMainForm.cs [Design]",
+              "DocumentMoniker": "D:\\_DE_TAI_\\CMS\\CMS\\GUI\\frmMainForm.cs",
+              "RelativeDocumentMoniker": "GUI\\frmMainForm.cs",
+              "ToolTip": "D:\\_DE_TAI_\\CMS\\CMS\\GUI\\frmMainForm.cs [Design]",
+              "RelativeToolTip": "GUI\\frmMainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T00:15:35.5Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\_DE_TAI_\\CMS\\CMS\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\_DE_TAI_\\CMS\\CMS\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-15T06:41:08.858Z",
               "EditorCaption": ""

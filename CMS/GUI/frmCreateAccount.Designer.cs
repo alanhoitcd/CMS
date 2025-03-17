@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panelIMG = new System.Windows.Forms.Panel();
-            this.ptbSigup = new System.Windows.Forms.PictureBox();
+            this.ptbSignUp = new System.Windows.Forms.PictureBox();
             this.panelMain = new System.Windows.Forms.Panel();
             this.cboIDDoctor = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -40,34 +40,34 @@
             this.label2 = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSignUp = new Guna.UI2.WinForms.Guna2Button();
             this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.lblSigup = new System.Windows.Forms.Label();
             this.panelIMG.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbSigup)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbSignUp)).BeginInit();
             this.panelMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelIMG
             // 
             this.panelIMG.BackColor = System.Drawing.Color.Transparent;
-            this.panelIMG.Controls.Add(this.ptbSigup);
+            this.panelIMG.Controls.Add(this.ptbSignUp);
             this.panelIMG.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelIMG.Location = new System.Drawing.Point(0, 0);
             this.panelIMG.Name = "panelIMG";
             this.panelIMG.Size = new System.Drawing.Size(396, 576);
             this.panelIMG.TabIndex = 19;
             // 
-            // ptbSigup
+            // ptbSignUp
             // 
-            this.ptbSigup.BackColor = System.Drawing.Color.White;
-            this.ptbSigup.Location = new System.Drawing.Point(10, 10);
-            this.ptbSigup.Name = "ptbSigup";
-            this.ptbSigup.Size = new System.Drawing.Size(375, 554);
-            this.ptbSigup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbSigup.TabIndex = 6;
-            this.ptbSigup.TabStop = false;
+            this.ptbSignUp.BackColor = System.Drawing.Color.White;
+            this.ptbSignUp.Location = new System.Drawing.Point(10, 10);
+            this.ptbSignUp.Name = "ptbSignUp";
+            this.ptbSignUp.Size = new System.Drawing.Size(375, 554);
+            this.ptbSignUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbSignUp.TabIndex = 6;
+            this.ptbSignUp.TabStop = false;
             // 
             // panelMain
             // 
@@ -81,7 +81,7 @@
             this.panelMain.Controls.Add(this.label2);
             this.panelMain.Controls.Add(this.guna2TextBox1);
             this.panelMain.Controls.Add(this.label1);
-            this.panelMain.Controls.Add(this.guna2Button1);
+            this.panelMain.Controls.Add(this.btnSignUp);
             this.panelMain.Controls.Add(this.txtUserName);
             this.panelMain.Controls.Add(this.btnClose);
             this.panelMain.Controls.Add(this.lblSigup);
@@ -229,22 +229,23 @@
             this.label1.Text = "User Name";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // guna2Button1
+            // btnSignUp
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.BorderRadius = 18;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.RoyalBlue;
-            this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(147, 406);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(392, 35);
-            this.guna2Button1.TabIndex = 22;
-            this.guna2Button1.Text = "Login";
+            this.btnSignUp.Animated = true;
+            this.btnSignUp.BorderRadius = 18;
+            this.btnSignUp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSignUp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSignUp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSignUp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSignUp.FillColor = System.Drawing.Color.RoyalBlue;
+            this.btnSignUp.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSignUp.ForeColor = System.Drawing.Color.White;
+            this.btnSignUp.Location = new System.Drawing.Point(147, 406);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(392, 35);
+            this.btnSignUp.TabIndex = 22;
+            this.btnSignUp.Text = "Sign up";
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // txtUserName
             // 
@@ -270,7 +271,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.BackColor = System.Drawing.Color.IndianRed;
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
             this.btnClose.BorderColor = System.Drawing.Color.Transparent;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -281,12 +282,13 @@
             this.btnClose.FocusedColor = System.Drawing.Color.Transparent;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnClose.ForeColor = System.Drawing.Color.Transparent;
-            this.btnClose.Location = new System.Drawing.Point(65, 371);
+            this.btnClose.Location = new System.Drawing.Point(591, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.PressedColor = System.Drawing.Color.Transparent;
             this.btnClose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnClose.Size = new System.Drawing.Size(44, 43);
             this.btnClose.TabIndex = 20;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // lblSigup
             // 
@@ -312,8 +314,9 @@
             this.Name = "frmCreateAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCreateAccount";
+            this.Load += new System.EventHandler(this.frmCreateAccount_Load);
             this.panelIMG.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ptbSigup)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbSignUp)).EndInit();
             this.panelMain.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -321,7 +324,7 @@
 
         #endregion
         private System.Windows.Forms.Panel panelIMG;
-        private System.Windows.Forms.PictureBox ptbSigup;
+        private System.Windows.Forms.PictureBox ptbSignUp;
         private System.Windows.Forms.Panel panelMain;
         private Guna.UI2.WinForms.Guna2ComboBox cboIDDoctor;
         private System.Windows.Forms.Label label5;
@@ -332,7 +335,7 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnSignUp;
         private Guna.UI2.WinForms.Guna2TextBox txtUserName;
         private Guna.UI2.WinForms.Guna2CircleButton btnClose;
         private System.Windows.Forms.Label lblSigup;
