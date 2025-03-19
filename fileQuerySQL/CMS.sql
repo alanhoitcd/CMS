@@ -83,7 +83,7 @@ CREATE TABLE Appointments (
     PatientId INT NOT NULL,
     DoctorId INT NOT NULL,
     AppointmentDate DATETIME NOT NULL CHECK (AppointmentDate >= GETDATE()),
-    Status NVARCHAR(20) NOT NULL CHECK (Status IN ('Scheduled', 'Completed', 'Cancelled')),
+    AppointmentsStatus NVARCHAR(20) NOT NULL CHECK (AppointmentsStatus IN ('Scheduled', 'Completed', 'Cancelled')),
     FOREIGN KEY (PatientId) REFERENCES Patients(PatientId),
     FOREIGN KEY (DoctorId) REFERENCES Doctors(DoctorId)
 );
@@ -174,7 +174,7 @@ CREATE TABLE InventoryTransactions (
     TransactionType NVARCHAR(20) NOT NULL CHECK (TransactionType IN ('In', 'Out')),
     Quantity INT NOT NULL CHECK (Quantity > 0),
     TransactionDate  DATETIME NOT NULL CHECK (TransactionDate <= GETDATE()),
-    Description NVARCHAR(200) NULL,
+    Description NVARCHAR(200) NULL,--check lai
     FOREIGN KEY (OrderId) REFERENCES Orders(OrderId),
     FOREIGN KEY (MedicineId) REFERENCES MedicineInventory(MedicineId)
 );
@@ -308,16 +308,16 @@ INSERT INTO UserSessions (UserId, LoginTime, LogoutTime, IpAddress, Token, IsAct
 INSERT INTO UserSessions (UserId, LoginTime, LogoutTime, IpAddress, Token, IsActive) VALUES (9, '2025-03-13 16:00:00', NULL, '192.168.1.9', 'token9', 1);
 INSERT INTO UserSessions (UserId, LoginTime, LogoutTime, IpAddress, Token, IsActive) VALUES (10, '2025-03-13 17:00:00', '2025-03-13 01:00:00', '192.168.1.10', 'token10', 0);
 
-INSERT INTO Appointments (PatientId, DoctorId, AppointmentDate, Status) VALUES (1, 1, '2025-03-18 10:00:00', 'Scheduled');
-INSERT INTO Appointments (PatientId, DoctorId, AppointmentDate, Status) VALUES (2, 2, '2025-03-19 14:00:00', 'Scheduled');
-INSERT INTO Appointments (PatientId, DoctorId, AppointmentDate, Status) VALUES (3, 3, '2025-03-20 09:00:00', 'Scheduled');
-INSERT INTO Appointments (PatientId, DoctorId, AppointmentDate, Status) VALUES (4, 4, '2025-03-21 11:00:00', 'Scheduled');
-INSERT INTO Appointments (PatientId, DoctorId, AppointmentDate, Status) VALUES (5, 1, '2025-03-22 15:00:00', 'Scheduled');
-INSERT INTO Appointments (PatientId, DoctorId, AppointmentDate, Status) VALUES (6, 2, '2025-03-23 13:00:00', 'Scheduled');
-INSERT INTO Appointments (PatientId, DoctorId, AppointmentDate, Status) VALUES (7, 3, '2025-03-24 10:00:00', 'Scheduled');
-INSERT INTO Appointments (PatientId, DoctorId, AppointmentDate, Status) VALUES (8, 4, '2025-03-25 12:00:00', 'Scheduled');
-INSERT INTO Appointments (PatientId, DoctorId, AppointmentDate, Status) VALUES (9, 1, '2025-03-26 16:00:00', 'Scheduled');
-INSERT INTO Appointments (PatientId, DoctorId, AppointmentDate, Status) VALUES (10, 2, '2025-03-27 14:00:00', 'Scheduled');
+INSERT INTO Appointments (PatientId, DoctorId, AppointmentDate, AppointmentsStatus) VALUES (1, 1, '2025-03-18 10:00:00', 'Scheduled');
+INSERT INTO Appointments (PatientId, DoctorId, AppointmentDate, AppointmentsStatus) VALUES (2, 2, '2025-03-19 14:00:00', 'Scheduled');
+INSERT INTO Appointments (PatientId, DoctorId, AppointmentDate, AppointmentsStatus) VALUES (3, 3, '2025-03-20 09:00:00', 'Scheduled');
+INSERT INTO Appointments (PatientId, DoctorId, AppointmentDate, AppointmentsStatus) VALUES (4, 4, '2025-03-21 11:00:00', 'Scheduled');
+INSERT INTO Appointments (PatientId, DoctorId, AppointmentDate, AppointmentsStatus) VALUES (5, 1, '2025-03-22 15:00:00', 'Scheduled');
+INSERT INTO Appointments (PatientId, DoctorId, AppointmentDate, AppointmentsStatus) VALUES (6, 2, '2025-03-23 13:00:00', 'Scheduled');
+INSERT INTO Appointments (PatientId, DoctorId, AppointmentDate, AppointmentsStatus) VALUES (7, 3, '2025-03-24 10:00:00', 'Scheduled');
+INSERT INTO Appointments (PatientId, DoctorId, AppointmentDate, AppointmentsStatus) VALUES (8, 4, '2025-03-25 12:00:00', 'Scheduled');
+INSERT INTO Appointments (PatientId, DoctorId, AppointmentDate, AppointmentsStatus) VALUES (9, 1, '2025-03-26 16:00:00', 'Scheduled');
+INSERT INTO Appointments (PatientId, DoctorId, AppointmentDate, AppointmentsStatus) VALUES (10, 2, '2025-03-27 14:00:00', 'Scheduled');
 
 INSERT INTO Visits (PatientId, DoctorId, StaffId, AppointmentId, VisitDate, ChiefComplaint) VALUES (1, 1, 1, 1, '2025-03-18 10:00:00', 'Chest pain');
 INSERT INTO Visits (PatientId, DoctorId, StaffId, AppointmentId, VisitDate, ChiefComplaint) VALUES (2, 2, 2, 2, '2025-03-19 14:00:00', 'Headache');
