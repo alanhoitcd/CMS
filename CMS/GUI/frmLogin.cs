@@ -49,7 +49,7 @@ namespace CMS.VIEW
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            NguoiDung_BLL NguoiDung_BLL_ = new NguoiDung_BLL();
+            Users_BLL NguoiDung_BLL_ = new Users_BLL();
             if (NguoiDung_BLL_.checkUser(txtUserName.Text)) //kiểm tra id có trong database chưa
             {
                 if (NguoiDung_BLL_.checkPassword(txtUserName.Text, txtPassword.Text)) //kiểm tra mật khẩu đúng

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CMS.BLL
 {
-    public class BacSi_BLL
+    public class Doctors_BLL
     {
         /*
          * 2. Business Logic Layer (Lớp nghiệp vụ)

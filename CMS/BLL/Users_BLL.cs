@@ -9,16 +9,16 @@ using System.Threading.Tasks;
 
 namespace CMS.BLL
 {
-    public class NguoiDung_BLL
+    public class Users_BLL
     {
-        private NguoiDung_DAL NguoiDung_DAL_ = new NguoiDung_DAL();
+        private Users_DAL Users_DAL_ = new Users_DAL();
         public bool checkUser(string ten_nguoi_dung)
         {
-            return NguoiDung_DAL_.checkUser(ten_nguoi_dung) > 0;
+            return Users_DAL_.checkUser(ten_nguoi_dung) > 0;
         }
         public bool checkPassword(string ten_nguoi_dung, string mat_khau)
         {
-            return NguoiDung_DAL_.checkPassword(ten_nguoi_dung, mat_khau) > 0;
+            return Users_DAL_.checkPassword(ten_nguoi_dung, mat_khau) > 0;
         }
     }
 }

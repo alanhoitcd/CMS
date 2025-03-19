@@ -6,7 +6,7 @@ GO
 
 CREATE TABLE Users (
     UserId INT IDENTITY(1,1) PRIMARY KEY,
-    Username NVARCHAR(50) NOT NULL UNIQUE,
+    Username VARCHAR(50) NOT NULL UNIQUE,
     PasswordHash NVARCHAR(256) NOT NULL,
     RoleUsers NVARCHAR(50) NOT NULL,
     Email NVARCHAR(100) NOT NULL UNIQUE,
@@ -451,4 +451,4 @@ INSERT INTO LabRequests (VisitId, LabId, TestType, RequestDate, ResultDate, Resu
 INSERT INTO LabRequests (VisitId, LabId, TestType, RequestDate, ResultDate, Result, StatusLabRequests) VALUES (9, 9, 'Blood Test', '2025-03-18 09:00', NULL, NULL, 'Pending');
 INSERT INTO LabRequests (VisitId, LabId, TestType, RequestDate, ResultDate, Result, StatusLabRequests) VALUES (10, 10, 'Ultrasound', '2025-03-18 11:00', '2025-03-18 13:00', 'Normal', 'Completed');
 
-select * from Users
+select * from Doctors

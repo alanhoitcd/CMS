@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CMS.DAL
 {
-    class NguoiDung_DAL
+    class Users_DAL
     {
         /*
          3. Data Access Layer (Lớp truy cập dữ liệu)
@@ -32,40 +32,40 @@ namespace CMS.DAL
                 using (SqlConnection c = new SqlConnection(DAL.sqlDatabase.getConnectString()))
                 {
                     c.Open();
-                    string query = "select count(ten_nguoi_dung) from nguoi_dung where ten_nguoi_dung = @ten_nguoi_dung";
+                    string query = "select count(Username) from Users where Username = @Username";
                     using (SqlCommand cmd = new SqlCommand(query, c))
                     {
-                        cmd.Parameters.Add("@ten_nguoi_dung", SqlDbType.VarChar).Value = ten_nguoi_dung; // Sửa kiểu dữ liệu
+                        cmd.Parameters.Add("@Username", SqlDbType.VarChar).Value = ten_nguoi_dung; // Sửa kiểu dữ liệu
                         return (int)cmd.ExecuteScalar(); // Trả về kết quả trực tiếp
                     }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi class NguoiDung_DAL function checkUser: " + ex.Message);
+                Console.WriteLine("Lỗi class Users_DAL function checkUser: " + ex.Message);
                 return 0;
             }
         }
 
-        public int checkPassword(string ten_nguoi_dung, string mat_khau)
+        public int checkPassword(string userName, string password)
         {
             try
             {
                 using (SqlConnection c = new SqlConnection(DAL.sqlDatabase.getConnectString()))
                 {
                     c.Open();
-                    string query = "select count(ten_nguoi_dung) from nguoi_dung where ten_nguoi_dung = @ten_nguoi_dung and mat_khau = @mat_khau";
+                    string query = "select count(Username) from Users where Username = @Username and PasswordHash = @PasswordHash";
                     using (SqlCommand cmd = new SqlCommand(query, c))
                     {
-                        cmd.Parameters.Add("@ten_nguoi_dung", SqlDbType.VarChar).Value = ten_nguoi_dung; // Sửa kiểu dữ liệu
-                        cmd.Parameters.Add("@mat_khau", SqlDbType.VarChar).Value = mat_khau;
+                        cmd.Parameters.Add("@Username", SqlDbType.VarChar).Value = userName; // Sửa kiểu dữ liệu
+                        cmd.Parameters.Add("@PasswordHash", SqlDbType.VarChar).Value = password;
                         return (int)cmd.ExecuteScalar(); // Trả về kết quả trực tiếp số lượng dòng kết quả
                     }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi class NguoiDung_DAL function checkPassword(): " + ex.Message);
+                Console.WriteLine("Lỗi class Users_DAL function checkPassword(): " + ex.Message);
                 return 0;
             }
         }

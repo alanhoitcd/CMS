@@ -52,12 +52,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\BacSi_BLL.cs" />
-    <Compile Include="BLL\NguoiDung_BLL.cs" />
-    <Compile Include="DAL\NguoiDung_DAL.cs" />
+    <Compile Include="BLL\Doctors_BLL.cs" />
+    <Compile Include="BLL\Users_BLL.cs" />
+    <Compile Include="DAL\Users_DAL.cs" />
     <Compile Include="DAL\sqlDatabase.cs" />
-    <Compile Include="DML\BacSi_DML.cs" />
-    <Compile Include="DML\NguoiDung_DML.cs" />
+    <Compile Include="DML\Doctors_DML.cs" />
+    <Compile Include="DML\Patients_DML.cs" />
+    <Compile Include="DML\Users_DML.cs" />
     <Compile Include="GUI\frmCreateAccount.cs">
       <SubType>Form</SubType>
     </Compile>

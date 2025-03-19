@@ -19,8 +19,8 @@ namespace CMS.GUI
 
         private void frmTest_Load(object sender, EventArgs e)
         {
-            string[] s = { "Id", "Họ tên", "chuyên khoa", "số điện thoại", "số giấy phép" };
-            UTIL.UTIL.showDataToDataGridview(dataGridView1, "select * from bac_si", s);
+            string[] s = { "ID BS", "TÊN NGƯỜI DÙNG", "TÊN ĐẦU", "TÊN CUỐI", "CHUYÊN NGÀNH", "SỐ GIẤY PHÉP", "LỊCH LÀM VIỆC"};
+            UTIL.UTIL.showDataToDataGridview(dataGridView1, "select * from Doctors", s);
         }
     }
 }
