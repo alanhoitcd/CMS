@@ -171,6 +171,9 @@ namespace CMS
             tsmiChangePassword.Enabled = on;
             tsmiManageUserAccounts.Enabled = on;
             tsmiChangePassword.Enabled = on;
+            tsmiLogin.Enabled = !on;
+            //Ẩn Panel main
+            pnlMain.Hide();
 
         }
         //********************************************************************************************//

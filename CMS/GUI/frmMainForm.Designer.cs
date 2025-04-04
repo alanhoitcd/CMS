@@ -61,9 +61,15 @@
             this.btnScreenMode = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.lblLogan = new System.Windows.Forms.Label();
+            this.pnlMain = new System.Windows.Forms.Panel();
+            this.tabControlMain = new System.Windows.Forms.TabControl();
+            this.tabPagePatients = new System.Windows.Forms.TabPage();
+            this.tabPageDoctors = new System.Windows.Forms.TabPage();
             this.menuStripMain.SuspendLayout();
             this.pnlHead.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
+            this.pnlMain.SuspendLayout();
+            this.tabControlMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStripMain
@@ -94,14 +100,14 @@
             this.tsmiExit});
             this.tsmiFile.ForeColor = System.Drawing.Color.RoyalBlue;
             this.tsmiFile.Name = "tsmiFile";
-            this.tsmiFile.Size = new System.Drawing.Size(46, 36);
+            this.tsmiFile.Size = new System.Drawing.Size(55, 36);
             this.tsmiFile.Text = "File";
             // 
             // tsmiLogin
             // 
             this.tsmiLogin.ForeColor = System.Drawing.Color.RoyalBlue;
             this.tsmiLogin.Name = "tsmiLogin";
-            this.tsmiLogin.Size = new System.Drawing.Size(196, 24);
+            this.tsmiLogin.Size = new System.Drawing.Size(243, 28);
             this.tsmiLogin.Text = "Log In";
             this.tsmiLogin.Click += new System.EventHandler(this.tsmiLogin_Click);
             // 
@@ -109,7 +115,7 @@
             // 
             this.tsmiLogout.ForeColor = System.Drawing.Color.RoyalBlue;
             this.tsmiLogout.Name = "tsmiLogout";
-            this.tsmiLogout.Size = new System.Drawing.Size(196, 24);
+            this.tsmiLogout.Size = new System.Drawing.Size(243, 28);
             this.tsmiLogout.Text = "Log Out";
             this.tsmiLogout.Click += new System.EventHandler(this.tsmiLogout_Click);
             // 
@@ -117,14 +123,14 @@
             // 
             this.tsmiChangePassword.ForeColor = System.Drawing.Color.RoyalBlue;
             this.tsmiChangePassword.Name = "tsmiChangePassword";
-            this.tsmiChangePassword.Size = new System.Drawing.Size(196, 24);
+            this.tsmiChangePassword.Size = new System.Drawing.Size(243, 28);
             this.tsmiChangePassword.Text = "Change Password";
             // 
             // tsmiExit
             // 
             this.tsmiExit.ForeColor = System.Drawing.Color.RoyalBlue;
             this.tsmiExit.Name = "tsmiExit";
-            this.tsmiExit.Size = new System.Drawing.Size(196, 24);
+            this.tsmiExit.Size = new System.Drawing.Size(243, 28);
             this.tsmiExit.Text = "Exit";
             this.tsmiExit.Click += new System.EventHandler(this.tsmiExit_Click);
             // 
@@ -137,35 +143,35 @@
             this.tsmiManageMedicineInventory});
             this.tsmiManagement.ForeColor = System.Drawing.Color.RoyalBlue;
             this.tsmiManagement.Name = "tsmiManagement";
-            this.tsmiManagement.Size = new System.Drawing.Size(110, 36);
+            this.tsmiManagement.Size = new System.Drawing.Size(134, 36);
             this.tsmiManagement.Text = "Management";
             // 
             // tsmiManagePatient
             // 
             this.tsmiManagePatient.ForeColor = System.Drawing.Color.RoyalBlue;
             this.tsmiManagePatient.Name = "tsmiManagePatient";
-            this.tsmiManagePatient.Size = new System.Drawing.Size(270, 24);
+            this.tsmiManagePatient.Size = new System.Drawing.Size(331, 28);
             this.tsmiManagePatient.Text = "Manage Patients";
             // 
             // tsmiManageDoctors
             // 
             this.tsmiManageDoctors.ForeColor = System.Drawing.Color.RoyalBlue;
             this.tsmiManageDoctors.Name = "tsmiManageDoctors";
-            this.tsmiManageDoctors.Size = new System.Drawing.Size(270, 24);
+            this.tsmiManageDoctors.Size = new System.Drawing.Size(331, 28);
             this.tsmiManageDoctors.Text = "Manage Doctors";
             // 
             // tsmiManageAppointments
             // 
             this.tsmiManageAppointments.ForeColor = System.Drawing.Color.RoyalBlue;
             this.tsmiManageAppointments.Name = "tsmiManageAppointments";
-            this.tsmiManageAppointments.Size = new System.Drawing.Size(270, 24);
+            this.tsmiManageAppointments.Size = new System.Drawing.Size(331, 28);
             this.tsmiManageAppointments.Text = "Manage Appointments";
             // 
             // tsmiManageMedicineInventory
             // 
             this.tsmiManageMedicineInventory.ForeColor = System.Drawing.Color.RoyalBlue;
             this.tsmiManageMedicineInventory.Name = "tsmiManageMedicineInventory";
-            this.tsmiManageMedicineInventory.Size = new System.Drawing.Size(270, 24);
+            this.tsmiManageMedicineInventory.Size = new System.Drawing.Size(331, 28);
             this.tsmiManageMedicineInventory.Text = "Manage Medicine Inventory";
             // 
             // tsmiPatientExamination
@@ -175,21 +181,21 @@
             this.tsmiManagePrescriptions});
             this.tsmiPatientExamination.ForeColor = System.Drawing.Color.RoyalBlue;
             this.tsmiPatientExamination.Name = "tsmiPatientExamination";
-            this.tsmiPatientExamination.Size = new System.Drawing.Size(155, 36);
+            this.tsmiPatientExamination.Size = new System.Drawing.Size(195, 36);
             this.tsmiPatientExamination.Text = "Patient Examination";
             // 
             // tsmiManageExaminationHistory
             // 
             this.tsmiManageExaminationHistory.ForeColor = System.Drawing.Color.RoyalBlue;
             this.tsmiManageExaminationHistory.Name = "tsmiManageExaminationHistory";
-            this.tsmiManageExaminationHistory.Size = new System.Drawing.Size(275, 24);
+            this.tsmiManageExaminationHistory.Size = new System.Drawing.Size(340, 28);
             this.tsmiManageExaminationHistory.Text = "Manage Examination History";
             // 
             // tsmiManagePrescriptions
             // 
             this.tsmiManagePrescriptions.ForeColor = System.Drawing.Color.RoyalBlue;
             this.tsmiManagePrescriptions.Name = "tsmiManagePrescriptions";
-            this.tsmiManagePrescriptions.Size = new System.Drawing.Size(275, 24);
+            this.tsmiManagePrescriptions.Size = new System.Drawing.Size(340, 28);
             this.tsmiManagePrescriptions.Text = "Manage Prescriptions";
             // 
             // tsmiReports
@@ -200,28 +206,28 @@
             this.tsmiInventoryAndMedicineRevenueReport});
             this.tsmiReports.ForeColor = System.Drawing.Color.RoyalBlue;
             this.tsmiReports.Name = "tsmiReports";
-            this.tsmiReports.Size = new System.Drawing.Size(75, 36);
+            this.tsmiReports.Size = new System.Drawing.Size(91, 36);
             this.tsmiReports.Text = "Reports";
             // 
             // tsmiPatientListReport
             // 
             this.tsmiPatientListReport.ForeColor = System.Drawing.Color.RoyalBlue;
             this.tsmiPatientListReport.Name = "tsmiPatientListReport";
-            this.tsmiPatientListReport.Size = new System.Drawing.Size(353, 24);
+            this.tsmiPatientListReport.Size = new System.Drawing.Size(436, 28);
             this.tsmiPatientListReport.Text = "Patient List Report";
             // 
             // tsmiAppointmentScheduleReport
             // 
             this.tsmiAppointmentScheduleReport.ForeColor = System.Drawing.Color.RoyalBlue;
             this.tsmiAppointmentScheduleReport.Name = "tsmiAppointmentScheduleReport";
-            this.tsmiAppointmentScheduleReport.Size = new System.Drawing.Size(353, 24);
+            this.tsmiAppointmentScheduleReport.Size = new System.Drawing.Size(436, 28);
             this.tsmiAppointmentScheduleReport.Text = "Appointment Schedule Report";
             // 
             // tsmiInventoryAndMedicineRevenueReport
             // 
             this.tsmiInventoryAndMedicineRevenueReport.ForeColor = System.Drawing.Color.RoyalBlue;
             this.tsmiInventoryAndMedicineRevenueReport.Name = "tsmiInventoryAndMedicineRevenueReport";
-            this.tsmiInventoryAndMedicineRevenueReport.Size = new System.Drawing.Size(353, 24);
+            this.tsmiInventoryAndMedicineRevenueReport.Size = new System.Drawing.Size(436, 28);
             this.tsmiInventoryAndMedicineRevenueReport.Text = "Inventory and Medicine Revenue Report";
             // 
             // tsmiSystem
@@ -232,28 +238,28 @@
             this.tsmiBackupandRestoreDatabase});
             this.tsmiSystem.ForeColor = System.Drawing.Color.RoyalBlue;
             this.tsmiSystem.Name = "tsmiSystem";
-            this.tsmiSystem.Size = new System.Drawing.Size(70, 36);
+            this.tsmiSystem.Size = new System.Drawing.Size(85, 36);
             this.tsmiSystem.Text = "System";
             // 
             // tsmiManageUserAccounts
             // 
             this.tsmiManageUserAccounts.ForeColor = System.Drawing.Color.RoyalBlue;
             this.tsmiManageUserAccounts.Name = "tsmiManageUserAccounts";
-            this.tsmiManageUserAccounts.Size = new System.Drawing.Size(283, 24);
+            this.tsmiManageUserAccounts.Size = new System.Drawing.Size(348, 28);
             this.tsmiManageUserAccounts.Text = "Manage User Accounts";
             // 
             // tsmiViewActivityLog
             // 
             this.tsmiViewActivityLog.ForeColor = System.Drawing.Color.RoyalBlue;
             this.tsmiViewActivityLog.Name = "tsmiViewActivityLog";
-            this.tsmiViewActivityLog.Size = new System.Drawing.Size(283, 24);
+            this.tsmiViewActivityLog.Size = new System.Drawing.Size(348, 28);
             this.tsmiViewActivityLog.Text = "View Activity Log";
             // 
             // tsmiBackupandRestoreDatabase
             // 
             this.tsmiBackupandRestoreDatabase.ForeColor = System.Drawing.Color.RoyalBlue;
             this.tsmiBackupandRestoreDatabase.Name = "tsmiBackupandRestoreDatabase";
-            this.tsmiBackupandRestoreDatabase.Size = new System.Drawing.Size(283, 24);
+            this.tsmiBackupandRestoreDatabase.Size = new System.Drawing.Size(348, 28);
             this.tsmiBackupandRestoreDatabase.Text = "Backup and Restore Database";
             // 
             // tsmiHelp
@@ -264,28 +270,28 @@
             this.tsmiContactSupport});
             this.tsmiHelp.ForeColor = System.Drawing.Color.RoyalBlue;
             this.tsmiHelp.Name = "tsmiHelp";
-            this.tsmiHelp.Size = new System.Drawing.Size(53, 36);
+            this.tsmiHelp.Size = new System.Drawing.Size(64, 36);
             this.tsmiHelp.Text = "Help";
             // 
             // tsmiAboutSoftware
             // 
             this.tsmiAboutSoftware.ForeColor = System.Drawing.Color.RoyalBlue;
             this.tsmiAboutSoftware.Name = "tsmiAboutSoftware";
-            this.tsmiAboutSoftware.Size = new System.Drawing.Size(186, 24);
+            this.tsmiAboutSoftware.Size = new System.Drawing.Size(232, 28);
             this.tsmiAboutSoftware.Text = "About Software";
             // 
             // tsmiUserGuide
             // 
             this.tsmiUserGuide.ForeColor = System.Drawing.Color.RoyalBlue;
             this.tsmiUserGuide.Name = "tsmiUserGuide";
-            this.tsmiUserGuide.Size = new System.Drawing.Size(186, 24);
+            this.tsmiUserGuide.Size = new System.Drawing.Size(232, 28);
             this.tsmiUserGuide.Text = "User Guide";
             // 
             // tsmiContactSupport
             // 
             this.tsmiContactSupport.ForeColor = System.Drawing.Color.RoyalBlue;
             this.tsmiContactSupport.Name = "tsmiContactSupport";
-            this.tsmiContactSupport.Size = new System.Drawing.Size(186, 24);
+            this.tsmiContactSupport.Size = new System.Drawing.Size(232, 28);
             this.tsmiContactSupport.Text = "Contact Support";
             // 
             // pnlHead
@@ -384,14 +390,59 @@
             this.lblLogan.Text = "Where health begins, technology leads the way";
             this.lblLogan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pnlMain
+            // 
+            this.pnlMain.BackColor = System.Drawing.Color.Transparent;
+            this.pnlMain.Controls.Add(this.tabControlMain);
+            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMain.Location = new System.Drawing.Point(0, 50);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(1440, 760);
+            this.pnlMain.TabIndex = 3;
+            // 
+            // tabControlMain
+            // 
+            this.tabControlMain.Controls.Add(this.tabPagePatients);
+            this.tabControlMain.Controls.Add(this.tabPageDoctors);
+            this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlMain.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlMain.Location = new System.Drawing.Point(0, 0);
+            this.tabControlMain.Name = "tabControlMain";
+            this.tabControlMain.SelectedIndex = 0;
+            this.tabControlMain.Size = new System.Drawing.Size(1440, 760);
+            this.tabControlMain.TabIndex = 0;
+            // 
+            // tabPagePatients
+            // 
+            this.tabPagePatients.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPagePatients.Location = new System.Drawing.Point(4, 24);
+            this.tabPagePatients.Name = "tabPagePatients";
+            this.tabPagePatients.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPagePatients.Size = new System.Drawing.Size(871, 354);
+            this.tabPagePatients.TabIndex = 0;
+            this.tabPagePatients.Text = "Manage Patients";
+            this.tabPagePatients.UseVisualStyleBackColor = true;
+            // 
+            // tabPageDoctors
+            // 
+            this.tabPageDoctors.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageDoctors.Location = new System.Drawing.Point(4, 28);
+            this.tabPageDoctors.Name = "tabPageDoctors";
+            this.tabPageDoctors.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageDoctors.Size = new System.Drawing.Size(1432, 728);
+            this.tabPageDoctors.TabIndex = 1;
+            this.tabPageDoctors.Text = "Manage Doctors";
+            this.tabPageDoctors.UseVisualStyleBackColor = true;
+            // 
             // frmMainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1440, 810);
+            this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.lblLogan);
             this.Controls.Add(this.pnlHead);
             this.DoubleBuffered = true;
@@ -406,6 +457,8 @@
             this.menuStripMain.PerformLayout();
             this.pnlHead.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
+            this.pnlMain.ResumeLayout(false);
+            this.tabControlMain.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -444,6 +497,10 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiUserGuide;
         private System.Windows.Forms.ToolStripMenuItem tsmiContactSupport;
         private System.Windows.Forms.Label lblHello;
+        private System.Windows.Forms.Panel pnlMain;
+        private System.Windows.Forms.TabControl tabControlMain;
+        private System.Windows.Forms.TabPage tabPagePatients;
+        private System.Windows.Forms.TabPage tabPageDoctors;
     }
 }
 
