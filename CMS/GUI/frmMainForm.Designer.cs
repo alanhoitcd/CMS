@@ -152,6 +152,7 @@
             this.tsmiManagePatient.Name = "tsmiManagePatient";
             this.tsmiManagePatient.Size = new System.Drawing.Size(331, 28);
             this.tsmiManagePatient.Text = "Manage Patients";
+            this.tsmiManagePatient.Click += new System.EventHandler(this.tsmiManagePatient_Click);
             // 
             // tsmiManageDoctors
             // 

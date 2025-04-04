@@ -1,4 +1,5 @@
-﻿using CMS.VIEW;
+﻿using CMS.GUI;
+using CMS.VIEW;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -181,6 +182,9 @@ namespace CMS
             {
                 pnlMain.Show();
             }
+            //Ẩn các tabcontrol
+            tabControlMain.TabPages.Remove(tabPagePatients);
+            tabControlMain.TabPages.Remove(tabPageDoctors);
 
         }
         //********************************************************************************************//
@@ -225,6 +229,32 @@ namespace CMS
         private void tsmiLogout_Click(object sender, EventArgs e)
         {
             frmMainForm_Load_(false);
+        }
+
+        private void tsmiManagePatient_Click(object sender, EventArgs e)
+        {
+            //Xóa nội dung các tabpage
+            tabPagePatients.Controls.Clear();
+            tabPageDoctors.Controls.Clear();
+
+            //tạo các đối tượng form và truyền vào các tabpage của tabcontrol
+            frmManagePatients frmManagePatients = new frmManagePatients(tabPagePatients, tabControlMain);
+
+            //thiết lập nhúng các form vào các tabpage
+            frmManagePatients.TopLevel = false;
+            frmManagePatients.Dock = DockStyle.Fill;
+            frmManagePatients.Visible = true;
+
+            //Thêm các form vào tabpage
+            tabPagePatients.Controls.Add(frmManagePatients);
+
+            //chuyển focus sang tabpage được chọn
+            tabControlMain.SelectedTab = tabPagePatients;
+            //Kiểm tra nếu tabpage bị ẩn thì mở lại
+            if (!tabControlMain.TabPages.Contains(tabPagePatients))
+            {
+                tabControlMain.TabPages.Add(tabPagePatients);
+            }
         }
     }
 }
