@@ -318,7 +318,8 @@
             this.lblHello.Name = "lblHello";
             this.lblHello.Size = new System.Drawing.Size(215, 39);
             this.lblHello.TabIndex = 6;
-            this.lblHello.Text = "Hi, Hồ Huyền Anh";
+            this.lblHello.Tag = "";
+            this.lblHello.Text = "lblNameLogin";
             this.lblHello.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnLang
@@ -405,7 +406,7 @@
             this.tabControlMain.Controls.Add(this.tabPagePatients);
             this.tabControlMain.Controls.Add(this.tabPageDoctors);
             this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlMain.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlMain.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlMain.Location = new System.Drawing.Point(0, 0);
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
@@ -415,10 +416,10 @@
             // tabPagePatients
             // 
             this.tabPagePatients.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPagePatients.Location = new System.Drawing.Point(4, 24);
+            this.tabPagePatients.Location = new System.Drawing.Point(4, 28);
             this.tabPagePatients.Name = "tabPagePatients";
             this.tabPagePatients.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePatients.Size = new System.Drawing.Size(871, 354);
+            this.tabPagePatients.Size = new System.Drawing.Size(1432, 728);
             this.tabPagePatients.TabIndex = 0;
             this.tabPagePatients.Text = "Manage Patients";
             this.tabPagePatients.UseVisualStyleBackColor = true;

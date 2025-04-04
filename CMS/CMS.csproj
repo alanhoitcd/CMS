@@ -77,6 +77,12 @@
     <Compile Include="GUI\frmMainForm.Designer.cs">
       <DependentUpon>frmMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmManagePatients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmManagePatients.Designer.cs">
+      <DependentUpon>frmManagePatients.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     <Compile Include="UTIL\UTIL.cs" />
     <EmbeddedResource Include="GUI\frmCreateAccount.resx">
       <DependentUpon>frmCreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmManagePatients.resx">
+      <DependentUpon>frmManagePatients.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmTest.resx">
       <DependentUpon>frmTest.cs</DependentUpon>
