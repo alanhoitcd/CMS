@@ -38,3 +38,6 @@ D:\_HuyenAnh_\_DuAn_\CMS\CMS\obj\Debug\CMS.GUI.frmCreateAccount.resources
 D:\_DE_TAI_\CMS\CMS\obj\Debug\CMS.GUI.frmCreateAccount.resources
 D:\_DE_TAI_\CMS\CMS\obj\Debug\CMS.GUI.frmTest.resources
 D:\_DE_TAI_\CMS\CMS\obj\Debug\CMS.GUI.frmManagePatients.resources
+D:\_DE_TAI_\CMS\CMS\bin\Debug\vi\CMS.resources.dll
+D:\_DE_TAI_\CMS\CMS\obj\Debug\CMS.Properties.Resources.vi.resources
+D:\_DE_TAI_\CMS\CMS\obj\Debug\vi\CMS.resources.dll

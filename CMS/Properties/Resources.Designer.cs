@@ -341,12 +341,111 @@ namespace CMS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Where health begins, technology leads the way.
+        /// </summary>
+        internal static string lblLogan_Text {
+            get {
+                return ResourceManager.GetString("lblLogan.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap logo {
             get {
                 object obj = ResourceManager.GetObject("logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File.
+        /// </summary>
+        internal static string tsmiFile_Text {
+            get {
+                return ResourceManager.GetString("tsmiFile.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Help.
+        /// </summary>
+        internal static string tsmiHelp_Text {
+            get {
+                return ResourceManager.GetString("tsmiHelp.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manage Appointments.
+        /// </summary>
+        internal static string tsmiManageAppointments_Text {
+            get {
+                return ResourceManager.GetString("tsmiManageAppointments.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manage Doctors.
+        /// </summary>
+        internal static string tsmiManageDoctors_Text {
+            get {
+                return ResourceManager.GetString("tsmiManageDoctors.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manage Medicine Inventory.
+        /// </summary>
+        internal static string tsmiManageMedicineInventory_Text {
+            get {
+                return ResourceManager.GetString("tsmiManageMedicineInventory.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Management.
+        /// </summary>
+        internal static string tsmiManagement_Text {
+            get {
+                return ResourceManager.GetString("tsmiManagement.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manage Patient.
+        /// </summary>
+        internal static string tsmiManagePatient_Text {
+            get {
+                return ResourceManager.GetString("tsmiManagePatient.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Patient Examination.
+        /// </summary>
+        internal static string tsmiPatientExamination_Text {
+            get {
+                return ResourceManager.GetString("tsmiPatientExamination.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reports..
+        /// </summary>
+        internal static string tsmiReports_Text {
+            get {
+                return ResourceManager.GetString("tsmiReports.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to System.
+        /// </summary>
+        internal static string tsmiSystem_Text {
+            get {
+                return ResourceManager.GetString("tsmiSystem.Text", resourceCulture);
             }
         }
     }

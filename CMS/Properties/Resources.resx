@@ -205,4 +205,37 @@
   <data name="imgfrmCreateAccount" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\IMG\imgfrmCreateAccount.jpg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="lblLogan.Text" xml:space="preserve">
+    <value>Where health begins, technology leads the way</value>
+  </data>
+  <data name="tsmiFile.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="tsmiManagement.Text" xml:space="preserve">
+    <value>Management</value>
+  </data>
+  <data name="tsmiPatientExamination.Text" xml:space="preserve">
+    <value>Patient Examination</value>
+  </data>
+  <data name="tsmiReports.Text" xml:space="preserve">
+    <value>Reports.</value>
+  </data>
+  <data name="tsmiSystem.Text" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="tsmiHelp.Text" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="tsmiManagePatient.Text" xml:space="preserve">
+    <value>Manage Patient</value>
+  </data>
+  <data name="tsmiManageDoctors.Text" xml:space="preserve">
+    <value>Manage Doctors</value>
+  </data>
+  <data name="tsmiManageAppointments.Text" xml:space="preserve">
+    <value>Manage Appointments</value>
+  </data>
+  <data name="tsmiManageMedicineInventory.Text" xml:space="preserve">
+    <value>Manage Medicine Inventory</value>
+  </data>
 </root>

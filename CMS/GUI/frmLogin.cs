@@ -54,7 +54,7 @@ namespace CMS.VIEW
             {
                 if (NguoiDung_BLL_.checkPassword(txtUserName.Text, txtPassword.Text)) //kiểm tra mật khẩu đúng
                 {
-                    MessageBox.Show("Đăng nhập thành công", "Thông báo");
+                    //MessageBox.Show("Đăng nhập thành công", "Thông báo");
                     this.DialogResult = DialogResult.OK;
                     countSaiPass = 0;
                 }

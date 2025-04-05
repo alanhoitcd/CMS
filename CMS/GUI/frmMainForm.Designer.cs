@@ -65,6 +65,8 @@
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabPagePatients = new System.Windows.Forms.TabPage();
             this.tabPageDoctors = new System.Windows.Forms.TabPage();
+            this.tabPageManageAppointments = new System.Windows.Forms.TabPage();
+            this.tabPageManageMedicineInventory = new System.Windows.Forms.TabPage();
             this.menuStripMain.SuspendLayout();
             this.pnlHead.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -125,6 +127,7 @@
             this.tsmiChangePassword.Name = "tsmiChangePassword";
             this.tsmiChangePassword.Size = new System.Drawing.Size(243, 28);
             this.tsmiChangePassword.Text = "Change Password";
+            this.tsmiChangePassword.Click += new System.EventHandler(this.tsmiChangePassword_Click);
             // 
             // tsmiExit
             // 
@@ -406,6 +409,8 @@
             // 
             this.tabControlMain.Controls.Add(this.tabPagePatients);
             this.tabControlMain.Controls.Add(this.tabPageDoctors);
+            this.tabControlMain.Controls.Add(this.tabPageManageAppointments);
+            this.tabControlMain.Controls.Add(this.tabPageManageMedicineInventory);
             this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlMain.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlMain.Location = new System.Drawing.Point(0, 0);
@@ -435,6 +440,24 @@
             this.tabPageDoctors.TabIndex = 1;
             this.tabPageDoctors.Text = "Manage Doctors";
             this.tabPageDoctors.UseVisualStyleBackColor = true;
+            // 
+            // tabPageManageAppointments
+            // 
+            this.tabPageManageAppointments.Location = new System.Drawing.Point(4, 28);
+            this.tabPageManageAppointments.Name = "tabPageManageAppointments";
+            this.tabPageManageAppointments.Size = new System.Drawing.Size(1432, 728);
+            this.tabPageManageAppointments.TabIndex = 2;
+            this.tabPageManageAppointments.Text = "Manage Appointments";
+            this.tabPageManageAppointments.UseVisualStyleBackColor = true;
+            // 
+            // tabPageManageMedicineInventory
+            // 
+            this.tabPageManageMedicineInventory.Location = new System.Drawing.Point(4, 28);
+            this.tabPageManageMedicineInventory.Name = "tabPageManageMedicineInventory";
+            this.tabPageManageMedicineInventory.Size = new System.Drawing.Size(1432, 728);
+            this.tabPageManageMedicineInventory.TabIndex = 3;
+            this.tabPageManageMedicineInventory.Text = "Manage Medicine Inventory";
+            this.tabPageManageMedicineInventory.UseVisualStyleBackColor = true;
             // 
             // frmMainForm
             // 
@@ -503,6 +526,8 @@
         private System.Windows.Forms.TabControl tabControlMain;
         private System.Windows.Forms.TabPage tabPagePatients;
         private System.Windows.Forms.TabPage tabPageDoctors;
+        private System.Windows.Forms.TabPage tabPageManageAppointments;
+        private System.Windows.Forms.TabPage tabPageManageMedicineInventory;
     }
 }
 
