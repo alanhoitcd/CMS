@@ -88,7 +88,7 @@
             this.tsmiHelp});
             this.menuStripMain.Location = new System.Drawing.Point(54, 4);
             this.menuStripMain.Name = "menuStripMain";
-            this.menuStripMain.Size = new System.Drawing.Size(1000, 40);
+            this.menuStripMain.Size = new System.Drawing.Size(1106, 40);
             this.menuStripMain.TabIndex = 0;
             // 
             // tsmiFile

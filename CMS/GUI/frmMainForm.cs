@@ -35,9 +35,9 @@ namespace CMS
 
         void ChangeLanguage(Guna2Button btnLang, Label lblLogan)//event btnLang_Click()
         {
-            if (statusLangENG)
+            if (Language.statusLangENG == DialogResult.OK)
             {
-                statusLangENG = false;
+                Language.statusLangENG = DialogResult.Cancel;
                 lblLogan.Text = "Nơi sức khỏe bắt đầu, công nghệ dẫn lối";
                 using (MemoryStream ms = new MemoryStream(Properties.Resources.iconUSA))
                 {
@@ -46,7 +46,7 @@ namespace CMS
             }
             else
             {
-                statusLangENG = true;
+                Language.statusLangENG = DialogResult.OK;
                 lblLogan.Text = "Where health begins, technology leads the way";
                 using (MemoryStream ms = new MemoryStream(Properties.Resources.iconVietNam))
                 {
@@ -55,30 +55,33 @@ namespace CMS
             }
         }
 
-        void ChangeScreenMode(Guna2Button btnScreenMode, bool lightMode)//event btnScreenMode_Click()
-        {
-            if (statusLightMode)
-            {
-                statusLightMode = false;
-                this.BackColor = Color.Gray;
-                using (MemoryStream ms = new MemoryStream(Properties.Resources.iconLightMode))
-                {
-                    btnScreenMode.Image = Image.FromStream(ms);
-                }
-            }
-            else
-            {
-                statusLightMode = true;
-                this.BackColor = Color.WhiteSmoke;
-                using (MemoryStream ms = new MemoryStream(Properties.Resources.iconDarkMode))
-                {
-                    btnScreenMode.Image = Image.FromStream(ms);
-                }
-            }
-        }
+        //void ChangeScreenMode(Guna2Button btnScreenMode, bool lightMode)//event btnScreenMode_Click()
+        //{
+        //    if (statusLightMode)
+        //    {
+        //        statusLightMode = false;
+        //        this.BackColor = Color.Gray;
+        //        using (MemoryStream ms = new MemoryStream(Properties.Resources.iconLightMode))
+        //        {
+        //            btnScreenMode.Image = Image.FromStream(ms);
+        //        }
+        //    }
+        //    else
+        //    {
+        //        statusLightMode = true;
+        //        this.BackColor = Color.WhiteSmoke;
+        //        using (MemoryStream ms = new MemoryStream(Properties.Resources.iconDarkMode))
+        //        {
+        //            btnScreenMode.Image = Image.FromStream(ms);
+        //        }
+        //    }
+        //}
 
         private void frmMainForm_Load_(bool on)//hàm khi form chạy
         {
+            //Ẩn nút đổi giao diện, phát triển tính năng sau, còn chưa đổi màu được viền của tabControl được
+            btnScreenMode.Hide();
+
             //thiết lập các icon cho toolmenustrip File item
             using (MemoryStream ms = new MemoryStream(Properties.Resources.iconLogin))
             {
@@ -96,6 +99,7 @@ namespace CMS
             {
                 tsmiExit.Image = Image.FromStream(ms);
             }
+
             //thiết lập các icon cho toolmenustrip Menagement item
             using (MemoryStream ms = new MemoryStream(Properties.Resources.iconManagePatients))
             {
@@ -113,6 +117,7 @@ namespace CMS
             {
                 tsmiManageMedicineInventory.Image = Image.FromStream(ms);
             }
+
             //thiết lập các icon cho toolmenustrip Patient Examination item
             using (MemoryStream ms = new MemoryStream(Properties.Resources.iconManageExaminationHistory))
             {
@@ -122,6 +127,7 @@ namespace CMS
             {
                 tsmiManagePrescriptions.Image = Image.FromStream(ms);
             }
+
             //thiết lập các icon cho toolmenustrip report item
             using (MemoryStream ms = new MemoryStream(Properties.Resources.iconPatientListReport))
             {
@@ -135,6 +141,7 @@ namespace CMS
             {
                 tsmiInventoryAndMedicineRevenueReport.Image = Image.FromStream(ms);
             }
+
             //thiết lập các icon cho toolmenustrip System item
             using (MemoryStream ms = new MemoryStream(Properties.Resources.iconManageUserAccounts))
             {
@@ -148,6 +155,7 @@ namespace CMS
             {
                 tsmiBackupandRestoreDatabase.Image = Image.FromStream(ms);
             }
+
             //thiết lập các icon cho toolmenustrip help item
             using (MemoryStream ms = new MemoryStream(Properties.Resources.iconAboutSoftware))
             {
@@ -161,18 +169,19 @@ namespace CMS
             {
                 tsmiContactSupport.Image = Image.FromStream(ms);
             }
+
             //Ẩn các menustrip
+            tsmiManagement.Enabled = on;
+            tsmiPatientExamination.Enabled = on;
+            tsmiReports.Enabled = on;
+            tsmiSystem.Enabled = on;
+
             tsmiLogout.Enabled = on;
             tsmiChangePassword.Enabled = on;
-            tsmiManagement.Enabled = on;
-            tsmiChangePassword.Enabled = on;
-            tsmiPatientExamination.Enabled = on;
-            tsmiChangePassword.Enabled = on;
-            tsmiReports.Enabled = on;
-            tsmiChangePassword.Enabled = on;
-            tsmiManageUserAccounts.Enabled = on;
-            tsmiChangePassword.Enabled = on;
+
+            //hiện các menustrip
             tsmiLogin.Enabled = !on;
+
             //Ẩn Panel main
             if (!on)
             {
@@ -182,6 +191,7 @@ namespace CMS
             {
                 pnlMain.Show();
             }
+
             //Ẩn các tabcontrol
             tabControlMain.TabPages.Remove(tabPagePatients);
             tabControlMain.TabPages.Remove(tabPageDoctors);
@@ -200,7 +210,7 @@ namespace CMS
 
         private void btnScreenMode_Click(object sender, EventArgs e)
         {
-            ChangeScreenMode(btnScreenMode, statusLightMode);
+            //ChangeScreenMode(btnScreenMode, statusLightMode);
         }
 
         private void btnLang_Click(object sender, EventArgs e)
