@@ -163,6 +163,7 @@
             this.tsmiManageDoctors.Name = "tsmiManageDoctors";
             this.tsmiManageDoctors.Size = new System.Drawing.Size(331, 28);
             this.tsmiManageDoctors.Text = "Manage Doctors";
+            this.tsmiManageDoctors.Click += new System.EventHandler(this.tsmiManageDoctors_Click);
             // 
             // tsmiManageAppointments
             // 
@@ -323,7 +324,7 @@
             this.lblHello.Size = new System.Drawing.Size(215, 39);
             this.lblHello.TabIndex = 6;
             this.lblHello.Tag = "";
-            this.lblHello.Text = "lblNameLogin";
+            this.lblHello.Text = "Hi";
             this.lblHello.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnLang

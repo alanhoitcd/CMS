@@ -341,6 +341,15 @@ namespace CMS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hi.
+        /// </summary>
+        internal static string lblHello_Text {
+            get {
+                return ResourceManager.GetString("lblHello.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Where health begins, technology leads the way.
         /// </summary>
         internal static string lblLogan_Text {

@@ -292,4 +292,7 @@
   <data name="tabPageMedicineInventory.Text" xml:space="preserve">
     <value>Medicine Inventory</value>
   </data>
+  <data name="lblHello.Text" xml:space="preserve">
+    <value>Hi</value>
+  </data>
 </root>

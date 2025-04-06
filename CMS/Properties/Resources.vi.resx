@@ -207,4 +207,7 @@
   <data name="tabPageMedicineInventory.Text" xml:space="preserve">
     <value>Kho thuốc</value>
   </data>
+  <data name="lblHello.Text" xml:space="preserve">
+    <value>Chào</value>
+  </data>
 </root>

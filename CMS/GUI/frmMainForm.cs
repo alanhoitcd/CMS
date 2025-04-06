@@ -31,9 +31,13 @@ namespace CMS
 {
     public partial class frmMainForm : Form
     {
+        string userName = "";
         //hàm cập nhật text ngôn ngữ mới cho các control
         private void UpdateLanguage()
         {
+            //Đổi ngôn ngữ label Chào
+            lblHello.Text = LanguageManager.GetString("lblHello.Text") + " " + this.userName;
+
             //Đổi ngôn ngữ label logan
             lblLogan.Text = LanguageManager.GetString("lblLogan.Text");
 
@@ -104,7 +108,7 @@ namespace CMS
             else
             {
                 //Gán giá trị mã ngôn ngữ mới cho Lang.// Setter sẽ kiểm tra giá trị
-                UTIL.Language.Lang = "en"; 
+                UTIL.Language.Lang = "en";
                 UTIL.LanguageManager.SetLanguage("en-US");
 
                 //thay đổi ảnh icon ngôn ngữ
@@ -233,10 +237,10 @@ namespace CMS
             }
 
             //Ẩn các tabcontrol
-            //tabControlMain.TabPages.Remove(tabPagePatients);
-            //tabControlMain.TabPages.Remove(tabPageDoctors);
-            //tabControlMain.TabPages.Remove(tabPageAppointments);
-            //tabControlMain.TabPages.Remove(tabPageMedicineInventory);
+            tabControlMain.TabPages.Remove(tabPagePatients);
+            tabControlMain.TabPages.Remove(tabPageDoctors);
+            tabControlMain.TabPages.Remove(tabPageAppointments);
+            tabControlMain.TabPages.Remove(tabPageMedicineInventory);
 
 
         }
@@ -272,6 +276,8 @@ namespace CMS
             if (f.ShowDialog() == DialogResult.OK)
             {
                 frmMainForm_Load_(false);
+                this.userName = "Hồ Huyền Anh";
+                lblHello.Text = LanguageManager.GetString("lblHello.Text") + " " + this.userName;
             }
             else
             {
@@ -282,6 +288,8 @@ namespace CMS
         private void tsmiLogout_Click(object sender, EventArgs e)
         {
             frmMainForm_Load_(true);
+            this.userName = "";
+            lblHello.Text = LanguageManager.GetString("lblHello.Text") + " " + this.userName;
         }
 
         private void tsmiManagePatient_Click(object sender, EventArgs e)
@@ -311,6 +319,11 @@ namespace CMS
         }
 
         private void tsmiChangePassword_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsmiManageDoctors_Click(object sender, EventArgs e)
         {
 
         }
