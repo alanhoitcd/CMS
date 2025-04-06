@@ -50,7 +50,7 @@
             this.tsmiSystem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiManageUserAccounts = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiViewActivityLog = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiBackupandRestoreDatabase = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiBackupAndRestoreDatabase = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAboutSoftware = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiUserGuide = new System.Windows.Forms.ToolStripMenuItem();
@@ -239,7 +239,7 @@
             this.tsmiSystem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiManageUserAccounts,
             this.tsmiViewActivityLog,
-            this.tsmiBackupandRestoreDatabase});
+            this.tsmiBackupAndRestoreDatabase});
             this.tsmiSystem.ForeColor = System.Drawing.Color.RoyalBlue;
             this.tsmiSystem.Name = "tsmiSystem";
             this.tsmiSystem.Size = new System.Drawing.Size(85, 36);
@@ -259,12 +259,12 @@
             this.tsmiViewActivityLog.Size = new System.Drawing.Size(348, 28);
             this.tsmiViewActivityLog.Text = "View Activity Log";
             // 
-            // tsmiBackupandRestoreDatabase
+            // tsmiBackupAndRestoreDatabase
             // 
-            this.tsmiBackupandRestoreDatabase.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.tsmiBackupandRestoreDatabase.Name = "tsmiBackupandRestoreDatabase";
-            this.tsmiBackupandRestoreDatabase.Size = new System.Drawing.Size(348, 28);
-            this.tsmiBackupandRestoreDatabase.Text = "Backup and Restore Database";
+            this.tsmiBackupAndRestoreDatabase.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.tsmiBackupAndRestoreDatabase.Name = "tsmiBackupAndRestoreDatabase";
+            this.tsmiBackupAndRestoreDatabase.Size = new System.Drawing.Size(348, 28);
+            this.tsmiBackupAndRestoreDatabase.Text = "Backup and Restore Database";
             // 
             // tsmiHelp
             // 
@@ -517,7 +517,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiInventoryAndMedicineRevenueReport;
         private System.Windows.Forms.ToolStripMenuItem tsmiManageUserAccounts;
         private System.Windows.Forms.ToolStripMenuItem tsmiViewActivityLog;
-        private System.Windows.Forms.ToolStripMenuItem tsmiBackupandRestoreDatabase;
+        private System.Windows.Forms.ToolStripMenuItem tsmiBackupAndRestoreDatabase;
         private System.Windows.Forms.ToolStripMenuItem tsmiAboutSoftware;
         private System.Windows.Forms.ToolStripMenuItem tsmiUserGuide;
         private System.Windows.Forms.ToolStripMenuItem tsmiContactSupport;

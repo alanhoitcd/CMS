@@ -117,10 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="logo" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="lblLogan.Text" xml:space="preserve">
     <value>Nơi sức khỏe bắt đầu, công nghệ dẫn lối</value>
   </data>
@@ -140,7 +136,7 @@
     <value>Hệ Thống</value>
   </data>
   <data name="tsmiHelp.Text" xml:space="preserve">
-    <value>Hổ Trợ</value>
+    <value>Hỗ Trợ</value>
   </data>
   <data name="tsmiManagePatient.Text" xml:space="preserve">
     <value>Quản Lý Bệnh Nhân</value>
@@ -153,5 +149,50 @@
   </data>
   <data name="tsmiManageMedicineInventory.Text" xml:space="preserve">
     <value>Quản Lý Kho Thuốc</value>
+  </data>
+  <data name="tsmiLogin.Text" xml:space="preserve">
+    <value>Đăng Nhập</value>
+  </data>
+  <data name="tsmiLogout.Text" xml:space="preserve">
+    <value>Đăng Xuất</value>
+  </data>
+  <data name="tsmiChangePassword.Text" xml:space="preserve">
+    <value>Đổi Mật Khẩu</value>
+  </data>
+  <data name="tsmiExit.Text" xml:space="preserve">
+    <value>Thoát</value>
+  </data>
+  <data name="tsmiAboutSoftware.Text" xml:space="preserve">
+    <value>Về Phần Mềm</value>
+  </data>
+  <data name="tsmiUserGuide.Text" xml:space="preserve">
+    <value>Hướng Dẫn Sử Dụng</value>
+  </data>
+  <data name="tsmiContactSupport.Text" xml:space="preserve">
+    <value>Liên Hệ Hỗ Trợ</value>
+  </data>
+  <data name="tsmiManageExaminationHistory.Text" xml:space="preserve">
+    <value>Quản Lý Lịch Sử Khám Bệnh</value>
+  </data>
+  <data name="tsmiManagePrescriptions.Text" xml:space="preserve">
+    <value>Quản Lý Đơn Thuốc</value>
+  </data>
+  <data name="tsmiPatientListReport.Text" xml:space="preserve">
+    <value>Báo Cáo Danh Sách Bệnh Nhân</value>
+  </data>
+  <data name="tsmiAppointmentScheduleReport.Text" xml:space="preserve">
+    <value>Báo Cáo Lịch Hẹn Khám Bệnh</value>
+  </data>
+  <data name="tsmiInventoryAndMedicineRevenueReport.Text" xml:space="preserve">
+    <value>Báo Cáo Doanh Thu Thuốc và Tồn Kho</value>
+  </data>
+  <data name="tsmiManageUserAccounts.Text" xml:space="preserve">
+    <value>Quản Lý Tài Khoản Người Dùng</value>
+  </data>
+  <data name="tsmiViewActivityLog.Text" xml:space="preserve">
+    <value>Xem Nhật Ký Hoạt Động</value>
+  </data>
+  <data name="tsmiBackupAndRestoreDatabase.Text" xml:space="preserve">
+    <value>Sao Lưu và Khôi Phục Cơ Sở Dữ Liệu</value>
   </data>
 </root>

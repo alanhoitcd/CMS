@@ -39,6 +39,12 @@ namespace CMS
 
             //Đổi ngôn ngữ các toolstripmenu item of tsmiFile
             tsmiFile.Text = LanguageManager.GetString("tsmiFile.Text");
+            tsmiLogin.Text = LanguageManager.GetString("tsmiLogin.Text");
+            tsmiLogout.Text = LanguageManager.GetString("tsmiLogout.Text");
+            tsmiChangePassword.Text = LanguageManager.GetString("tsmiChangePassword.Text");
+            tsmiExit.Text = LanguageManager.GetString("tsmiExit.Text");
+
+            //Đổi ngôn ngữ các toolstripmenu item of tsmiManagement
             tsmiManagement.Text = LanguageManager.GetString("tsmiManagement.Text");
             tsmiManagePatient.Text = LanguageManager.GetString("tsmiManagePatient.Text");
             tsmiManageDoctors.Text = LanguageManager.GetString("tsmiManageDoctors.Text");
@@ -47,15 +53,29 @@ namespace CMS
 
             //Đổi ngôn ngữ các toolstripmenu item of tsmiPatientExamination
             tsmiPatientExamination.Text = LanguageManager.GetString("tsmiPatientExamination.Text");
+            tsmiManageExaminationHistory.Text = LanguageManager.GetString("tsmiManageExaminationHistory.Text");
+            tsmiManagePrescriptions.Text = LanguageManager.GetString("tsmiManagePrescriptions.Text");
+
 
             //Đổi ngôn ngữ các toolstripmenu item of tsmiReports
             tsmiReports.Text = LanguageManager.GetString("tsmiReports.Text");
+            tsmiPatientListReport.Text = LanguageManager.GetString("tsmiPatientListReport.Text");
+            tsmiAppointmentScheduleReport.Text = LanguageManager.GetString("tsmiAppointmentScheduleReport.Text");
+            tsmiInventoryAndMedicineRevenueReport.Text = LanguageManager.GetString("tsmiInventoryAndMedicineRevenueReport.Text");
+
 
             //Đổi ngôn ngữ các toolstripmenu item of tsmiSystem
             tsmiSystem.Text = LanguageManager.GetString("tsmiSystem.Text");
+            tsmiManageUserAccounts.Text = LanguageManager.GetString("tsmiManageUserAccounts.Text");
+            tsmiViewActivityLog.Text = LanguageManager.GetString("tsmiViewActivityLog.Text");
+            tsmiBackupAndRestoreDatabase.Text = LanguageManager.GetString("tsmiBackupAndRestoreDatabase.Text");
+
 
             //Đổi ngôn ngữ các toolstripmenu item of tsmiHelp
             tsmiHelp.Text = LanguageManager.GetString("tsmiHelp.Text");
+            tsmiAboutSoftware.Text = LanguageManager.GetString("tsmiAboutSoftware.Text");
+            tsmiUserGuide.Text = LanguageManager.GetString("tsmiUserGuide.Text");
+            tsmiContactSupport.Text = LanguageManager.GetString("tsmiContactSupport.Text");
 
 
         }
@@ -93,10 +113,6 @@ namespace CMS
         //hàm khi form chạy, truyền vào true == trạng thái chưa đăng nhập và ngược lại
         private void frmMainForm_Load_(bool on)
         {
-            //thiết lập ngôn ngữ mặc định khi form chạy
-            LanguageManager.SetLanguage("en-US");
-            UpdateLanguage();
-
             //Ẩn nút đổi giao diện, phát triển tính năng sau, còn chưa đổi màu được viền của tabControl được
             btnScreenMode.Hide();
 
@@ -171,7 +187,7 @@ namespace CMS
             }
             using (MemoryStream ms = new MemoryStream(Properties.Resources.iconBackupandRestoreDatabase))
             {
-                tsmiBackupandRestoreDatabase.Image = Image.FromStream(ms);
+                tsmiBackupAndRestoreDatabase.Image = Image.FromStream(ms);
             }
 
             //thiết lập các ảnh icon cho toolmenustrip help item
