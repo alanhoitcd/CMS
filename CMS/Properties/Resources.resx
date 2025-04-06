@@ -280,4 +280,16 @@
   <data name="tsmiBackupAndRestoreDatabase.Text" xml:space="preserve">
     <value>Backup And Restore Database</value>
   </data>
+  <data name="tabPagePatients.Text" xml:space="preserve">
+    <value>Patients</value>
+  </data>
+  <data name="tabPageDoctors.Text" xml:space="preserve">
+    <value>Doctors</value>
+  </data>
+  <data name="tabPageAppointments.Text" xml:space="preserve">
+    <value>Appointments</value>
+  </data>
+  <data name="tabPageMedicineInventory.Text" xml:space="preserve">
+    <value>Medicine Inventory</value>
+  </data>
 </root>

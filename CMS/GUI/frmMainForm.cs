@@ -77,6 +77,12 @@ namespace CMS
             tsmiUserGuide.Text = LanguageManager.GetString("tsmiUserGuide.Text");
             tsmiContactSupport.Text = LanguageManager.GetString("tsmiContactSupport.Text");
 
+            //Đổi ngôn ngữ các tabpage thuộc tabControlMain
+            tabPagePatients.Text = LanguageManager.GetString("tabPagePatients.Text");
+            tabPageDoctors.Text = LanguageManager.GetString("tabPageDoctors.Text");
+            tabPageAppointments.Text = LanguageManager.GetString("tabPageAppointments.Text");
+            tabPageMedicineInventory.Text = LanguageManager.GetString("tabPageMedicineInventory.Text");
+
 
         }
 
@@ -227,10 +233,10 @@ namespace CMS
             }
 
             //Ẩn các tabcontrol
-            tabControlMain.TabPages.Remove(tabPagePatients);
-            tabControlMain.TabPages.Remove(tabPageDoctors);
-            tabControlMain.TabPages.Remove(tabPageManageAppointments);
-            tabControlMain.TabPages.Remove(tabPageManageMedicineInventory);
+            //tabControlMain.TabPages.Remove(tabPagePatients);
+            //tabControlMain.TabPages.Remove(tabPageDoctors);
+            //tabControlMain.TabPages.Remove(tabPageAppointments);
+            //tabControlMain.TabPages.Remove(tabPageMedicineInventory);
 
 
         }

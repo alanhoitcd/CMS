@@ -350,6 +350,42 @@ namespace CMS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Appointments.
+        /// </summary>
+        internal static string tabPageAppointments_Text {
+            get {
+                return ResourceManager.GetString("tabPageAppointments.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Doctors.
+        /// </summary>
+        internal static string tabPageDoctors_Text {
+            get {
+                return ResourceManager.GetString("tabPageDoctors.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Medicine Inventory.
+        /// </summary>
+        internal static string tabPageMedicineInventory_Text {
+            get {
+                return ResourceManager.GetString("tabPageMedicineInventory.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Patients.
+        /// </summary>
+        internal static string tabPagePatients_Text {
+            get {
+                return ResourceManager.GetString("tabPagePatients.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to About Software.
         /// </summary>
         internal static string tsmiAboutSoftware_Text {

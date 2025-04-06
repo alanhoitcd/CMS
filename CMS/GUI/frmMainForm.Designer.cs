@@ -65,8 +65,8 @@
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabPagePatients = new System.Windows.Forms.TabPage();
             this.tabPageDoctors = new System.Windows.Forms.TabPage();
-            this.tabPageManageAppointments = new System.Windows.Forms.TabPage();
-            this.tabPageManageMedicineInventory = new System.Windows.Forms.TabPage();
+            this.tabPageAppointments = new System.Windows.Forms.TabPage();
+            this.tabPageMedicineInventory = new System.Windows.Forms.TabPage();
             this.menuStripMain.SuspendLayout();
             this.pnlHead.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -409,8 +409,8 @@
             // 
             this.tabControlMain.Controls.Add(this.tabPagePatients);
             this.tabControlMain.Controls.Add(this.tabPageDoctors);
-            this.tabControlMain.Controls.Add(this.tabPageManageAppointments);
-            this.tabControlMain.Controls.Add(this.tabPageManageMedicineInventory);
+            this.tabControlMain.Controls.Add(this.tabPageAppointments);
+            this.tabControlMain.Controls.Add(this.tabPageMedicineInventory);
             this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlMain.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlMain.Location = new System.Drawing.Point(0, 0);
@@ -427,7 +427,7 @@
             this.tabPagePatients.Padding = new System.Windows.Forms.Padding(3);
             this.tabPagePatients.Size = new System.Drawing.Size(1432, 728);
             this.tabPagePatients.TabIndex = 0;
-            this.tabPagePatients.Text = "Manage Patients";
+            this.tabPagePatients.Text = "Patients";
             this.tabPagePatients.UseVisualStyleBackColor = true;
             // 
             // tabPageDoctors
@@ -438,26 +438,26 @@
             this.tabPageDoctors.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageDoctors.Size = new System.Drawing.Size(1432, 728);
             this.tabPageDoctors.TabIndex = 1;
-            this.tabPageDoctors.Text = "Manage Doctors";
+            this.tabPageDoctors.Text = "Doctors";
             this.tabPageDoctors.UseVisualStyleBackColor = true;
             // 
-            // tabPageManageAppointments
+            // tabPageAppointments
             // 
-            this.tabPageManageAppointments.Location = new System.Drawing.Point(4, 28);
-            this.tabPageManageAppointments.Name = "tabPageManageAppointments";
-            this.tabPageManageAppointments.Size = new System.Drawing.Size(1432, 728);
-            this.tabPageManageAppointments.TabIndex = 2;
-            this.tabPageManageAppointments.Text = "Manage Appointments";
-            this.tabPageManageAppointments.UseVisualStyleBackColor = true;
+            this.tabPageAppointments.Location = new System.Drawing.Point(4, 28);
+            this.tabPageAppointments.Name = "tabPageAppointments";
+            this.tabPageAppointments.Size = new System.Drawing.Size(1432, 728);
+            this.tabPageAppointments.TabIndex = 2;
+            this.tabPageAppointments.Text = "Appointments";
+            this.tabPageAppointments.UseVisualStyleBackColor = true;
             // 
-            // tabPageManageMedicineInventory
+            // tabPageMedicineInventory
             // 
-            this.tabPageManageMedicineInventory.Location = new System.Drawing.Point(4, 28);
-            this.tabPageManageMedicineInventory.Name = "tabPageManageMedicineInventory";
-            this.tabPageManageMedicineInventory.Size = new System.Drawing.Size(1432, 728);
-            this.tabPageManageMedicineInventory.TabIndex = 3;
-            this.tabPageManageMedicineInventory.Text = "Manage Medicine Inventory";
-            this.tabPageManageMedicineInventory.UseVisualStyleBackColor = true;
+            this.tabPageMedicineInventory.Location = new System.Drawing.Point(4, 28);
+            this.tabPageMedicineInventory.Name = "tabPageMedicineInventory";
+            this.tabPageMedicineInventory.Size = new System.Drawing.Size(1432, 728);
+            this.tabPageMedicineInventory.TabIndex = 3;
+            this.tabPageMedicineInventory.Text = "Medicine Inventory";
+            this.tabPageMedicineInventory.UseVisualStyleBackColor = true;
             // 
             // frmMainForm
             // 
@@ -526,8 +526,8 @@
         private System.Windows.Forms.TabControl tabControlMain;
         private System.Windows.Forms.TabPage tabPagePatients;
         private System.Windows.Forms.TabPage tabPageDoctors;
-        private System.Windows.Forms.TabPage tabPageManageAppointments;
-        private System.Windows.Forms.TabPage tabPageManageMedicineInventory;
+        private System.Windows.Forms.TabPage tabPageAppointments;
+        private System.Windows.Forms.TabPage tabPageMedicineInventory;
     }
 }
 
