@@ -31,9 +31,9 @@
             this.ptbLogin = new System.Windows.Forms.PictureBox();
             this.panel = new System.Windows.Forms.Panel();
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.llblDontHaveAnAccount = new System.Windows.Forms.LinkLabel();
             this.llblForgotPassword = new System.Windows.Forms.LinkLabel();
-            this.cboRemember = new System.Windows.Forms.CheckBox();
+            this.chkRememberPassword = new System.Windows.Forms.CheckBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
@@ -55,9 +55,9 @@
             // panel
             // 
             this.panel.Controls.Add(this.btnClose);
-            this.panel.Controls.Add(this.linkLabel1);
+            this.panel.Controls.Add(this.llblDontHaveAnAccount);
             this.panel.Controls.Add(this.llblForgotPassword);
-            this.panel.Controls.Add(this.cboRemember);
+            this.panel.Controls.Add(this.chkRememberPassword);
             this.panel.Controls.Add(this.txtPassword);
             this.panel.Controls.Add(this.btnLogin);
             this.panel.Controls.Add(this.txtUserName);
@@ -88,17 +88,17 @@
             this.btnClose.TabIndex = 2;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // linkLabel1
+            // llblDontHaveAnAccount
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(208, 333);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(175, 19);
-            this.linkLabel1.TabIndex = 8;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Don\'t have an account?";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.llblDontHaveAnAccount.AutoSize = true;
+            this.llblDontHaveAnAccount.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblDontHaveAnAccount.Location = new System.Drawing.Point(208, 333);
+            this.llblDontHaveAnAccount.Name = "llblDontHaveAnAccount";
+            this.llblDontHaveAnAccount.Size = new System.Drawing.Size(175, 19);
+            this.llblDontHaveAnAccount.TabIndex = 8;
+            this.llblDontHaveAnAccount.TabStop = true;
+            this.llblDontHaveAnAccount.Text = "Don\'t have an account?";
+            this.llblDontHaveAnAccount.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // llblForgotPassword
             // 
@@ -111,15 +111,15 @@
             this.llblForgotPassword.TabStop = true;
             this.llblForgotPassword.Text = "Forgot Password?";
             // 
-            // cboRemember
+            // chkRememberPassword
             // 
-            this.cboRemember.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboRemember.Location = new System.Drawing.Point(9, 225);
-            this.cboRemember.Name = "cboRemember";
-            this.cboRemember.Size = new System.Drawing.Size(392, 23);
-            this.cboRemember.TabIndex = 5;
-            this.cboRemember.Text = "Remember Password";
-            this.cboRemember.UseVisualStyleBackColor = true;
+            this.chkRememberPassword.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkRememberPassword.Location = new System.Drawing.Point(9, 225);
+            this.chkRememberPassword.Name = "chkRememberPassword";
+            this.chkRememberPassword.Size = new System.Drawing.Size(392, 23);
+            this.chkRememberPassword.TabIndex = 5;
+            this.chkRememberPassword.Text = "Remember Password";
+            this.chkRememberPassword.UseVisualStyleBackColor = true;
             // 
             // txtPassword
             // 
@@ -218,9 +218,9 @@
         private System.Windows.Forms.PictureBox ptbLogin;
         private System.Windows.Forms.Panel panel;
         private Guna.UI2.WinForms.Guna2CircleButton btnClose;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel llblDontHaveAnAccount;
         private System.Windows.Forms.LinkLabel llblForgotPassword;
-        private System.Windows.Forms.CheckBox cboRemember;
+        private System.Windows.Forms.CheckBox chkRememberPassword;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private Guna.UI2.WinForms.Guna2Button btnLogin;
         private Guna.UI2.WinForms.Guna2TextBox txtUserName;

@@ -61,6 +61,96 @@ namespace CMS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Login.
+        /// </summary>
+        internal static string btnLogin_Text {
+            get {
+                return ResourceManager.GetString("btnLogin.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remember Password.
+        /// </summary>
+        internal static string chkRememberPassword_Text {
+            get {
+                return ResourceManager.GetString("chkRememberPassword.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  time.
+        /// </summary>
+        internal static string frmLoginCap_CountTime_Text {
+            get {
+                return ResourceManager.GetString("frmLoginCap_CountTime.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter account and password.
+        /// </summary>
+        internal static string frmLoginCap_Enter_Text {
+            get {
+                return ResourceManager.GetString("frmLoginCap_Enter.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error during login: .
+        /// </summary>
+        internal static string frmLoginCap_Error_Text {
+            get {
+                return ResourceManager.GetString("frmLoginCap_Error.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Login successful.
+        /// </summary>
+        internal static string frmLoginCap_LoginSuccessful_Text {
+            get {
+                return ResourceManager.GetString("frmLoginCap_LoginSuccessful.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Entered wrong password 3 times, software will close now!.
+        /// </summary>
+        internal static string frmLoginCap_noticeClosed_Text {
+            get {
+                return ResourceManager.GetString("frmLoginCap_noticeClosed.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to not correct, do you want to create a new user?.
+        /// </summary>
+        internal static string frmLoginCap_noticeNotFound_Text {
+            get {
+                return ResourceManager.GetString("frmLoginCap_noticeNotFound.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User name .
+        /// </summary>
+        internal static string frmLoginCap_UserName_Text {
+            get {
+                return ResourceManager.GetString("frmLoginCap_UserName.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to wrong password .
+        /// </summary>
+        internal static string frmLoginCap_WrongPassword_Text {
+            get {
+                return ResourceManager.GetString("frmLoginCap_WrongPassword.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         internal static byte[] iconAboutSoftware {
@@ -359,6 +449,42 @@ namespace CMS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Login.
+        /// </summary>
+        internal static string lblLogin_Text {
+            get {
+                return ResourceManager.GetString("lblLogin.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Don&apos;t have an account?.
+        /// </summary>
+        internal static string llblDontHaveAnAccount_Text {
+            get {
+                return ResourceManager.GetString("llblDontHaveAnAccount.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Forgot Password?.
+        /// </summary>
+        internal static string llblForgotPassword_Text {
+            get {
+                return ResourceManager.GetString("llblForgotPassword.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Notification.
+        /// </summary>
+        internal static string notification_Text {
+            get {
+                return ResourceManager.GetString("notification.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Appointments.
         /// </summary>
         internal static string tabPageAppointments_Text {
@@ -616,6 +742,24 @@ namespace CMS.Properties {
         internal static string tsmiViewActivityLog_Text {
             get {
                 return ResourceManager.GetString("tsmiViewActivityLog.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        internal static string txtPassword_Text {
+            get {
+                return ResourceManager.GetString("txtPassword.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User Name.
+        /// </summary>
+        internal static string txtUserName_Text {
+            get {
+                return ResourceManager.GetString("txtUserName.Text", resourceCulture);
             }
         }
     }

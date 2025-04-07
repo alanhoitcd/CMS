@@ -1,5 +1,6 @@
 ﻿using CMS.BLL;
 using CMS.GUI;
+using CMS.UTIL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace CMS.VIEW
 {
@@ -17,6 +19,43 @@ namespace CMS.VIEW
     {
         private readonly Users_BLL _usersBLL = new Users_BLL();
         private static int countSaiPass = 0;
+        private void UpdateLanguage()
+        {
+            //Đổi ngôn ngữ label Chào
+            lblLogin.Text = LanguageManager.GetString("lblLogin.Text");
+            txtUserName.PlaceholderText = LanguageManager.GetString("txtUserName.Text");
+            txtPassword.PlaceholderText = LanguageManager.GetString("txtPassword.Text");
+            chkRememberPassword.Text = LanguageManager.GetString("chkRememberPassword.Text");
+            btnLogin.Text = LanguageManager.GetString("btnLogin.Text");
+            llblForgotPassword.Text = LanguageManager.GetString("llblForgotPassword.Text");
+            llblDontHaveAnAccount.Text = LanguageManager.GetString("llblDontHaveAnAccount.Text");
+
+        }
+        void frmLogin_Load_()
+        {
+            using (MemoryStream ms = new MemoryStream(Properties.Resources.iconClose))
+            {
+                btnClose.Image = Image.FromStream(ms);
+            }
+            using (MemoryStream ms = new MemoryStream(Properties.Resources.imgfrmLoginForm))
+            {
+                ptbLogin.Image = Image.FromStream(ms);
+            }
+
+            if (UTIL.Language.Lang.Equals("vn"))
+            {
+                //Gán giá trị mã ngôn ngữ mới cho Lang. Setter sẽ kiểm tra giá trị
+                UTIL.LanguageManager.SetLanguage("vi-VN");
+            }
+            else
+            {
+                //Gán giá trị mã ngôn ngữ mới cho Lang.// Setter sẽ kiểm tra giá trị
+                UTIL.LanguageManager.SetLanguage("en-US");
+            }
+            UpdateLanguage();
+            txtPassword.Text = "admin";
+            txtUserName.Text = "admin";
+        }
         public frmLogin()
         {
             InitializeComponent();
@@ -24,18 +63,9 @@ namespace CMS.VIEW
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            using (MemoryStream ms = new MemoryStream(Properties.Resources.iconClose))
-            {
-                btnClose.Image = Image.FromStream(ms);
-            }
-            txtPassword.Text = "admin";
-            txtUserName.Text = "admin";
+            frmLogin_Load_();
 
-            //chèn ảnh 
-            using (MemoryStream ms = new MemoryStream(Properties.Resources.imgfrmLoginForm))
-            {
-                ptbLogin.Image = Image.FromStream(ms);
-            }
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -59,7 +89,9 @@ namespace CMS.VIEW
         {
             if (string.IsNullOrEmpty(txtUserName.Text) || string.IsNullOrEmpty(txtPassword.Text))
             {
-                MessageBox.Show("vui long nhap user va pass", "Thông báo");
+                string frmLoginCap_Enter = LanguageManager.GetString("frmLoginCap_Enter.Text");
+                string notification = LanguageManager.GetString("notification.Text");
+                MessageBox.Show(frmLoginCap_Enter, notification);
                 return;
             }
             else
@@ -72,7 +104,9 @@ namespace CMS.VIEW
                         bool success = _usersBLL.LoginUser(txtUserName.Text, txtPassword.Text);
                         if (success)
                         {
-                            MessageBox.Show("Đăng nhập thành công", "Thông báo");
+                            string frmLoginCap_LoginSuccessful = LanguageManager.GetString("frmLoginCap_LoginSuccessful.Text");
+                            string notification = LanguageManager.GetString("notification.Text");
+                            MessageBox.Show(frmLoginCap_LoginSuccessful, notification);
                             this.DialogResult = DialogResult.OK;
                             countSaiPass = 0;
                         }
@@ -80,13 +114,17 @@ namespace CMS.VIEW
                         {
                             if (countSaiPass <= 2)
                             {
-                                MessageBox.Show("sai password " + (countSaiPass + 1) + " lần", "Thông Báo");
+                                string frmLoginCap_WrongPassword = LanguageManager.GetString("frmLoginCap_WrongPassword.Text");
+                                string frmLoginCap_CountTime = LanguageManager.GetString("frmLoginCap_CountTime.Text");
+                                string notification = LanguageManager.GetString("notification.Text");
+                                MessageBox.Show(frmLoginCap_WrongPassword + (countSaiPass + 1) + frmLoginCap_CountTime, notification);
                                 countSaiPass++;
                                 txtPassword.ResetText();
                                 if (countSaiPass == 3)
                                 {
                                     txtPassword.Enabled = false;
-                                    MessageBox.Show("Đã nhập sai 3 lần, thoát app, byeeeeeeeeeeee", "Thông Báo");
+                                    string noticeClosed = LanguageManager.GetString("frmLoginCap_noticeClosed.Text");
+                                    MessageBox.Show(noticeClosed, notification);
                                     this.DialogResult = DialogResult.Cancel;
                                     Application.Exit();
                                 }
@@ -95,14 +133,19 @@ namespace CMS.VIEW
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Error during login: " + ex.Message);
+                        string frmLoginCap_Error = LanguageManager.GetString("frmLoginCap_Error.Text");
+                        MessageBox.Show(frmLoginCap_Error + ex.Message);
                     }
                 }
                 else
                 {
                     txtUserName.ResetText();
                     txtPassword.ResetText();
-                    if (MessageBox.Show("user " + txtUserName.Text + " không đúng, bạn có muốn tạo user mới không?", "THÔNG BÁO", MessageBoxButtons.YesNoCancel) == DialogResult.Yes)
+                    string frmLoginCap_UserName = LanguageManager.GetString("frmLoginCap_UserName.Text");
+                    string frmLoginCap_noticeNotFound = LanguageManager.GetString("frmLoginCap_noticeNotFound.Text");
+                    string notification = LanguageManager.GetString("notification.Text");
+
+                    if (MessageBox.Show(frmLoginCap_UserName + txtUserName.Text + frmLoginCap_noticeNotFound, notification, MessageBoxButtons.YesNoCancel) == DialogResult.Yes)
                     {
                         this.Hide();
                         frmCreateAccount frm = new frmCreateAccount();

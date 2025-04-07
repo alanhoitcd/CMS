@@ -117,6 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="iconDarkMode" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="lblLogan.Text" xml:space="preserve">
     <value>Nơi sức khỏe bắt đầu, công nghệ dẫn lối</value>
   </data>
@@ -209,5 +213,53 @@
   </data>
   <data name="lblHello.Text" xml:space="preserve">
     <value>Chào</value>
+  </data>
+  <data name="notification.Text" xml:space="preserve">
+    <value>Thông báo</value>
+  </data>
+  <data name="lblLogin.Text" xml:space="preserve">
+    <value>Đăng Nhập</value>
+  </data>
+  <data name="txtUserName.Text" xml:space="preserve">
+    <value>Tên Người Dùng</value>
+  </data>
+  <data name="txtPassword.Text" xml:space="preserve">
+    <value>Mật Khẩu</value>
+  </data>
+  <data name="chkRememberPassword.Text" xml:space="preserve">
+    <value>Ghi Nhớ Mật Khẩu</value>
+  </data>
+  <data name="btnLogin.Text" xml:space="preserve">
+    <value>Đăng Nhập</value>
+  </data>
+  <data name="llblForgotPassword.Text" xml:space="preserve">
+    <value>Quên Mật Khẩu?</value>
+  </data>
+  <data name="llblDontHaveAnAccount.Text" xml:space="preserve">
+    <value>Không có một tài khoản?</value>
+  </data>
+  <data name="frmLoginCap_Enter.Text" xml:space="preserve">
+    <value>Nhập tài khoản và mật khẩu</value>
+  </data>
+  <data name="frmLoginCap_LoginSuccessful.Text" xml:space="preserve">
+    <value>Đăng nhập thành công</value>
+  </data>
+  <data name="frmLoginCap_WrongPassword.Text" xml:space="preserve">
+    <value>Sai mật khẩu </value>
+  </data>
+  <data name="frmLoginCap_CountTime.Text" xml:space="preserve">
+    <value> lần</value>
+  </data>
+  <data name="frmLoginCap_noticeClosed.Text" xml:space="preserve">
+    <value>Đã nhập sai mật khẩu 3 lần, phần mềm sẽ đóng lại ngay bây giò!</value>
+  </data>
+  <data name="frmLoginCap_Error.Text" xml:space="preserve">
+    <value>Lỗi khi đăng nhập: </value>
+  </data>
+  <data name="frmLoginCap_UserName.Text" xml:space="preserve">
+    <value>Tên người dùng </value>
+  </data>
+  <data name="frmLoginCap_noticeNotFound.Text" xml:space="preserve">
+    <value>không đúng, bạn có muốn tạo user mới không?</value>
   </data>
 </root>
