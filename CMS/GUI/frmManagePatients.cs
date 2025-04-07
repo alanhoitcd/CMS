@@ -48,14 +48,6 @@ namespace CMS.GUI
             if (parentTab != null && tabControl != null)
             {
                 tabControl.TabPages.Remove(parentTab); // Xóa tab khỏi TabControl nhưng không dispose
-                if (tabControl.TabPages.Count == 0)
-                {
-                    tabControl.Hide();
-                }
-                else
-                {
-                    tabControl.Show();
-                }
             }
         }
     }
