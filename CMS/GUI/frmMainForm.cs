@@ -219,7 +219,6 @@ namespace CMS
             tsmiPatientExamination.Enabled = !on;
             tsmiReports.Enabled = !on;
             tsmiSystem.Enabled = !on;
-
             tsmiLogout.Enabled = !on;
             tsmiChangePassword.Enabled = !on;
 
@@ -257,6 +256,7 @@ namespace CMS
 
         private void btnScreenMode_Click(object sender, EventArgs e)
         {
+            //giao diện tối phát triển sau
             //ChangeScreenMode(btnScreenMode, statusLightMode);
         }
 
