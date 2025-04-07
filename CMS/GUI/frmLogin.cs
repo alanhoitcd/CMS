@@ -15,6 +15,7 @@ namespace CMS.VIEW
 {
     public partial class frmLogin : Form
     {
+        private readonly Users_BLL _usersBLL = new Users_BLL();
         private static int countSaiPass = 0;
         public frmLogin()
         {
@@ -47,52 +48,68 @@ namespace CMS.VIEW
 
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            Users_BLL NguoiDung_BLL_ = new Users_BLL();
-            if (NguoiDung_BLL_.checkUser(txtUserName.Text)) //kiểm tra id có trong database chưa
-            {
-                if (NguoiDung_BLL_.checkPassword(txtUserName.Text, txtPassword.Text)) //kiểm tra mật khẩu đúng
-                {
-                    //MessageBox.Show("Đăng nhập thành công", "Thông báo");
-                    this.DialogResult = DialogResult.OK;
-                    countSaiPass = 0;
-                }
-                else
-                {
-                    if (countSaiPass <= 2)
-                    {
-                        MessageBox.Show("sai password " + (countSaiPass + 1) + " lần", "Thông Báo");
-                        countSaiPass++;
-                        txtPassword.ResetText();
-                        if (countSaiPass == 3)
-                        {
-                            txtPassword.Enabled = false;
-                            MessageBox.Show("Đã nhập sai 3 lần, thoát app, byeeeeeeeeeeee", "Thông Báo");
-                            this.DialogResult = DialogResult.Cancel;
-                            Application.Exit();
-                        }
-                    }
-                }
-            }
-            else
-            {
-                txtUserName.ResetText();
-                txtPassword.ResetText();
-                if (MessageBox.Show("user " + txtUserName.Text + " không đúng, bạn có muốn tạo user mới không?", "THÔNG BÁO", MessageBoxButtons.YesNoCancel) == DialogResult.Yes)
-                {
-                    this.Hide();
-                    frmCreateAccount frm = new frmCreateAccount();
-                    frm.ShowDialog();
-                }
-            }
-        }
-
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmCreateAccount f = new frmCreateAccount();
             f.ShowDialog();
 
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtUserName.Text) || string.IsNullOrEmpty(txtPassword.Text))
+            {
+                MessageBox.Show("vui long nhap user va pass", "Thông báo");
+                return;
+            }
+            else
+            {
+                Users_BLL NguoiDung_BLL_ = new Users_BLL();
+                if (NguoiDung_BLL_.checkUser(txtUserName.Text))//kiểm tra id có trong database chưa
+                {
+                    try
+                    {
+                        bool success = _usersBLL.LoginUser(txtUserName.Text, txtPassword.Text);
+                        if (success)
+                        {
+                            MessageBox.Show("Đăng nhập thành công", "Thông báo");
+                            this.DialogResult = DialogResult.OK;
+                            countSaiPass = 0;
+                        }
+                        else
+                        {
+                            if (countSaiPass <= 2)
+                            {
+                                MessageBox.Show("sai password " + (countSaiPass + 1) + " lần", "Thông Báo");
+                                countSaiPass++;
+                                txtPassword.ResetText();
+                                if (countSaiPass == 3)
+                                {
+                                    txtPassword.Enabled = false;
+                                    MessageBox.Show("Đã nhập sai 3 lần, thoát app, byeeeeeeeeeeee", "Thông Báo");
+                                    this.DialogResult = DialogResult.Cancel;
+                                    Application.Exit();
+                                }
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error during login: " + ex.Message);
+                    }
+                }
+                else
+                {
+                    txtUserName.ResetText();
+                    txtPassword.ResetText();
+                    if (MessageBox.Show("user " + txtUserName.Text + " không đúng, bạn có muốn tạo user mới không?", "THÔNG BÁO", MessageBoxButtons.YesNoCancel) == DialogResult.Yes)
+                    {
+                        this.Hide();
+                        frmCreateAccount frm = new frmCreateAccount();
+                        frm.ShowDialog();
+                    }
+                }
+            }
         }
     }
 }

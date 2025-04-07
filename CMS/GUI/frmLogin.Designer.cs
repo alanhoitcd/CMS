@@ -35,7 +35,7 @@
             this.llblForgotPassword = new System.Windows.Forms.LinkLabel();
             this.cboRemember = new System.Windows.Forms.CheckBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblLogin = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogin)).BeginInit();
@@ -59,7 +59,7 @@
             this.panel.Controls.Add(this.llblForgotPassword);
             this.panel.Controls.Add(this.cboRemember);
             this.panel.Controls.Add(this.txtPassword);
-            this.panel.Controls.Add(this.guna2Button1);
+            this.panel.Controls.Add(this.btnLogin);
             this.panel.Controls.Add(this.txtUserName);
             this.panel.Controls.Add(this.lblLogin);
             this.panel.Location = new System.Drawing.Point(297, 12);
@@ -142,23 +142,23 @@
             this.txtPassword.Size = new System.Drawing.Size(392, 38);
             this.txtPassword.TabIndex = 4;
             // 
-            // guna2Button1
+            // btnLogin
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.BorderRadius = 18;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.RoyalBlue;
-            this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(9, 273);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(392, 35);
-            this.guna2Button1.TabIndex = 3;
-            this.guna2Button1.Text = "Login";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btnLogin.Animated = true;
+            this.btnLogin.BorderRadius = 18;
+            this.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogin.FillColor = System.Drawing.Color.RoyalBlue;
+            this.btnLogin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(9, 273);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(392, 35);
+            this.btnLogin.TabIndex = 3;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtUserName
             // 
@@ -222,7 +222,7 @@
         private System.Windows.Forms.LinkLabel llblForgotPassword;
         private System.Windows.Forms.CheckBox cboRemember;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnLogin;
         private Guna.UI2.WinForms.Guna2TextBox txtUserName;
         private System.Windows.Forms.Label lblLogin;
     }

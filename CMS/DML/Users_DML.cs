@@ -23,8 +23,8 @@ namespace CMS.DML
         private string PasswordHash;
         private string RoleUsers;
         private string Email;
-        private byte[] SecurityQuestion;
-        private byte[] SecurityAnswerHash;
+        private string SecurityQuestion;
+        private string SecurityAnswerHash;
         private DateTime? LastLogin;
         private bool IsActive;
         private DateTime CreatedDate;
@@ -33,8 +33,8 @@ namespace CMS.DML
         {
         }
 
-        public Users_DML(int userId, string username, string passwordHash, string roleUsers, string email, byte[] securityQuestion,
-            byte[] securityAnswerHash, DateTime? lastLogin, bool isActive, DateTime createdDate)
+        public Users_DML(int userId, string username, string passwordHash, string roleUsers, string email, string securityQuestion, 
+            string securityAnswerHash, DateTime? lastLogin, bool isActive, DateTime createdDate)
         {
             UserId1 = userId;
             Username1 = username;
@@ -53,8 +53,8 @@ namespace CMS.DML
         public string PasswordHash1 { get => PasswordHash; set => PasswordHash = value; }
         public string RoleUsers1 { get => RoleUsers; set => RoleUsers = value; }
         public string Email1 { get => Email; set => Email = value; }
-        public byte[] SecurityQuestion1 { get => SecurityQuestion; set => SecurityQuestion = value; }
-        public byte[] SecurityAnswerHash1 { get => SecurityAnswerHash; set => SecurityAnswerHash = value; }
+        public string SecurityQuestion1 { get => SecurityQuestion; set => SecurityQuestion = value; }
+        public string SecurityAnswerHash1 { get => SecurityAnswerHash; set => SecurityAnswerHash = value; }
         public DateTime? LastLogin1 { get => LastLogin; set => LastLogin = value; }
         public bool IsActive1 { get => IsActive; set => IsActive = value; }
         public DateTime CreatedDate1 { get => CreatedDate; set => CreatedDate = value; }

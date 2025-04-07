@@ -41,3 +41,13 @@ D:\_DE_TAI_\CMS\CMS\obj\Debug\CMS.GUI.frmManagePatients.resources
 D:\_DE_TAI_\CMS\CMS\bin\Debug\vi\CMS.resources.dll
 D:\_DE_TAI_\CMS\CMS\obj\Debug\CMS.Properties.Resources.vi.resources
 D:\_DE_TAI_\CMS\CMS\obj\Debug\vi\CMS.resources.dll
+D:\_DE_TAI_\CMS\CMS\bin\Debug\BCrypt.Net-Next.dll
+D:\_DE_TAI_\CMS\CMS\bin\Debug\System.Buffers.dll
+D:\_DE_TAI_\CMS\CMS\bin\Debug\System.Memory.dll
+D:\_DE_TAI_\CMS\CMS\bin\Debug\System.Numerics.Vectors.dll
+D:\_DE_TAI_\CMS\CMS\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\_DE_TAI_\CMS\CMS\bin\Debug\BCrypt.Net-Next.xml
+D:\_DE_TAI_\CMS\CMS\bin\Debug\System.Buffers.xml
+D:\_DE_TAI_\CMS\CMS\bin\Debug\System.Memory.xml
+D:\_DE_TAI_\CMS\CMS\bin\Debug\System.Numerics.Vectors.xml
+D:\_DE_TAI_\CMS\CMS\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
