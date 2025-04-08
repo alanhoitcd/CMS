@@ -478,18 +478,18 @@ namespace CMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Hi.
         /// </summary>
-        internal static string lblHello_Text {
+        internal static string lblHello {
             get {
-                return ResourceManager.GetString("lblHello.Text", resourceCulture);
+                return ResourceManager.GetString("lblHello", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Where health begins, technology leads the way.
         /// </summary>
-        internal static string lblLogan_Text {
+        internal static string lblLogan {
             get {
-                return ResourceManager.GetString("lblLogan.Text", resourceCulture);
+                return ResourceManager.GetString("lblLogan", resourceCulture);
             }
         }
         
@@ -505,261 +505,261 @@ namespace CMS.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Appointments.
         /// </summary>
-        internal static string tabPageAppointments_Text {
+        internal static string tabPageAppointments {
             get {
-                return ResourceManager.GetString("tabPageAppointments.Text", resourceCulture);
+                return ResourceManager.GetString("tabPageAppointments", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Doctors.
         /// </summary>
-        internal static string tabPageDoctors_Text {
+        internal static string tabPageDoctors {
             get {
-                return ResourceManager.GetString("tabPageDoctors.Text", resourceCulture);
+                return ResourceManager.GetString("tabPageDoctors", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Medicine Inventory.
         /// </summary>
-        internal static string tabPageMedicineInventory_Text {
+        internal static string tabPageMedicineInventory {
             get {
-                return ResourceManager.GetString("tabPageMedicineInventory.Text", resourceCulture);
+                return ResourceManager.GetString("tabPageMedicineInventory", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Patients.
         /// </summary>
-        internal static string tabPagePatients_Text {
+        internal static string tabPagePatients {
             get {
-                return ResourceManager.GetString("tabPagePatients.Text", resourceCulture);
+                return ResourceManager.GetString("tabPagePatients", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to About Software.
         /// </summary>
-        internal static string tsmiAboutSoftware_Text {
+        internal static string tsmiAboutSoftware {
             get {
-                return ResourceManager.GetString("tsmiAboutSoftware.Text", resourceCulture);
+                return ResourceManager.GetString("tsmiAboutSoftware", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Appointment ScheduleReport.
         /// </summary>
-        internal static string tsmiAppointmentScheduleReport_Text {
+        internal static string tsmiAppointmentScheduleReport {
             get {
-                return ResourceManager.GetString("tsmiAppointmentScheduleReport.Text", resourceCulture);
+                return ResourceManager.GetString("tsmiAppointmentScheduleReport", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Backup And Restore Database.
         /// </summary>
-        internal static string tsmiBackupAndRestoreDatabase_Text {
+        internal static string tsmiBackupAndRestoreDatabase {
             get {
-                return ResourceManager.GetString("tsmiBackupAndRestoreDatabase.Text", resourceCulture);
+                return ResourceManager.GetString("tsmiBackupAndRestoreDatabase", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Change Password.
         /// </summary>
-        internal static string tsmiChangePassword_Text {
+        internal static string tsmiChangePassword {
             get {
-                return ResourceManager.GetString("tsmiChangePassword.Text", resourceCulture);
+                return ResourceManager.GetString("tsmiChangePassword", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Contact Support.
         /// </summary>
-        internal static string tsmiContactSupport_Text {
+        internal static string tsmiContactSupport {
             get {
-                return ResourceManager.GetString("tsmiContactSupport.Text", resourceCulture);
+                return ResourceManager.GetString("tsmiContactSupport", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Exit.
         /// </summary>
-        internal static string tsmiExit_Text {
+        internal static string tsmiExit {
             get {
-                return ResourceManager.GetString("tsmiExit.Text", resourceCulture);
+                return ResourceManager.GetString("tsmiExit", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to File.
         /// </summary>
-        internal static string tsmiFile_Text {
+        internal static string tsmiFile {
             get {
-                return ResourceManager.GetString("tsmiFile.Text", resourceCulture);
+                return ResourceManager.GetString("tsmiFile", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Help.
         /// </summary>
-        internal static string tsmiHelp_Text {
+        internal static string tsmiHelp {
             get {
-                return ResourceManager.GetString("tsmiHelp.Text", resourceCulture);
+                return ResourceManager.GetString("tsmiHelp", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Inventory And Medicine Revenue Report.
         /// </summary>
-        internal static string tsmiInventoryAndMedicineRevenueReport_Text {
+        internal static string tsmiInventoryAndMedicineRevenueReport {
             get {
-                return ResourceManager.GetString("tsmiInventoryAndMedicineRevenueReport.Text", resourceCulture);
+                return ResourceManager.GetString("tsmiInventoryAndMedicineRevenueReport", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Log In.
         /// </summary>
-        internal static string tsmiLogin_Text {
+        internal static string tsmiLogin {
             get {
-                return ResourceManager.GetString("tsmiLogin.Text", resourceCulture);
+                return ResourceManager.GetString("tsmiLogin", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Log Out.
         /// </summary>
-        internal static string tsmiLogout_Text {
+        internal static string tsmiLogout {
             get {
-                return ResourceManager.GetString("tsmiLogout.Text", resourceCulture);
+                return ResourceManager.GetString("tsmiLogout", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Manage Appointments.
         /// </summary>
-        internal static string tsmiManageAppointments_Text {
+        internal static string tsmiManageAppointments {
             get {
-                return ResourceManager.GetString("tsmiManageAppointments.Text", resourceCulture);
+                return ResourceManager.GetString("tsmiManageAppointments", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Manage Doctors.
         /// </summary>
-        internal static string tsmiManageDoctors_Text {
+        internal static string tsmiManageDoctors {
             get {
-                return ResourceManager.GetString("tsmiManageDoctors.Text", resourceCulture);
+                return ResourceManager.GetString("tsmiManageDoctors", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Manage Examination History.
         /// </summary>
-        internal static string tsmiManageExaminationHistory_Text {
+        internal static string tsmiManageExaminationHistory {
             get {
-                return ResourceManager.GetString("tsmiManageExaminationHistory.Text", resourceCulture);
+                return ResourceManager.GetString("tsmiManageExaminationHistory", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Manage Medicine Inventory.
         /// </summary>
-        internal static string tsmiManageMedicineInventory_Text {
+        internal static string tsmiManageMedicineInventory {
             get {
-                return ResourceManager.GetString("tsmiManageMedicineInventory.Text", resourceCulture);
+                return ResourceManager.GetString("tsmiManageMedicineInventory", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Management.
         /// </summary>
-        internal static string tsmiManagement_Text {
+        internal static string tsmiManagement {
             get {
-                return ResourceManager.GetString("tsmiManagement.Text", resourceCulture);
+                return ResourceManager.GetString("tsmiManagement", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Manage Patient.
         /// </summary>
-        internal static string tsmiManagePatient_Text {
+        internal static string tsmiManagePatient {
             get {
-                return ResourceManager.GetString("tsmiManagePatient.Text", resourceCulture);
+                return ResourceManager.GetString("tsmiManagePatient", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Manage Prescriptions.
         /// </summary>
-        internal static string tsmiManagePrescriptions_Text {
+        internal static string tsmiManagePrescriptions {
             get {
-                return ResourceManager.GetString("tsmiManagePrescriptions.Text", resourceCulture);
+                return ResourceManager.GetString("tsmiManagePrescriptions", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Manage User Accounts.
         /// </summary>
-        internal static string tsmiManageUserAccounts_Text {
+        internal static string tsmiManageUserAccounts {
             get {
-                return ResourceManager.GetString("tsmiManageUserAccounts.Text", resourceCulture);
+                return ResourceManager.GetString("tsmiManageUserAccounts", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Patient Examination.
         /// </summary>
-        internal static string tsmiPatientExamination_Text {
+        internal static string tsmiPatientExamination {
             get {
-                return ResourceManager.GetString("tsmiPatientExamination.Text", resourceCulture);
+                return ResourceManager.GetString("tsmiPatientExamination", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Patient List Report.
         /// </summary>
-        internal static string tsmiPatientListReport_Text {
+        internal static string tsmiPatientListReport {
             get {
-                return ResourceManager.GetString("tsmiPatientListReport.Text", resourceCulture);
+                return ResourceManager.GetString("tsmiPatientListReport", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Reports..
         /// </summary>
-        internal static string tsmiReports_Text {
+        internal static string tsmiReports {
             get {
-                return ResourceManager.GetString("tsmiReports.Text", resourceCulture);
+                return ResourceManager.GetString("tsmiReports", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to System.
         /// </summary>
-        internal static string tsmiSystem_Text {
+        internal static string tsmiSystem {
             get {
-                return ResourceManager.GetString("tsmiSystem.Text", resourceCulture);
+                return ResourceManager.GetString("tsmiSystem", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to User Guide.
         /// </summary>
-        internal static string tsmiUserGuide_Text {
+        internal static string tsmiUserGuide {
             get {
-                return ResourceManager.GetString("tsmiUserGuide.Text", resourceCulture);
+                return ResourceManager.GetString("tsmiUserGuide", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to View Activity Log.
         /// </summary>
-        internal static string tsmiViewActivityLog_Text {
+        internal static string tsmiViewActivityLog {
             get {
-                return ResourceManager.GetString("tsmiViewActivityLog.Text", resourceCulture);
+                return ResourceManager.GetString("tsmiViewActivityLog", resourceCulture);
             }
         }
     }

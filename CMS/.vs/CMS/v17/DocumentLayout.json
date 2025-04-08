@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "D:\\_DE_TAI_\\CMS\\CMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|d:\\_de_tai_\\cms\\cms\\gui\\frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:gui\\frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|d:\\_de_tai_\\cms\\cms\\gui\\frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:gui\\frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|d:\\_de_tai_\\cms\\cms\\gui\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:gui\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|D:\\_DE_TAI_\\CMS\\CMS\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
@@ -22,36 +18,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmMainForm.cs",
-              "DocumentMoniker": "D:\\_DE_TAI_\\CMS\\CMS\\GUI\\frmMainForm.cs",
-              "RelativeDocumentMoniker": "GUI\\frmMainForm.cs",
-              "ToolTip": "D:\\_DE_TAI_\\CMS\\CMS\\GUI\\frmMainForm.cs",
-              "RelativeToolTip": "GUI\\frmMainForm.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAtwCMAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T01:24:17.808Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmMainForm.cs [Design]",
-              "DocumentMoniker": "D:\\_DE_TAI_\\CMS\\CMS\\GUI\\frmMainForm.cs",
-              "RelativeDocumentMoniker": "GUI\\frmMainForm.cs",
-              "ToolTip": "D:\\_DE_TAI_\\CMS\\CMS\\GUI\\frmMainForm.cs [Design]",
-              "RelativeToolTip": "GUI\\frmMainForm.cs [Design]",
+              "Title": "frmLogin.cs [Design]",
+              "DocumentMoniker": "D:\\_DE_TAI_\\CMS\\CMS\\GUI\\frmLogin.cs",
+              "RelativeDocumentMoniker": "GUI\\frmLogin.cs",
+              "ToolTip": "D:\\_DE_TAI_\\CMS\\CMS\\GUI\\frmLogin.cs [Design]",
+              "RelativeToolTip": "GUI\\frmLogin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T01:24:14.761Z",
+              "WhenOpened": "2025-04-08T01:52:36.434Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Resources.resx",
               "DocumentMoniker": "D:\\_DE_TAI_\\CMS\\CMS\\Properties\\Resources.resx",
               "RelativeDocumentMoniker": "Properties\\Resources.resx",

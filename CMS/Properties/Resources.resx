@@ -202,97 +202,97 @@
   <data name="imgfrmCreateAccount" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\IMG\imgfrmCreateAccount.jpg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblLogan.Text" xml:space="preserve">
+  <data name="lblLogan" xml:space="preserve">
     <value>Where health begins, technology leads the way</value>
   </data>
-  <data name="tsmiFile.Text" xml:space="preserve">
+  <data name="tsmiFile" xml:space="preserve">
     <value>File</value>
   </data>
-  <data name="tsmiManagement.Text" xml:space="preserve">
+  <data name="tsmiManagement" xml:space="preserve">
     <value>Management</value>
   </data>
-  <data name="tsmiPatientExamination.Text" xml:space="preserve">
+  <data name="tsmiPatientExamination" xml:space="preserve">
     <value>Patient Examination</value>
   </data>
-  <data name="tsmiReports.Text" xml:space="preserve">
+  <data name="tsmiReports" xml:space="preserve">
     <value>Reports.</value>
   </data>
-  <data name="tsmiSystem.Text" xml:space="preserve">
+  <data name="tsmiSystem" xml:space="preserve">
     <value>System</value>
   </data>
-  <data name="tsmiHelp.Text" xml:space="preserve">
+  <data name="tsmiHelp" xml:space="preserve">
     <value>Help</value>
   </data>
-  <data name="tsmiManagePatient.Text" xml:space="preserve">
+  <data name="tsmiManagePatient" xml:space="preserve">
     <value>Manage Patient</value>
   </data>
-  <data name="tsmiManageDoctors.Text" xml:space="preserve">
+  <data name="tsmiManageDoctors" xml:space="preserve">
     <value>Manage Doctors</value>
   </data>
-  <data name="tsmiManageAppointments.Text" xml:space="preserve">
+  <data name="tsmiManageAppointments" xml:space="preserve">
     <value>Manage Appointments</value>
   </data>
-  <data name="tsmiManageMedicineInventory.Text" xml:space="preserve">
+  <data name="tsmiManageMedicineInventory" xml:space="preserve">
     <value>Manage Medicine Inventory</value>
   </data>
-  <data name="tsmiLogin.Text" xml:space="preserve">
+  <data name="tsmiLogin" xml:space="preserve">
     <value>Log In</value>
   </data>
-  <data name="tsmiLogout.Text" xml:space="preserve">
+  <data name="tsmiLogout" xml:space="preserve">
     <value>Log Out</value>
   </data>
-  <data name="tsmiChangePassword.Text" xml:space="preserve">
+  <data name="tsmiChangePassword" xml:space="preserve">
     <value>Change Password</value>
   </data>
-  <data name="tsmiExit.Text" xml:space="preserve">
+  <data name="tsmiExit" xml:space="preserve">
     <value>Exit</value>
   </data>
-  <data name="tsmiAboutSoftware.Text" xml:space="preserve">
+  <data name="tsmiAboutSoftware" xml:space="preserve">
     <value>About Software</value>
   </data>
-  <data name="tsmiUserGuide.Text" xml:space="preserve">
+  <data name="tsmiUserGuide" xml:space="preserve">
     <value>User Guide</value>
   </data>
-  <data name="tsmiContactSupport.Text" xml:space="preserve">
+  <data name="tsmiContactSupport" xml:space="preserve">
     <value>Contact Support</value>
   </data>
-  <data name="tsmiManageExaminationHistory.Text" xml:space="preserve">
+  <data name="tsmiManageExaminationHistory" xml:space="preserve">
     <value>Manage Examination History</value>
   </data>
-  <data name="tsmiManagePrescriptions.Text" xml:space="preserve">
+  <data name="tsmiManagePrescriptions" xml:space="preserve">
     <value>Manage Prescriptions</value>
   </data>
-  <data name="tsmiPatientListReport.Text" xml:space="preserve">
+  <data name="tsmiPatientListReport" xml:space="preserve">
     <value>Patient List Report</value>
   </data>
-  <data name="tsmiAppointmentScheduleReport.Text" xml:space="preserve">
+  <data name="tsmiAppointmentScheduleReport" xml:space="preserve">
     <value>Appointment ScheduleReport</value>
   </data>
-  <data name="tsmiInventoryAndMedicineRevenueReport.Text" xml:space="preserve">
+  <data name="tsmiInventoryAndMedicineRevenueReport" xml:space="preserve">
     <value>Inventory And Medicine Revenue Report</value>
   </data>
-  <data name="tsmiManageUserAccounts.Text" xml:space="preserve">
+  <data name="tsmiManageUserAccounts" xml:space="preserve">
     <value>Manage User Accounts</value>
   </data>
-  <data name="tsmiViewActivityLog.Text" xml:space="preserve">
+  <data name="tsmiViewActivityLog" xml:space="preserve">
     <value>View Activity Log</value>
   </data>
-  <data name="tsmiBackupAndRestoreDatabase.Text" xml:space="preserve">
+  <data name="tsmiBackupAndRestoreDatabase" xml:space="preserve">
     <value>Backup And Restore Database</value>
   </data>
-  <data name="tabPagePatients.Text" xml:space="preserve">
+  <data name="tabPagePatients" xml:space="preserve">
     <value>Patients</value>
   </data>
-  <data name="tabPageDoctors.Text" xml:space="preserve">
+  <data name="tabPageDoctors" xml:space="preserve">
     <value>Doctors</value>
   </data>
-  <data name="tabPageAppointments.Text" xml:space="preserve">
+  <data name="tabPageAppointments" xml:space="preserve">
     <value>Appointments</value>
   </data>
-  <data name="tabPageMedicineInventory.Text" xml:space="preserve">
+  <data name="tabPageMedicineInventory" xml:space="preserve">
     <value>Medicine Inventory</value>
   </data>
-  <data name="lblHello.Text" xml:space="preserve">
+  <data name="lblHello" xml:space="preserve">
     <value>Hi</value>
   </data>
   <data name="notif" xml:space="preserve">

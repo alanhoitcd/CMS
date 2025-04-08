@@ -36,56 +36,56 @@ namespace CMS
         private void UpdateLanguage()
         {
             //Đổi ngôn ngữ label Chào
-            lblHello.Text = LanguageManager.GetString("lblHello.Text") + " " + this.userName;
+            lblHello.Text = LanguageManager.GetString("lblHello") + " " + this.userName;
 
             //Đổi ngôn ngữ label logan
-            lblLogan.Text = LanguageManager.GetString("lblLogan.Text");
+            lblLogan.Text = LanguageManager.GetString("lblLogan");
 
             //Đổi ngôn ngữ các toolstripmenu item of tsmiFile
-            tsmiFile.Text = LanguageManager.GetString("tsmiFile.Text");
-            tsmiLogin.Text = LanguageManager.GetString("tsmiLogin.Text");
-            tsmiLogout.Text = LanguageManager.GetString("tsmiLogout.Text");
-            tsmiChangePassword.Text = LanguageManager.GetString("tsmiChangePassword.Text");
-            tsmiExit.Text = LanguageManager.GetString("tsmiExit.Text");
+            tsmiFile.Text = LanguageManager.GetString("tsmiFile");
+            tsmiLogin.Text = LanguageManager.GetString("tsmiLogin");
+            tsmiLogout.Text = LanguageManager.GetString("tsmiLogout");
+            tsmiChangePassword.Text = LanguageManager.GetString("tsmiChangePassword");
+            tsmiExit.Text = LanguageManager.GetString("tsmiExit");
 
             //Đổi ngôn ngữ các toolstripmenu item of tsmiManagement
-            tsmiManagement.Text = LanguageManager.GetString("tsmiManagement.Text");
-            tsmiManagePatient.Text = LanguageManager.GetString("tsmiManagePatient.Text");
-            tsmiManageDoctors.Text = LanguageManager.GetString("tsmiManageDoctors.Text");
-            tsmiManageAppointments.Text = LanguageManager.GetString("tsmiManageAppointments.Text");
-            tsmiManageMedicineInventory.Text = LanguageManager.GetString("tsmiManageMedicineInventory.Text");
+            tsmiManagement.Text = LanguageManager.GetString("tsmiManagement");
+            tsmiManagePatient.Text = LanguageManager.GetString("tsmiManagePatient");
+            tsmiManageDoctors.Text = LanguageManager.GetString("tsmiManageDoctors");
+            tsmiManageAppointments.Text = LanguageManager.GetString("tsmiManageAppointments");
+            tsmiManageMedicineInventory.Text = LanguageManager.GetString("tsmiManageMedicineInventory");
 
             //Đổi ngôn ngữ các toolstripmenu item of tsmiPatientExamination
-            tsmiPatientExamination.Text = LanguageManager.GetString("tsmiPatientExamination.Text");
-            tsmiManageExaminationHistory.Text = LanguageManager.GetString("tsmiManageExaminationHistory.Text");
-            tsmiManagePrescriptions.Text = LanguageManager.GetString("tsmiManagePrescriptions.Text");
+            tsmiPatientExamination.Text = LanguageManager.GetString("tsmiPatientExamination");
+            tsmiManageExaminationHistory.Text = LanguageManager.GetString("tsmiManageExaminationHistory");
+            tsmiManagePrescriptions.Text = LanguageManager.GetString("tsmiManagePrescriptions");
 
 
             //Đổi ngôn ngữ các toolstripmenu item of tsmiReports
-            tsmiReports.Text = LanguageManager.GetString("tsmiReports.Text");
-            tsmiPatientListReport.Text = LanguageManager.GetString("tsmiPatientListReport.Text");
-            tsmiAppointmentScheduleReport.Text = LanguageManager.GetString("tsmiAppointmentScheduleReport.Text");
-            tsmiInventoryAndMedicineRevenueReport.Text = LanguageManager.GetString("tsmiInventoryAndMedicineRevenueReport.Text");
+            tsmiReports.Text = LanguageManager.GetString("tsmiReports");
+            tsmiPatientListReport.Text = LanguageManager.GetString("tsmiPatientListReport");
+            tsmiAppointmentScheduleReport.Text = LanguageManager.GetString("tsmiAppointmentScheduleReport");
+            tsmiInventoryAndMedicineRevenueReport.Text = LanguageManager.GetString("tsmiInventoryAndMedicineRevenueReport");
 
 
             //Đổi ngôn ngữ các toolstripmenu item of tsmiSystem
-            tsmiSystem.Text = LanguageManager.GetString("tsmiSystem.Text");
-            tsmiManageUserAccounts.Text = LanguageManager.GetString("tsmiManageUserAccounts.Text");
-            tsmiViewActivityLog.Text = LanguageManager.GetString("tsmiViewActivityLog.Text");
-            tsmiBackupAndRestoreDatabase.Text = LanguageManager.GetString("tsmiBackupAndRestoreDatabase.Text");
+            tsmiSystem.Text = LanguageManager.GetString("tsmiSystem");
+            tsmiManageUserAccounts.Text = LanguageManager.GetString("tsmiManageUserAccounts");
+            tsmiViewActivityLog.Text = LanguageManager.GetString("tsmiViewActivityLog");
+            tsmiBackupAndRestoreDatabase.Text = LanguageManager.GetString("tsmiBackupAndRestoreDatabase");
 
 
             //Đổi ngôn ngữ các toolstripmenu item of tsmiHelp
-            tsmiHelp.Text = LanguageManager.GetString("tsmiHelp.Text");
-            tsmiAboutSoftware.Text = LanguageManager.GetString("tsmiAboutSoftware.Text");
-            tsmiUserGuide.Text = LanguageManager.GetString("tsmiUserGuide.Text");
-            tsmiContactSupport.Text = LanguageManager.GetString("tsmiContactSupport.Text");
+            tsmiHelp.Text = LanguageManager.GetString("tsmiHelp");
+            tsmiAboutSoftware.Text = LanguageManager.GetString("tsmiAboutSoftware");
+            tsmiUserGuide.Text = LanguageManager.GetString("tsmiUserGuide");
+            tsmiContactSupport.Text = LanguageManager.GetString("tsmiContactSupport");
 
             //Đổi ngôn ngữ các tabpage thuộc tabControlMain
-            tabPagePatients.Text = LanguageManager.GetString("tabPagePatients.Text");
-            tabPageDoctors.Text = LanguageManager.GetString("tabPageDoctors.Text");
-            tabPageAppointments.Text = LanguageManager.GetString("tabPageAppointments.Text");
-            tabPageMedicineInventory.Text = LanguageManager.GetString("tabPageMedicineInventory.Text");
+            tabPagePatients.Text = LanguageManager.GetString("tabPagePatients");
+            tabPageDoctors.Text = LanguageManager.GetString("tabPageDoctors");
+            tabPageAppointments.Text = LanguageManager.GetString("tabPageAppointments");
+            tabPageMedicineInventory.Text = LanguageManager.GetString("tabPageMedicineInventory");
 
 
         }
@@ -277,7 +277,7 @@ namespace CMS
             {
                 frmMainForm_Load_(false);
                 this.userName = "Hồ Huyền Anh";
-                lblHello.Text = LanguageManager.GetString("lblHello.Text") + " " + this.userName;
+                lblHello.Text = LanguageManager.GetString("lblHello") + " " + this.userName;
             }
             else
             {
@@ -289,7 +289,7 @@ namespace CMS
         {
             frmMainForm_Load_(true);
             this.userName = "";
-            lblHello.Text = LanguageManager.GetString("lblHello.Text") + " " + this.userName;
+            lblHello.Text = LanguageManager.GetString("lblHello") + " " + this.userName;
         }
 
         private void tsmiManagePatient_Click(object sender, EventArgs e)
