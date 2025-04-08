@@ -295,52 +295,52 @@
   <data name="lblHello" xml:space="preserve">
     <value>Hi</value>
   </data>
-  <data name="notif" xml:space="preserve">
-    <value>Notification</value>
-  </data>
-  <data name="frmLogin_lblLogin" xml:space="preserve">
+  <data name="lblLogin" xml:space="preserve">
     <value>Login</value>
   </data>
-  <data name="frmLogin_txtUserName" xml:space="preserve">
+  <data name="txtUserName" xml:space="preserve">
     <value>User Name</value>
   </data>
-  <data name="frmLogin_txtPassword" xml:space="preserve">
+  <data name="txtPassword" xml:space="preserve">
     <value>Password</value>
   </data>
-  <data name="frmLogin_chkRememberPassword" xml:space="preserve">
+  <data name="chkRememberPassword" xml:space="preserve">
     <value>Remember Password</value>
   </data>
-  <data name="frmLogin_btnLogin" xml:space="preserve">
+  <data name="btnLogin" xml:space="preserve">
     <value>Login</value>
   </data>
-  <data name="frmLogin_llblForgotPassword" xml:space="preserve">
+  <data name="llblForgotPassword" xml:space="preserve">
     <value>Forgot Password?</value>
   </data>
-  <data name="frmLogin_llblDontHaveAnAccount" xml:space="preserve">
+  <data name="llblDontHaveAnAccount" xml:space="preserve">
     <value>Don't have an account?</value>
   </data>
-  <data name="frmLogin_Notif_Enter" xml:space="preserve">
+  <data name="notif_frmLogin_EnterUserAndPass" xml:space="preserve">
     <value>Enter account and password</value>
   </data>
-  <data name="frmLogin_Notif_LoginSuccessful" xml:space="preserve">
+  <data name="notif_" xml:space="preserve">
+    <value>Notification</value>
+  </data>
+  <data name="notif_frmLogin_LoginSuccessful" xml:space="preserve">
     <value>Login successful</value>
   </data>
-  <data name="frmLogin_Notif_WrongPassword" xml:space="preserve">
+  <data name="notif_frmLogin_WrongPassword" xml:space="preserve">
     <value>wrong password </value>
   </data>
-  <data name="frmLogin_Notif_CountTime" xml:space="preserve">
+  <data name="notif_frmLogin_CountTime" xml:space="preserve">
     <value> time</value>
   </data>
-  <data name="frmLogin_Notif_Closed" xml:space="preserve">
+  <data name="notif_frmLogin_Closed" xml:space="preserve">
     <value>Entered wrong password 3 times, software will close now!</value>
   </data>
-  <data name="frmLogin_Notif_Error" xml:space="preserve">
+  <data name="notif_frmLogin_Error" xml:space="preserve">
     <value>Error during login: </value>
   </data>
-  <data name="frmLogin_Notif_UserName" xml:space="preserve">
+  <data name="notif_frmLogin_UserName" xml:space="preserve">
     <value>User name </value>
   </data>
-  <data name="frmLogin_Notif_NotFound" xml:space="preserve">
+  <data name="notif_frmLogin_NotFound" xml:space="preserve">
     <value>not correct, do you want to create a new user?</value>
   </data>
 </root>
