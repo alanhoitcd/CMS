@@ -22,14 +22,14 @@ namespace CMS.VIEW
         private void UpdateLanguage()
         {
             //Đổi ngôn ngữ label Chào
-            lblLogin.Text = LanguageManager.GetString("lblLogin.Text");
-            txtUserName.PlaceholderText = LanguageManager.GetString("txtUserName.Text");
-            txtPassword.PlaceholderText = LanguageManager.GetString("txtPassword.Text");
-            chkRememberPassword.Text = LanguageManager.GetString("chkRememberPassword.Text");
-            btnLogin.Text = LanguageManager.GetString("btnLogin.Text");
-            llblForgotPassword.Text = LanguageManager.GetString("llblForgotPassword.Text");
-            llblDontHaveAnAccount.Text = LanguageManager.GetString("llblDontHaveAnAccount.Text");
-
+            lblLogin.Text = LanguageManager.GetString("frmLogin_lblLogin");
+            txtUserName.PlaceholderText = LanguageManager.GetString("frmLogin_txtUserName");
+            txtPassword.PlaceholderText = LanguageManager.GetString("frmLogin_txtPassword");
+            chkRememberPassword.Text = LanguageManager.GetString("frmLogin_chkRememberPassword");
+            btnLogin.Text = LanguageManager.GetString("frmLogin_btnLogin");
+            llblForgotPassword.Text = LanguageManager.GetString("frmLogin_llblForgotPassword");
+            llblDontHaveAnAccount.Text = LanguageManager.GetString("frmLogin_llblDontHaveAnAccount");
+            
         }
         void frmLogin_Load_()
         {
@@ -89,8 +89,8 @@ namespace CMS.VIEW
         {
             if (string.IsNullOrEmpty(txtUserName.Text) || string.IsNullOrEmpty(txtPassword.Text))
             {
-                string frmLoginCap_Enter = LanguageManager.GetString("frmLoginCap_Enter.Text");
-                string notification = LanguageManager.GetString("notification.Text");
+                string frmLoginCap_Enter = LanguageManager.GetString("frmLogin_Notif_Enter");
+                string notification = LanguageManager.GetString("notif");
                 MessageBox.Show(frmLoginCap_Enter, notification);
                 return;
             }
@@ -104,8 +104,8 @@ namespace CMS.VIEW
                         bool success = _usersBLL.LoginUser(txtUserName.Text, txtPassword.Text);
                         if (success)
                         {
-                            string frmLoginCap_LoginSuccessful = LanguageManager.GetString("frmLoginCap_LoginSuccessful.Text");
-                            string notification = LanguageManager.GetString("notification.Text");
+                            string frmLoginCap_LoginSuccessful = LanguageManager.GetString("frmLogin_Notif_LoginSuccessful");
+                            string notification = LanguageManager.GetString("notif");
                             MessageBox.Show(frmLoginCap_LoginSuccessful, notification);
                             this.DialogResult = DialogResult.OK;
                             countSaiPass = 0;
@@ -114,16 +114,16 @@ namespace CMS.VIEW
                         {
                             if (countSaiPass <= 2)
                             {
-                                string frmLoginCap_WrongPassword = LanguageManager.GetString("frmLoginCap_WrongPassword.Text");
-                                string frmLoginCap_CountTime = LanguageManager.GetString("frmLoginCap_CountTime.Text");
-                                string notification = LanguageManager.GetString("notification.Text");
+                                string frmLoginCap_WrongPassword = LanguageManager.GetString("frmLogin_Notif_WrongPassword");
+                                string frmLoginCap_CountTime = LanguageManager.GetString("frmLogin_Notif_CountTime");
+                                string notification = LanguageManager.GetString("notif");
                                 MessageBox.Show(frmLoginCap_WrongPassword + (countSaiPass + 1) + frmLoginCap_CountTime, notification);
                                 countSaiPass++;
                                 txtPassword.ResetText();
                                 if (countSaiPass == 3)
                                 {
                                     txtPassword.Enabled = false;
-                                    string noticeClosed = LanguageManager.GetString("frmLoginCap_noticeClosed.Text");
+                                    string noticeClosed = LanguageManager.GetString("frmLogin_Notif_Closed");
                                     MessageBox.Show(noticeClosed, notification);
                                     this.DialogResult = DialogResult.Cancel;
                                     Application.Exit();
@@ -133,7 +133,7 @@ namespace CMS.VIEW
                     }
                     catch (Exception ex)
                     {
-                        string frmLoginCap_Error = LanguageManager.GetString("frmLoginCap_Error.Text");
+                        string frmLoginCap_Error = LanguageManager.GetString("frmLogin_Notif_Error");
                         MessageBox.Show(frmLoginCap_Error + ex.Message);
                     }
                 }
@@ -141,9 +141,9 @@ namespace CMS.VIEW
                 {
                     txtUserName.ResetText();
                     txtPassword.ResetText();
-                    string frmLoginCap_UserName = LanguageManager.GetString("frmLoginCap_UserName.Text");
-                    string frmLoginCap_noticeNotFound = LanguageManager.GetString("frmLoginCap_noticeNotFound.Text");
-                    string notification = LanguageManager.GetString("notification.Text");
+                    string frmLoginCap_UserName = LanguageManager.GetString("frmLogin_Notif_UserName");
+                    string frmLoginCap_noticeNotFound = LanguageManager.GetString("frmLogin_Notif_NotFound");
+                    string notification = LanguageManager.GetString("notif");
 
                     if (MessageBox.Show(frmLoginCap_UserName + txtUserName.Text + frmLoginCap_noticeNotFound, notification, MessageBoxButtons.YesNoCancel) == DialogResult.Yes)
                     {
