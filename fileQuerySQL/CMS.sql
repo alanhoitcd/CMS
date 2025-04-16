@@ -643,3 +643,4 @@ INSERT INTO LabRequests (VisitId, LabId, TestType, RequestDate, ResultDate, Resu
 VALUES (10, 10, 'Ultrasound', '2025-03-18 11:00', '2025-03-18 13:00', 'Normal', 'Completed');
 
 --
+

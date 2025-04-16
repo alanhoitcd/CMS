@@ -343,4 +343,58 @@
   <data name="notif_frmLogin_NotFound" xml:space="preserve">
     <value>not correct, do you want to create a new user?</value>
   </data>
+  <data name="lblSigup" xml:space="preserve">
+    <value>Sigup</value>
+  </data>
+  <data name="lblUserName" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="lblPassword" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="lblConfirmPassword" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="lblUsersRole" xml:space="preserve">
+    <value>Users Role</value>
+  </data>
+  <data name="lblEmail" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="lblSecurityQuestion" xml:space="preserve">
+    <value>Security Question</value>
+  </data>
+  <data name="lblSecurityAnswer" xml:space="preserve">
+    <value>Security Answer</value>
+  </data>
+  <data name="txtUserName_Holder" xml:space="preserve">
+    <value>Enter User Name</value>
+  </data>
+  <data name="txtPassword_Holder" xml:space="preserve">
+    <value>Enter Password</value>
+  </data>
+  <data name="txtConfirmPassword_Holder" xml:space="preserve">
+    <value>Enter Confirm Password</value>
+  </data>
+  <data name="btnSignUp" xml:space="preserve">
+    <value>SignUp</value>
+  </data>
+  <data name="notif_frmCreateAccount_Fill" xml:space="preserve">
+    <value>Please fill in all required fields.</value>
+  </data>
+  <data name="notif_frmCreateAccount_Created" xml:space="preserve">
+    <value>Account created successfully!</value>
+  </data>
+  <data name="notif_frmCreateAccount_CreateFailed" xml:space="preserve">
+    <value>Account creation failed</value>
+  </data>
+  <data name="notif_frmCreateAccount_PassMiss" xml:space="preserve">
+    <value>Password authentication mismatch</value>
+  </data>
+  <data name="txtEmail_Holder" xml:space="preserve">
+    <value>Enter Email</value>
+  </data>
+  <data name="txtSecurityAnswer_Holder" xml:space="preserve">
+    <value>Enter Security Answer</value>
+  </data>
 </root>

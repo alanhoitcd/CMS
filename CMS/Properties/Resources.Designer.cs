@@ -70,6 +70,15 @@ namespace CMS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SignUp.
+        /// </summary>
+        internal static string btnSignUp {
+            get {
+                return ResourceManager.GetString("btnSignUp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Remember Password.
         /// </summary>
         internal static string chkRememberPassword {
@@ -359,6 +368,24 @@ namespace CMS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Confirm Password.
+        /// </summary>
+        internal static string lblConfirmPassword {
+            get {
+                return ResourceManager.GetString("lblConfirmPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email.
+        /// </summary>
+        internal static string lblEmail {
+            get {
+                return ResourceManager.GetString("lblEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hi.
         /// </summary>
         internal static string lblHello {
@@ -386,6 +413,60 @@ namespace CMS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        internal static string lblPassword {
+            get {
+                return ResourceManager.GetString("lblPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Security Answer.
+        /// </summary>
+        internal static string lblSecurityAnswer {
+            get {
+                return ResourceManager.GetString("lblSecurityAnswer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Security Question.
+        /// </summary>
+        internal static string lblSecurityQuestion {
+            get {
+                return ResourceManager.GetString("lblSecurityQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sigup.
+        /// </summary>
+        internal static string lblSigup {
+            get {
+                return ResourceManager.GetString("lblSigup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User Name.
+        /// </summary>
+        internal static string lblUserName {
+            get {
+                return ResourceManager.GetString("lblUserName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Users Role.
+        /// </summary>
+        internal static string lblUsersRole {
+            get {
+                return ResourceManager.GetString("lblUsersRole", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Don&apos;t have an account?.
         /// </summary>
         internal static string llblDontHaveAnAccount {
@@ -409,6 +490,42 @@ namespace CMS.Properties {
         internal static string notif_ {
             get {
                 return ResourceManager.GetString("notif_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Account created successfully!.
+        /// </summary>
+        internal static string notif_frmCreateAccount_Created {
+            get {
+                return ResourceManager.GetString("notif_frmCreateAccount_Created", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Account creation failed.
+        /// </summary>
+        internal static string notif_frmCreateAccount_CreateFailed {
+            get {
+                return ResourceManager.GetString("notif_frmCreateAccount_CreateFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please fill in all required fields..
+        /// </summary>
+        internal static string notif_frmCreateAccount_Fill {
+            get {
+                return ResourceManager.GetString("notif_frmCreateAccount_Fill", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password authentication mismatch.
+        /// </summary>
+        internal static string notif_frmCreateAccount_PassMiss {
+            get {
+                return ResourceManager.GetString("notif_frmCreateAccount_PassMiss", resourceCulture);
             }
         }
         
@@ -746,6 +863,24 @@ namespace CMS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enter Confirm Password.
+        /// </summary>
+        internal static string txtConfirmPassword_Holder {
+            get {
+                return ResourceManager.GetString("txtConfirmPassword_Holder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter Email.
+        /// </summary>
+        internal static string txtEmail_Holder {
+            get {
+                return ResourceManager.GetString("txtEmail_Holder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         internal static string txtPassword {
@@ -755,11 +890,38 @@ namespace CMS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enter Password.
+        /// </summary>
+        internal static string txtPassword_Holder {
+            get {
+                return ResourceManager.GetString("txtPassword_Holder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter Security Answer.
+        /// </summary>
+        internal static string txtSecurityAnswer_Holder {
+            get {
+                return ResourceManager.GetString("txtSecurityAnswer_Holder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to User Name.
         /// </summary>
         internal static string txtUserName {
             get {
                 return ResourceManager.GetString("txtUserName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter User Name.
+        /// </summary>
+        internal static string txtUserName_Holder {
+            get {
+                return ResourceManager.GetString("txtUserName_Holder", resourceCulture);
             }
         }
     }

@@ -1,5 +1,6 @@
 ﻿using CMS.BLL;
 using CMS.DML;
+using CMS.UTIL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,14 +17,21 @@ namespace CMS.GUI
     public partial class frmCreateAccount : Form
     {
         private readonly Users_BLL _usersBLL = new Users_BLL();
-        string[] userRoles = new string[] {
+        string[] userRolesEN = new string[] {
             "Administrator",
             "Doctor",
             "Nurse",
             "Receptionist",
             "Accountant"
         };
-        private string[] securityQuestion = new string[] {
+        string[] userRolesVN = new string[] {
+            "Quản trị viên",
+            "Bác sĩ",
+            "Y tá",
+            "Lễ tân",
+            "Kế toán"
+        };
+        private string[] securityQuestionVN = new string[] {
             "Tên thời con gái của mẹ bạn là gì?",
             "Ngày sinh của bạn là ngày nào?",
             "Nơi sinh của bạn là thành phố/thị trấn nào?",
@@ -56,6 +64,124 @@ namespace CMS.GUI
             "Bạn có tài lẻ gì đặc biệt không?"
         };
 
+        private string[] securityQuestionEN = new string[] {
+            "What is your mother's maiden name?",
+            "What is your date of birth?",
+            "In which city/town were you born?",
+            "What was the name of your first pet?",
+            "What was the license plate number of your first car?",
+            "What was the name of your first elementary school?",
+            "What was your favorite food as a child?",
+            "What is your favorite book?",
+            "What is your favorite movie?",
+            "Who is your favorite singer or band?",
+            "What is your favorite sport?",
+            "What is your favorite sports team?",
+            "What is your favorite color?",
+            "What is your dream travel destination?",
+            "Do you prefer reading books or watching movies?",
+            "What do you usually do in your free time?",
+            "What type of music do you like?",
+            "What type of drink do you like?",
+            "What type of fruit do you like?",
+            "Which season of the year do you like the most?",
+            "What is your most memorable moment?",
+            "What is your biggest dream?",
+            "What are you most proud of about yourself?",
+            "Who has had the greatest influence on your life?",
+            "What is the one thing you would most like to change about the world?",
+            "If you had three wishes, what would you wish for?",
+            "Would you rather live in a city or the countryside?",
+            "Do you prefer working independently or in a team?",
+            "What was your favorite subject in school?",
+            "Do you have any special talents?"
+        };
+
+        private void UpdateLanguage()
+        {
+            lblSigup.Text = LanguageManager.GetString("lblSigup");
+            lblUserName.Text = LanguageManager.GetString("lblUserName");
+            lblPassword.Text = LanguageManager.GetString("lblPassword");
+            lblConfirmPassword.Text = LanguageManager.GetString("lblConfirmPassword");
+            lblUsersRole.Text = LanguageManager.GetString("lblUsersRole");
+            lblEmail.Text = LanguageManager.GetString("lblEmail");
+            lblSecurityQuestion.Text = LanguageManager.GetString("lblSecurityQuestion");
+            lblSecurityAnswer.Text = LanguageManager.GetString("lblSecurityAnswer");
+            btnSignUp.Text = LanguageManager.GetString("btnSignUp");
+            txtUserName.PlaceholderText = LanguageManager.GetString("txtUserName_Holder");
+            txtPassword.PlaceholderText = LanguageManager.GetString("txtPassword_Holder");
+            txtConfirmPassword.PlaceholderText = LanguageManager.GetString("txtConfirmPassword_Holder");
+            txtEmail.PlaceholderText = LanguageManager.GetString("txtEmail_Holder");
+            txtSecurityAnswer.PlaceholderText = LanguageManager.GetString("txtSecurityAnswer_Holder");
+
+        }
+
+        private void frmCreateAccount_Load_()
+        {
+            //add data vào combobox quyền
+            if (UTIL.Language.Lang.Equals("vn"))
+            {
+                cboUsersRole.Items.Clear();
+                foreach (string item in userRolesVN)
+                {
+                    cboUsersRole.Items.Add(item);
+                }
+                cboUsersRole.SelectedIndex = 0;
+            }
+            else
+            {
+                cboUsersRole.Items.Clear();
+                foreach (string item in userRolesEN)
+                {
+                    cboUsersRole.Items.Add(item);
+                }
+                cboUsersRole.SelectedIndex = 0;
+            }
+
+
+            //add dâta vào combobox câu hỏi bảo mật
+            if (UTIL.Language.Lang.Equals("vn"))
+            {
+                cboSecurityQuestion.Items.Clear();
+                foreach (string item in securityQuestionVN)
+                {
+                    cboSecurityQuestion.Items.Add(item);
+                }
+                cboSecurityQuestion.SelectedIndex = 0;
+            }
+            else
+            {
+                cboSecurityQuestion.Items.Clear();
+                foreach (string item in securityQuestionEN)
+                {
+                    cboSecurityQuestion.Items.Add(item);
+                }
+                cboSecurityQuestion.SelectedIndex = 0;
+            }
+            cboSecurityQuestion.SelectedIndex = 0;
+
+            using (MemoryStream ms = new MemoryStream(Properties.Resources.iconClose))
+            {
+                btnClose.Image = Image.FromStream(ms);
+            }
+            using (MemoryStream ms = new MemoryStream(Properties.Resources.imgfrmCreateAccount))
+            {
+                ptbSignUp.Image = Image.FromStream(ms);
+            }
+
+            if (UTIL.Language.Lang.Equals("vn"))
+            {
+                //Gán giá trị mã ngôn ngữ mới cho Lang. Setter sẽ kiểm tra giá trị
+                UTIL.LanguageManager.SetLanguage("vi-VN");
+            }
+            else
+            {
+                //Gán giá trị mã ngôn ngữ mới cho Lang.// Setter sẽ kiểm tra giá trị
+                UTIL.LanguageManager.SetLanguage("en-US");
+            }
+            UpdateLanguage();
+        }
+
         public frmCreateAccount()
         {
             InitializeComponent();
@@ -65,9 +191,9 @@ namespace CMS.GUI
         {
             if (string.IsNullOrEmpty(txtUserName.Text) || string.IsNullOrEmpty(txtPassword.Text) ||
                 string.IsNullOrEmpty(cboUsersRole.SelectedItem.ToString()) || string.IsNullOrEmpty(txtEmail.Text) ||
-                string.IsNullOrEmpty(cboSecurityQuestion.SelectedItem.ToString()) || string.IsNullOrEmpty(txtSecurityAnswerHash.Text))
+                string.IsNullOrEmpty(cboSecurityQuestion.SelectedItem.ToString()) || string.IsNullOrEmpty(txtSecurityAnswer.Text))
             {
-                MessageBox.Show("Please fill in all required fields.");
+                MessageBox.Show(LanguageManager.GetString("notif_frmCreateAccount_Fill"));
                 return;
             }
             if (txtPassword.Text.Equals(txtConfirmPassword.Text))
@@ -79,7 +205,7 @@ namespace CMS.GUI
                     RoleUsers1 = cboUsersRole.SelectedItem.ToString(),
                     Email1 = txtEmail.Text,
                     SecurityQuestion1 = cboSecurityQuestion.SelectedItem.ToString(),
-                    SecurityAnswerHash1 = txtSecurityAnswerHash.Text,
+                    SecurityAnswerHash1 = txtSecurityAnswer.Text,
                     LastLogin1 = null,
                     IsActive1 = true
                 };
@@ -89,20 +215,20 @@ namespace CMS.GUI
                     bool success = _usersBLL.RegisterUser(t);
                     if (success)
                     {
-                        MessageBox.Show("Tạo tài khoản thành công!");
+                        MessageBox.Show(LanguageManager.GetString("notif_frmCreateAccount_Created"));
                         this.Close();
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Tạo tài khoản thất bại: " + ex.Message);
+                    MessageBox.Show(LanguageManager.GetString("notif_frmCreateAccount_CreateFailed") + ": " + ex.Message);
                 }
             }
             else
             {
-                MessageBox.Show("Xác thực mật khẩu không khớp");
+                MessageBox.Show(LanguageManager.GetString("notif_frmCreateAccount_PassMiss"));
             }
-            
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -112,24 +238,7 @@ namespace CMS.GUI
 
         private void frmCreateAccount_Load(object sender, EventArgs e)
         {
-            foreach (string item in userRoles)
-            {
-                cboUsersRole.Items.Add(item);
-            }
-            cboUsersRole.SelectedIndex = 0;
-            foreach (string item in securityQuestion)
-            {
-                cboSecurityQuestion.Items.Add(item);
-            }
-            cboSecurityQuestion.SelectedIndex = 0;
-            using (MemoryStream ms = new MemoryStream(Properties.Resources.iconClose))
-            {
-                btnClose.Image = Image.FromStream(ms);
-            }
-            using (MemoryStream ms = new MemoryStream(Properties.Resources.imgfrmCreateAccount))
-            {
-                ptbSignUp.Image = Image.FromStream(ms);
-            }
+            frmCreateAccount_Load_();
         }
     }
 }

@@ -262,4 +262,58 @@
   <data name="notif_frmLogin_NotFound" xml:space="preserve">
     <value>không đúng, bạn có muốn tạo user mới không?</value>
   </data>
+  <data name="lblSigup" xml:space="preserve">
+    <value>Đăng Ký</value>
+  </data>
+  <data name="lblUserName" xml:space="preserve">
+    <value>Tên Người Dùng</value>
+  </data>
+  <data name="lblPassword" xml:space="preserve">
+    <value>Mật Khẩu</value>
+  </data>
+  <data name="lblConfirmPassword" xml:space="preserve">
+    <value>Xác Thực Mật Khẩu</value>
+  </data>
+  <data name="lblUsersRole" xml:space="preserve">
+    <value>Quyền Người Dùng</value>
+  </data>
+  <data name="lblEmail" xml:space="preserve">
+    <value>Thư Điện Tử</value>
+  </data>
+  <data name="lblSecurityQuestion" xml:space="preserve">
+    <value>Câu Hỏi Bảo Mật</value>
+  </data>
+  <data name="lblSecurityAnswer" xml:space="preserve">
+    <value>Câu Trả Lời </value>
+  </data>
+  <data name="txtUserName_Holder" xml:space="preserve">
+    <value>Nhập Tên Người Dùng</value>
+  </data>
+  <data name="txtPassword_Holder" xml:space="preserve">
+    <value>Nhập Mật Khẩu</value>
+  </data>
+  <data name="txtConfirmPassword_Holder" xml:space="preserve">
+    <value>Nhập Xác Thực Mật Khẩu</value>
+  </data>
+  <data name="btnSignUp" xml:space="preserve">
+    <value>Đăng Ký</value>
+  </data>
+  <data name="notif_frmCreateAccount_Fill" xml:space="preserve">
+    <value>Vui lòng điền vào tất cả các trường bắt buộc.</value>
+  </data>
+  <data name="notif_frmCreateAccount_Created" xml:space="preserve">
+    <value>Tạo tài khoản thành công!</value>
+  </data>
+  <data name="notif_frmCreateAccount_CreateFailed" xml:space="preserve">
+    <value>Tạo tài khoản thất bại</value>
+  </data>
+  <data name="notif_frmCreateAccount_PassMiss" xml:space="preserve">
+    <value>Xác thực mật khẩu không khớp</value>
+  </data>
+  <data name="txtEmail_Holder" xml:space="preserve">
+    <value>Nhập Email</value>
+  </data>
+  <data name="txtSecurityAnswer_Holder" xml:space="preserve">
+    <value>Nhập Câu Trả Lời</value>
+  </data>
 </root>

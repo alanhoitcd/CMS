@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\_DE_TAI_\\CMS\\CMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|d:\\_de_tai_\\cms\\cms\\gui\\frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:gui\\frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|d:\\_de_tai_\\cms\\cms\\gui\\frmcreateaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:gui\\frmcreateaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|d:\\_de_tai_\\cms\\cms\\gui\\frmcreateaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:gui\\frmcreateaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|D:\\_DE_TAI_\\CMS\\CMS\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
       "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|d:\\_de_tai_\\cms\\cms\\gui\\frmcreateaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:gui\\frmcreateaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,30 +27,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmMainForm.cs [Design]",
-              "DocumentMoniker": "D:\\_DE_TAI_\\CMS\\CMS\\GUI\\frmMainForm.cs",
-              "RelativeDocumentMoniker": "GUI\\frmMainForm.cs",
-              "ToolTip": "D:\\_DE_TAI_\\CMS\\CMS\\GUI\\frmMainForm.cs [Design]",
-              "RelativeToolTip": "GUI\\frmMainForm.cs [Design]",
+              "Title": "frmCreateAccount.cs",
+              "DocumentMoniker": "D:\\_DE_TAI_\\CMS\\CMS\\GUI\\frmCreateAccount.cs",
+              "RelativeDocumentMoniker": "GUI\\frmCreateAccount.cs",
+              "ToolTip": "D:\\_DE_TAI_\\CMS\\CMS\\GUI\\frmCreateAccount.cs",
+              "RelativeToolTip": "GUI\\frmCreateAccount.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAcwHsAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T02:29:50.991Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-16T07:18:11.526Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmCreateAccount.cs [Design]",
-              "DocumentMoniker": "D:\\_DE_TAI_\\CMS\\CMS\\GUI\\frmCreateAccount.cs",
-              "RelativeDocumentMoniker": "GUI\\frmCreateAccount.cs",
-              "ToolTip": "D:\\_DE_TAI_\\CMS\\CMS\\GUI\\frmCreateAccount.cs [Design]",
-              "RelativeToolTip": "GUI\\frmCreateAccount.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T02:28:17.77Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Resources.resx",
               "DocumentMoniker": "D:\\_DE_TAI_\\CMS\\CMS\\Properties\\Resources.resx",
               "RelativeDocumentMoniker": "Properties\\Resources.resx",
@@ -59,6 +48,18 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
               "WhenOpened": "2025-04-06T00:17:38.859Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmCreateAccount.cs [Design]",
+              "DocumentMoniker": "D:\\_DE_TAI_\\CMS\\CMS\\GUI\\frmCreateAccount.cs",
+              "RelativeDocumentMoniker": "GUI\\frmCreateAccount.cs",
+              "ToolTip": "D:\\_DE_TAI_\\CMS\\CMS\\GUI\\frmCreateAccount.cs [Design]",
+              "RelativeToolTip": "GUI\\frmCreateAccount.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T07:15:27.609Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
