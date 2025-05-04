@@ -251,7 +251,8 @@ namespace CMS
 
         private void frmMainForm_Load(object sender, EventArgs e)
         {
-            frmMainForm_Load_(true);
+            //frmMainForm_Load_(true);
+            frmMainForm_Load_(false);
         }
 
         private void btnScreenMode_Click(object sender, EventArgs e)
@@ -272,17 +273,17 @@ namespace CMS
 
         private void tsmiLogin_Click(object sender, EventArgs e)
         {
-            frmLogin f = new frmLogin();
-            if (f.ShowDialog() == DialogResult.OK)
-            {
-                frmMainForm_Load_(false);
-                this.userName = "Hồ Huyền Anh";
-                lblHello.Text = LanguageManager.GetString("lblHello") + " " + this.userName;
-            }
-            else
-            {
-                frmMainForm_Load_(true);
-            }
+            //frmLogin f = new frmLogin();
+            //if (f.ShowDialog() == DialogResult.OK)
+            //{
+            //    frmMainForm_Load_(false);
+            //    this.userName = "Hồ Huyền Anh";
+            //    lblHello.Text = LanguageManager.GetString("lblHello") + " " + this.userName;
+            //}
+            //else
+            //{
+            //    frmMainForm_Load_(true);
+            //}
         }
 
         private void tsmiLogout_Click(object sender, EventArgs e)

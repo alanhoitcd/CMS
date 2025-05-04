@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\_DE_TAI_\\CMS\\CMS\\",
+  "WorkspaceRootPath": "D:\\_DuAn_\\CMS\\CMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|d:\\_de_tai_\\cms\\cms\\gui\\frmcreateaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:gui\\frmcreateaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|d:\\_duan_\\cms\\cms\\gui\\frmmanagepatients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:gui\\frmmanagepatients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|D:\\_DE_TAI_\\CMS\\CMS\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
-      "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|d:\\_duan_\\cms\\cms\\gui\\frmmanagepatients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:gui\\frmmanagepatients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|d:\\_de_tai_\\cms\\cms\\gui\\frmcreateaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:gui\\frmcreateaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|d:\\_duan_\\cms\\cms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,44 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmCreateAccount.cs",
-              "DocumentMoniker": "D:\\_DE_TAI_\\CMS\\CMS\\GUI\\frmCreateAccount.cs",
-              "RelativeDocumentMoniker": "GUI\\frmCreateAccount.cs",
-              "ToolTip": "D:\\_DE_TAI_\\CMS\\CMS\\GUI\\frmCreateAccount.cs",
-              "RelativeToolTip": "GUI\\frmCreateAccount.cs",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAcwHsAAAArAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\_DuAn_\\CMS\\CMS\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\_DuAn_\\CMS\\CMS\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T07:18:11.526Z",
+              "WhenOpened": "2025-05-04T11:51:23.894Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Resources.resx",
-              "DocumentMoniker": "D:\\_DE_TAI_\\CMS\\CMS\\Properties\\Resources.resx",
-              "RelativeDocumentMoniker": "Properties\\Resources.resx",
-              "ToolTip": "D:\\_DE_TAI_\\CMS\\CMS\\Properties\\Resources.resx",
-              "RelativeToolTip": "Properties\\Resources.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-04-06T00:17:38.859Z",
-              "EditorCaption": ""
+              "Title": "frmManagePatients.cs [Design]",
+              "DocumentMoniker": "D:\\_DuAn_\\CMS\\CMS\\GUI\\frmManagePatients.cs",
+              "RelativeDocumentMoniker": "GUI\\frmManagePatients.cs",
+              "ToolTip": "D:\\_DuAn_\\CMS\\CMS\\GUI\\frmManagePatients.cs [Design]",
+              "RelativeToolTip": "GUI\\frmManagePatients.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T11:18:09.91Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmCreateAccount.cs [Design]",
-              "DocumentMoniker": "D:\\_DE_TAI_\\CMS\\CMS\\GUI\\frmCreateAccount.cs",
-              "RelativeDocumentMoniker": "GUI\\frmCreateAccount.cs",
-              "ToolTip": "D:\\_DE_TAI_\\CMS\\CMS\\GUI\\frmCreateAccount.cs [Design]",
-              "RelativeToolTip": "GUI\\frmCreateAccount.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "frmManagePatients.cs",
+              "DocumentMoniker": "D:\\_DuAn_\\CMS\\CMS\\GUI\\frmManagePatients.cs",
+              "RelativeDocumentMoniker": "GUI\\frmManagePatients.cs",
+              "ToolTip": "D:\\_DuAn_\\CMS\\CMS\\GUI\\frmManagePatients.cs",
+              "RelativeToolTip": "GUI\\frmManagePatients.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAwEkAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T07:15:27.609Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-04T10:04:44.43Z",
+              "EditorCaption": ""
             }
           ]
         }

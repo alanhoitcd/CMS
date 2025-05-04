@@ -643,4 +643,11 @@ INSERT INTO LabRequests (VisitId, LabId, TestType, RequestDate, ResultDate, Resu
 VALUES (10, 10, 'Ultrasound', '2025-03-18 11:00', '2025-03-18 13:00', 'Normal', 'Completed');
 
 --
+--get sinh vien by MaSv
+create procedure getALlPatients
+as begin 
+select PatientId, FirstName, LastName, DateOfBirth, Gender, PhoneNumber, AddressPatients, SocialSecurityNumber from Patients
+end
 
+
+getALlPatients
