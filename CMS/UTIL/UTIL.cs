@@ -180,7 +180,7 @@ namespace CMS.UTIL
         }
 
         // hàm dành cho event CellClick của Datagridview: lấy dữ liệu từ Datagridview lên textbox
-        public static void layDataFromDatagridviewFillTextbox(TextBox textbox, DataGridView dataGridView, int collum, DataGridViewCellEventArgs e)
+        public static void getDataFromDatagridviewFillTextbox(TextBox textbox, DataGridView dataGridView, int collum, DataGridViewCellEventArgs e)
         {
             //private void dataGridView_Form4_CellClick(object sender, DataGridViewCellEventArgs e)
             //{ // Sự kiện CellClick của DataGridView 
@@ -196,8 +196,42 @@ namespace CMS.UTIL
             }
         }
 
+        // hàm dành cho event CellClick của Datagridview: lấy dữ liệu từ Datagridview lên date time picker
+        public static void getDataFromDatagridviewFillDateTimePicker(DateTimePicker dateTimePicker, DataGridView dataGridView, int column, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (dataGridView.Rows[e.RowIndex].Cells[column].Value != null && dataGridView.Rows[e.RowIndex].Cells[column].Value != DBNull.Value)
+                {
+                    try
+                    {
+                        // Lấy giá trị từ ô trong DataGridView và chuyển đổi sang DateTime
+                        DateTime selectedDateTime = Convert.ToDateTime(dataGridView.Rows[e.RowIndex].Cells[column].Value);
+
+                        // Gán giá trị DateTime vào DateTimePicker
+                        dateTimePicker.Value = selectedDateTime;
+                    }
+                    catch (FormatException ex)
+                    {
+                        // Xử lý lỗi nếu giá trị trong ô không phải là DateTime hợp lệ
+                        MessageBox.Show("Giá trị trong cột không phải là định dạng ngày giờ hợp lệ. Lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    catch (Exception ex)
+                    {
+                        // Xử lý các lỗi khác
+                        MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    // Xử lý trường hợp giá trị trong ô là null hoặc DBNull
+                    MessageBox.Show("Ô dữ liệu trống.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
         // hàm dành cho event CellClick của Datagridview: lấy dữ liệu từ Datagridview lên COMBOBOX
-        public static void layDataFromDatagridviewFillCombobox(ComboBox comboBox, DataGridView dataGridView, int collum, DataGridViewCellEventArgs e)
+        public static void getDataFromDatagridviewFillCombobox(ComboBox comboBox, DataGridView dataGridView, int collum, DataGridViewCellEventArgs e)
         {
             //    private void dataGridView_Form4_CellClick(object sender, DataGridViewCellEventArgs e)
             //{ // Sự kiện CellClick của DataGridView 

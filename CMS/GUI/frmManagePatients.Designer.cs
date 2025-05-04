@@ -32,8 +32,6 @@
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pnlHead = new System.Windows.Forms.Panel();
             this.panelBody = new System.Windows.Forms.Panel();
-            this.cboMonth = new System.Windows.Forms.ComboBox();
-            this.lblMonth = new System.Windows.Forms.Label();
             this.cboGender = new System.Windows.Forms.ComboBox();
             this.lblSocialSecurityNumber = new System.Windows.Forms.Label();
             this.txtSocialSecurityNumber = new System.Windows.Forms.TextBox();
@@ -53,12 +51,9 @@
             this.btnDeletePatients = new Guna.UI2.WinForms.Guna2Button();
             this.btnEditPatients = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddPatients = new Guna.UI2.WinForms.Guna2Button();
-            this.cboYear = new System.Windows.Forms.ComboBox();
-            this.lblYear = new System.Windows.Forms.Label();
-            this.cboDay = new System.Windows.Forms.ComboBox();
-            this.lblDay = new System.Windows.Forms.Label();
             this.panelFoot = new System.Windows.Forms.Panel();
             this.dgvManagePatients = new System.Windows.Forms.DataGridView();
+            this.dtpDateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.pnlHead.SuspendLayout();
             this.panelBody.SuspendLayout();
             this.panelFoot.SuspendLayout();
@@ -111,12 +106,7 @@
             // 
             // panelBody
             // 
-            this.panelBody.Controls.Add(this.cboDay);
-            this.panelBody.Controls.Add(this.lblDay);
-            this.panelBody.Controls.Add(this.cboYear);
-            this.panelBody.Controls.Add(this.lblYear);
-            this.panelBody.Controls.Add(this.cboMonth);
-            this.panelBody.Controls.Add(this.lblMonth);
+            this.panelBody.Controls.Add(this.dtpDateOfBirth);
             this.panelBody.Controls.Add(this.cboGender);
             this.panelBody.Controls.Add(this.lblSocialSecurityNumber);
             this.panelBody.Controls.Add(this.txtSocialSecurityNumber);
@@ -141,26 +131,6 @@
             this.panelBody.Name = "panelBody";
             this.panelBody.Size = new System.Drawing.Size(1593, 278);
             this.panelBody.TabIndex = 27;
-            // 
-            // cboMonth
-            // 
-            this.cboMonth.Font = new System.Drawing.Font("Times New Roman", 16.2F);
-            this.cboMonth.FormattingEnabled = true;
-            this.cboMonth.Location = new System.Drawing.Point(481, 156);
-            this.cboMonth.Name = "cboMonth";
-            this.cboMonth.Size = new System.Drawing.Size(75, 39);
-            this.cboMonth.TabIndex = 52;
-            this.cboMonth.SelectedIndexChanged += new System.EventHandler(this.cboMonth_SelectedIndexChanged);
-            // 
-            // lblMonth
-            // 
-            this.lblMonth.AutoSize = true;
-            this.lblMonth.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMonth.Location = new System.Drawing.Point(385, 159);
-            this.lblMonth.Name = "lblMonth";
-            this.lblMonth.Size = new System.Drawing.Size(90, 33);
-            this.lblMonth.TabIndex = 51;
-            this.lblMonth.Text = "Month";
             // 
             // cboGender
             // 
@@ -373,45 +343,6 @@
             this.btnAddPatients.Text = "Add";
             this.btnAddPatients.Click += new System.EventHandler(this.btnAddPatients_Click);
             // 
-            // cboYear
-            // 
-            this.cboYear.Font = new System.Drawing.Font("Times New Roman", 16.2F);
-            this.cboYear.FormattingEnabled = true;
-            this.cboYear.Location = new System.Drawing.Point(304, 153);
-            this.cboYear.Name = "cboYear";
-            this.cboYear.Size = new System.Drawing.Size(75, 39);
-            this.cboYear.TabIndex = 56;
-            this.cboYear.SelectedIndexChanged += new System.EventHandler(this.cboYear_SelectedIndexChanged);
-            // 
-            // lblYear
-            // 
-            this.lblYear.AutoSize = true;
-            this.lblYear.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblYear.Location = new System.Drawing.Point(233, 156);
-            this.lblYear.Name = "lblYear";
-            this.lblYear.Size = new System.Drawing.Size(65, 33);
-            this.lblYear.TabIndex = 55;
-            this.lblYear.Text = "Year";
-            // 
-            // cboDay
-            // 
-            this.cboDay.Font = new System.Drawing.Font("Times New Roman", 16.2F);
-            this.cboDay.FormattingEnabled = true;
-            this.cboDay.Location = new System.Drawing.Point(657, 156);
-            this.cboDay.Name = "cboDay";
-            this.cboDay.Size = new System.Drawing.Size(75, 39);
-            this.cboDay.TabIndex = 58;
-            // 
-            // lblDay
-            // 
-            this.lblDay.AutoSize = true;
-            this.lblDay.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDay.Location = new System.Drawing.Point(591, 159);
-            this.lblDay.Name = "lblDay";
-            this.lblDay.Size = new System.Drawing.Size(60, 33);
-            this.lblDay.TabIndex = 57;
-            this.lblDay.Text = "Day";
-            // 
             // panelFoot
             // 
             this.panelFoot.Controls.Add(this.dgvManagePatients);
@@ -435,6 +366,16 @@
             this.dgvManagePatients.RowTemplate.Height = 24;
             this.dgvManagePatients.Size = new System.Drawing.Size(1569, 478);
             this.dgvManagePatients.TabIndex = 61;
+            this.dgvManagePatients.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvManagePatients_CellClick);
+            this.dgvManagePatients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvManagePatients_CellContentClick);
+            // 
+            // dtpDateOfBirth
+            // 
+            this.dtpDateOfBirth.Font = new System.Drawing.Font("Times New Roman", 16.2F);
+            this.dtpDateOfBirth.Location = new System.Drawing.Point(226, 150);
+            this.dtpDateOfBirth.Name = "dtpDateOfBirth";
+            this.dtpDateOfBirth.Size = new System.Drawing.Size(506, 39);
+            this.dtpDateOfBirth.TabIndex = 51;
             // 
             // frmManagePatients
             // 
@@ -484,13 +425,8 @@
         private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.ComboBox cboGender;
-        private System.Windows.Forms.ComboBox cboMonth;
-        private System.Windows.Forms.Label lblMonth;
-        private System.Windows.Forms.ComboBox cboYear;
-        private System.Windows.Forms.Label lblYear;
-        private System.Windows.Forms.ComboBox cboDay;
-        private System.Windows.Forms.Label lblDay;
         private System.Windows.Forms.Panel panelFoot;
         private System.Windows.Forms.DataGridView dgvManagePatients;
+        private System.Windows.Forms.DateTimePicker dtpDateOfBirth;
     }
 }

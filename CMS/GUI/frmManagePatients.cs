@@ -10,6 +10,9 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CMS.BLL;
+using CMS.DAL;
+using CMS.DML;
 
 namespace CMS.GUI
 {
@@ -31,32 +34,25 @@ namespace CMS.GUI
 
         void frmManagePatients_Load_()
         {
+            //chèn ảnh cho nut thoát
             using (MemoryStream ms = new MemoryStream(Properties.Resources.iconClose))
             {
                 btnClose.Image = Image.FromStream(ms);
             }
+
+            //thiết lập ngôn ngữ cho header datagridview và load dữ liệu lên form khi form load
             if (UTIL.Language.Lang.Equals("vn"))
             {
+                dgvManagePatients.Rows.Clear();
                 UTIL.UTIL.showDataToDataGridview(dgvManagePatients, "getALlPatients", headTitleVN);
             }
             else
             {
+                dgvManagePatients.Rows.Clear();
                 UTIL.UTIL.showDataToDataGridview(dgvManagePatients, "getALlPatients", headTitleEng);
             }
-            //
-            // add year
-            for (int i = 1900; i <= DateTime.Now.Year + 2; i++)
-            {
-                cboYear.Items.Add(i);
-            }
-            cboYear.SelectedItem = 1979;
-            // add month
-            for (int i = 1; i <= 12; i++)
-            {
-                cboMonth.Items.Add(i);
-            }
-            cboMonth.SelectedIndex = 1;
-            //
+
+            //add data combobox gender
             if (UTIL.Language.Lang.Equals("vn"))
             {
                 for (int i = 0; i < genderVN.Length; i++)
@@ -71,6 +67,7 @@ namespace CMS.GUI
                     cboGender.Items.Add(genderEN[i]);
                 }
             }
+            //thiết lập combobox mặc định cho gender
             cboGender.SelectedIndex = 0;
         }
         //
@@ -96,7 +93,38 @@ namespace CMS.GUI
 
         private void btnAddPatients_Click(object sender, EventArgs e)
         {
+            PatientsBLL t = new PatientsBLL();
+            if (t.checkPatientsBySSN(txtSocialSecurityNumber.Text.Trim()))
+            {
+                MessageBox.Show(txtSocialSecurityNumber.Text + " is available", "Notif");
+            }
+            else
+            {
+                Patients_DML a = new Patients_DML();
+                a.FirstName1 = txtFirstName.Text.Trim();
+                a.LastName1 = txtLastName.Text.Trim();
+                // Lấy giá trị DateTime từ DateTimePicker
+                DateTime selectedDateTime = dtpDateOfBirth.Value;
+                //// Chuyển đổi DateTime thành chuỗi với định dạng mong muốn
+                //string formattedDateTime = selectedDateTime.ToString("yyyy-MM-dd");
+                a.Gender1 = cboGender.SelectedItem.ToString().Trim();
+                a.PhoneNumber1 = txtPhoneNumber.Text.Trim();
+                a.AddressPatients1 = txtAddressPatients.Text.Trim();
+                a.SocialSecurityNumber1 = txtSocialSecurityNumber.Text.Trim();
 
+                PatientsDAL PatientsDAL_ = new PatientsDAL();
+                PatientsDAL_.Insert(a);
+                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                if (UTIL.Language.Lang.Equals("vn"))
+                {
+                    UTIL.UTIL.showDataToDataGridview(dgvManagePatients, "getALlPatients", headTitleVN);
+                }
+                else
+                {
+                    UTIL.UTIL.showDataToDataGridview(dgvManagePatients, "getALlPatients", headTitleEng);
+                }
+            }
         }
 
         private void cboYear_SelectedIndexChanged(object sender, EventArgs e)
@@ -106,19 +134,28 @@ namespace CMS.GUI
 
         private void cboMonth_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cboDay.Items.Clear();
-            // Lấy số ngày trong tháng và năm được chọn
-            int daysInMonth = DateTime.DaysInMonth(int.Parse(cboYear.SelectedItem.ToString().Trim()), int.Parse(cboMonth.SelectedItem.ToString().Trim()));
 
-            // Thêm các ngày vào ComboBox cboDay
-            for (int day = 1; day <= daysInMonth; day++)
-            {
-                cboDay.Items.Add(day);
-            }
-            cboDay.SelectedIndex = 0;
         }
 
         private void lblSocialSecurityNumber_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvManagePatients_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            UTIL.UTIL.getDataFromDatagridviewFillTextbox(txtPatientId, dgvManagePatients, 0, e);
+            UTIL.UTIL.getDataFromDatagridviewFillTextbox(txtFirstName, dgvManagePatients, 1, e);
+            UTIL.UTIL.getDataFromDatagridviewFillTextbox(txtLastName, dgvManagePatients, 2, e);
+            UTIL.UTIL.getDataFromDatagridviewFillDateTimePicker(dtpDateOfBirth, dgvManagePatients, 3, e);
+            UTIL.UTIL.getDataFromDatagridviewFillCombobox(cboGender, dgvManagePatients, 4, e);
+            UTIL.UTIL.getDataFromDatagridviewFillTextbox(txtPhoneNumber, dgvManagePatients, 5, e);
+            UTIL.UTIL.getDataFromDatagridviewFillTextbox(txtAddressPatients, dgvManagePatients, 6, e);
+            UTIL.UTIL.getDataFromDatagridviewFillTextbox(txtSocialSecurityNumber, dgvManagePatients, 7, e);
+
+        }
+
+        private void dgvManagePatients_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

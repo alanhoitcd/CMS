@@ -25,7 +25,7 @@ CREATE TABLE Patients (
     FirstName NVARCHAR(50) NOT NULL,
     LastName NVARCHAR(50) NOT NULL,
     DateOfBirth DATE NOT NULL,
-    Gender NVARCHAR(1) NOT NULL CHECK (Gender IN ('M', 'F', 'O')),
+    Gender NVARCHAR(6) NOT NULL CHECK (Gender IN ('Male', 'Female', 'Nam', 'Nữ')),
     PhoneNumber NVARCHAR(15) NOT NULL CHECK (PhoneNumber LIKE '[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]'),
     AddressPatients NVARCHAR(100) NOT NULL,
     SocialSecurityNumber NVARCHAR(11) NULL CHECK (SocialSecurityNumber LIKE '[0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9][0-9][0-9]' OR SocialSecurityNumber IS NULL),
@@ -254,25 +254,25 @@ INSERT INTO Users (Username, PasswordHash, RoleUsers, Email, SecurityQuestion, S
 VALUES ('user10', 'hashedpass10', 'User', 'user10@example.com', 'What is your dream destination?', 'hashedanswer10', NULL, 1, GETDATE());
 
 INSERT INTO Patients (FirstName, LastName, DateOfBirth, Gender, PhoneNumber, AddressPatients, SocialSecurityNumber, IsEncrypted) 
-VALUES ('John', 'Doe', '1980-05-15', 'M', '123-456-7890', '123 Main St', '123-45-6789', 0);
+VALUES ('John', 'Doe', '1980-05-15', 'Male', '123-456-7890', '123 Main St', '123-45-6789', 0);
 INSERT INTO Patients (FirstName, LastName, DateOfBirth, Gender, PhoneNumber, AddressPatients, SocialSecurityNumber, IsEncrypted) 
-VALUES ('Jane', 'Smith', '1990-08-22', 'F', '234-567-8901', '456 Oak St', '234-56-7890', 0);
+VALUES ('Jane', 'Smith', '1990-08-22', 'Female', '234-567-8901', '456 Oak St', '234-56-7890', 0);
 INSERT INTO Patients (FirstName, LastName, DateOfBirth, Gender, PhoneNumber, AddressPatients, SocialSecurityNumber, IsEncrypted) 
-VALUES ('Alex', 'Brown', '1975-03-10', 'O', '345-678-9012', '789 Pine St', NULL, 0);
+VALUES ('Alex', 'Brown', '1975-03-10', 'Female', '345-678-9012', '789 Pine St', NULL, 0);
 INSERT INTO Patients (FirstName, LastName, DateOfBirth, Gender, PhoneNumber, AddressPatients, SocialSecurityNumber, IsEncrypted) 
-VALUES ('Mary', 'Johnson', '1985-12-01', 'F', '456-789-0123', '101 Maple St', '345-67-8901', 0);
+VALUES ('Mary', 'Johnson', '1985-12-01', 'Female', '456-789-0123', '101 Maple St', '345-67-8901', 0);
 INSERT INTO Patients (FirstName, LastName, DateOfBirth, Gender, PhoneNumber, AddressPatients, SocialSecurityNumber, IsEncrypted) 
-VALUES ('Peter', 'Parker', '1995-07-19', 'M', '567-890-1234', '202 Cedar St', '456-78-9012', 0);
+VALUES ('Peter', 'Parker', '1995-07-19', 'Male', '567-890-1234', '202 Cedar St', '456-78-9012', 0);
 INSERT INTO Patients (FirstName, LastName, DateOfBirth, Gender, PhoneNumber, AddressPatients, SocialSecurityNumber, IsEncrypted) 
-VALUES ('Lisa', 'Davis', '1988-09-25', 'F', '678-901-2345', '303 Birch St', NULL, 0);
+VALUES ('Lisa', 'Davis', '1988-09-25', 'Female', '678-901-2345', '303 Birch St', NULL, 0);
 INSERT INTO Patients (FirstName, LastName, DateOfBirth, Gender, PhoneNumber, AddressPatients, SocialSecurityNumber, IsEncrypted) 
-VALUES ('Tom', 'Wilson', '1970-11-30', 'M', '789-012-3456', '404 Elm St', '567-89-0123', 0);
+VALUES ('Tom', 'Wilson', '1970-11-30', 'Male', '789-012-3456', '404 Elm St', '567-89-0123', 0);
 INSERT INTO Patients (FirstName, LastName, DateOfBirth, Gender, PhoneNumber, AddressPatients, SocialSecurityNumber, IsEncrypted) 
-VALUES ('Emma', 'Taylor', '1992-02-14', 'F', '890-123-4567', '505 Spruce St', '678-90-1234', 0);
+VALUES ('Emma', 'Taylor', '1992-02-14', 'Female', '890-123-4567', '505 Spruce St', '678-90-1234', 0);
 INSERT INTO Patients (FirstName, LastName, DateOfBirth, Gender, PhoneNumber, AddressPatients, SocialSecurityNumber, IsEncrypted) 
-VALUES ('James', 'Moore', '1983-06-08', 'M', '901-234-5678', '606 Willow St', NULL, 0);
+VALUES ('James', 'Moore', '1983-06-08', 'Male', '901-234-5678', '606 Willow St', NULL, 0);
 INSERT INTO Patients (FirstName, LastName, DateOfBirth, Gender, PhoneNumber, AddressPatients, SocialSecurityNumber, IsEncrypted) 
-VALUES ('Sarah', 'Lee', '1998-04-17', 'F', '012-345-6789', '707 Ash St', '789-01-2345', 0);
+VALUES ('Sarah', 'Lee', '1998-04-17', 'Female', '012-345-6789', '707 Ash St', '789-01-2345', 0);
 
 INSERT INTO Doctors (UserId, FirstName, LastName, Specialty, LicenseNumber, Schedule) 
 VALUES (2, 'Robert', 'Miller', 'Cardiology', 'LIC001', 'Mon-Fri 9-5');
@@ -643,11 +643,52 @@ INSERT INTO LabRequests (VisitId, LabId, TestType, RequestDate, ResultDate, Resu
 VALUES (10, 10, 'Ultrasound', '2025-03-18 11:00', '2025-03-18 13:00', 'Normal', 'Completed');
 
 --
---get sinh vien by MaSv
+--tạo các procedure
 create procedure getALlPatients
 as begin 
 select PatientId, FirstName, LastName, DateOfBirth, Gender, PhoneNumber, AddressPatients, SocialSecurityNumber from Patients
 end
 
-
 getALlPatients
+
+CREATE TABLE Patients (
+    PatientId INT IDENTITY(1,1) PRIMARY KEY,
+    FirstName NVARCHAR(50) NOT NULL,
+    LastName NVARCHAR(50) NOT NULL,
+    DateOfBirth DATE NOT NULL,
+    Gender NVARCHAR(6) NOT NULL CHECK (Gender IN ('Male', 'Female', 'Nam', 'Nữ')),
+    PhoneNumber NVARCHAR(15) NOT NULL CHECK (PhoneNumber LIKE '[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]'),
+    AddressPatients NVARCHAR(100) NOT NULL,
+    SocialSecurityNumber NVARCHAR(11) NULL CHECK (SocialSecurityNumber LIKE '[0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9][0-9][0-9]' OR SocialSecurityNumber IS NULL),
+    IsEncrypted BIT DEFAULT 0 NOT NULL
+);
+
+create procedure checkPatientsBySSN
+@SocialSecurityNumber NVARCHAR(11)
+as begin
+select count(SocialSecurityNumber) from Patients where SocialSecurityNumber = @SocialSecurityNumber
+end
+
+checkPatientsBySSN '123-45-6789'
+
+CREATE PROCEDURE insertPatient (
+    @FirstName NVARCHAR(50),
+    @LastName NVARCHAR(50),
+    @DateOfBirth DATE,
+    @Gender NVARCHAR(6),
+    @PhoneNumber NVARCHAR(15),
+    @AddressPatients NVARCHAR(100),
+    @SocialSecurityNumber NVARCHAR(11) = NULL, -- Cho phép giá trị NULL
+    @IsEncrypted BIT = 0                     -- Giá trị mặc định là 0
+)
+AS
+BEGIN
+    INSERT INTO Patients (FirstName, LastName, DateOfBirth, Gender, PhoneNumber, AddressPatients, SocialSecurityNumber, IsEncrypted)
+    VALUES (@FirstName, @LastName, @DateOfBirth, @Gender, @PhoneNumber, @AddressPatients, @SocialSecurityNumber, @IsEncrypted);
+END;
+
+
+
+ EXEC insertPatient @FirstName = 'aaa',@LastName = 'Văn A',@DateOfBirth = '2000-01-15',
+ @Gender = 'Nam',@PhoneNumber = '090-123-4567',@AddressPatients = '123 Đường ABC, Quận XYZ, Thành phố HCM',
+ @SocialSecurityNumber = '111-11-1111'
