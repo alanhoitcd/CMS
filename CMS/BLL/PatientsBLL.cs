@@ -14,5 +14,10 @@ namespace CMS.BLL
         {
             return t.checkPatientsBySSN(SSN) > 0;
         }
+
+        public bool checkPatientsByID(int patientID)
+        {
+            return t.checkPatientsByID(patientID) > 0;
+        }
     }
 }

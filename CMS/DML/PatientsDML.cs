@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CMS.DML
 {
-    public class Patients_DML
+    public class PatientsDML
     {
         /*
             PatientId INT IDENTITY(1,1) PRIMARY KEY,
@@ -29,11 +29,11 @@ namespace CMS.DML
         private string SocialSecurityNumber;
         private bool IsEncrypted;
 
-        public Patients_DML()
+        public PatientsDML()
         {
         }
 
-        public Patients_DML(int patientId, string firstName, string lastName, DateTime dateOfBirth, string gender,
+        public PatientsDML(int patientId, string firstName, string lastName, DateTime dateOfBirth, string gender,
             string phoneNumber, string addressPatients, string socialSecurityNumber, bool isEncrypted)
         {
             PatientId1 = patientId;

@@ -16,7 +16,7 @@ namespace CMS.GUI
 {
     public partial class frmCreateAccount : Form
     {
-        private readonly Users_BLL _usersBLL = new Users_BLL();
+        private readonly UsersBLL _usersBLL = new UsersBLL();
         string[] userRolesEN = new string[] {
             "Administrator",
             "Doctor",
@@ -198,7 +198,7 @@ namespace CMS.GUI
             }
             if (txtPassword.Text.Equals(txtConfirmPassword.Text))
             {
-                Users_DML t = new Users_DML
+                UsersDML t = new UsersDML
                 {
                     Username1 = txtUserName.Text,
                     PasswordHash1 = txtPassword.Text,

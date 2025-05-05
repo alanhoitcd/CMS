@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CMS.DML
 {
-    public class Users_DML
+    public class UsersDML
     {
         /*      UserId INT IDENTITY(1,1) PRIMARY KEY,
                 Username VARCHAR(50) NOT NULL UNIQUE,
@@ -29,11 +29,11 @@ namespace CMS.DML
         private bool IsActive;
         private DateTime CreatedDate;
 
-        public Users_DML()
+        public UsersDML()
         {
         }
 
-        public Users_DML(int userId, string username, string passwordHash, string roleUsers, string email, string securityQuestion, 
+        public UsersDML(int userId, string username, string passwordHash, string roleUsers, string email, string securityQuestion, 
             string securityAnswerHash, DateTime? lastLogin, bool isActive, DateTime createdDate)
         {
             UserId1 = userId;

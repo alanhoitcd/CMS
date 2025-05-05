@@ -12,9 +12,9 @@ using System.Threading.Tasks;
 
 namespace CMS.BLL
 {
-    public class Users_BLL
+    public class UsersBLL
     {
-        private readonly Users_DAL _usersDAL = new Users_DAL();
+        private readonly UsersDAL _usersDAL = new UsersDAL();
         public bool checkUser(string ten_nguoi_dung)
         {
             return _usersDAL.checkUser(ten_nguoi_dung) > 0;
@@ -27,7 +27,7 @@ namespace CMS.BLL
                 throw new ArgumentException("Username and password are required.");
             }
 
-            Users_DML user = _usersDAL.GetUserByUsername(username);
+            UsersDML user = _usersDAL.GetUserByUsername(username);
             if (user == null)
             {
                 return false; // Người dùng không tồn tại
@@ -72,7 +72,7 @@ namespace CMS.BLL
             }
         }
 
-        public bool RegisterUser(Users_DML t)
+        public bool RegisterUser(UsersDML t)
         {
             // Kiểm tra các trường bắt buộc
             if (string.IsNullOrEmpty(t.Username1) || string.IsNullOrEmpty(t.PasswordHash1) ||

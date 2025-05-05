@@ -69,14 +69,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\PatientsBLL.cs" />
-    <Compile Include="BLL\Doctors_BLL.cs" />
-    <Compile Include="BLL\Users_BLL.cs" />
+    <Compile Include="BLL\DoctorsBLL.cs" />
+    <Compile Include="BLL\UsersBLL.cs" />
     <Compile Include="DAL\PatientsDAL.cs" />
-    <Compile Include="DAL\Users_DAL.cs" />
+    <Compile Include="DAL\UsersDAL.cs" />
     <Compile Include="DAL\sqlDatabase.cs" />
-    <Compile Include="DML\Doctors_DML.cs" />
-    <Compile Include="DML\Patients_DML.cs" />
-    <Compile Include="DML\Users_DML.cs" />
+    <Compile Include="DML\DoctorsDML.cs" />
+    <Compile Include="DML\PatientsDML.cs" />
+    <Compile Include="DML\UsersDML.cs" />
     <Compile Include="GUI\frmCreateAccount.cs">
       <SubType>Form</SubType>
     </Compile>

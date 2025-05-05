@@ -17,7 +17,7 @@ Class Appointment: Chứa các thuộc tính như Id, PatientId, DateTime, Docto
 Class Bill: Chứa các thuộc tính như Id, PatientId, Amount, Date.*/
 namespace CMS.DML
 {
-    public class Doctors_DML
+    public class DoctorsDML
     {
         /*  DoctorId INT IDENTITY(1,1) PRIMARY KEY,
 	        UserId INT NULL,
@@ -35,11 +35,11 @@ namespace CMS.DML
         private string LicenseNumber;
         private string Schedule;
 
-        public Doctors_DML()
+        public DoctorsDML()
         {
         }
 
-        public Doctors_DML(int doctorId, int userId, string firstName, string lastName, string specialty, string licenseNumber, string schedule)
+        public DoctorsDML(int doctorId, int userId, string firstName, string lastName, string specialty, string licenseNumber, string schedule)
         {
             DoctorId1 = doctorId;
             UserId1 = userId;

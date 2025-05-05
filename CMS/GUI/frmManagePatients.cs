@@ -100,29 +100,39 @@ namespace CMS.GUI
             }
             else
             {
-                Patients_DML a = new Patients_DML();
-                a.FirstName1 = txtFirstName.Text.Trim();
-                a.LastName1 = txtLastName.Text.Trim();
-                // Lấy giá trị DateTime từ DateTimePicker
-                DateTime selectedDateTime = dtpDateOfBirth.Value;
-                //// Chuyển đổi DateTime thành chuỗi với định dạng mong muốn
-                //string formattedDateTime = selectedDateTime.ToString("yyyy-MM-dd");
-                a.Gender1 = cboGender.SelectedItem.ToString().Trim();
-                a.PhoneNumber1 = txtPhoneNumber.Text.Trim();
-                a.AddressPatients1 = txtAddressPatients.Text.Trim();
-                a.SocialSecurityNumber1 = txtSocialSecurityNumber.Text.Trim();
-
-                PatientsDAL PatientsDAL_ = new PatientsDAL();
-                PatientsDAL_.Insert(a);
-                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                if (UTIL.Language.Lang.Equals("vn"))
+                if (string.IsNullOrEmpty(txtFirstName.Text) || string.IsNullOrEmpty(txtLastName.Text) || string.IsNullOrEmpty(txtSocialSecurityNumber.Text))
                 {
-                    UTIL.UTIL.showDataToDataGridview(dgvManagePatients, "getALlPatients", headTitleVN);
+                    MessageBox.Show("First name, last name and social security number is not null", "Notif", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
-                    UTIL.UTIL.showDataToDataGridview(dgvManagePatients, "getALlPatients", headTitleEng);
+                    PatientsDML a = new PatientsDML();
+                    a.FirstName1 = txtFirstName.Text.Trim();
+                    a.LastName1 = txtLastName.Text.Trim();
+
+                    // Lấy giá trị DateTime từ DateTimePicker và gán co ngày sinh
+                    DateTime selectedDateTime = dtpDateOfBirth.Value;
+                    //// Chuyển đổi DateTime thành chuỗi với định dạng mong muốn
+                    //string formattedDateTime = selectedDateTime.ToString("yyyy-MM-dd");
+                    a.DateOfBirth1 = selectedDateTime;
+
+                    a.Gender1 = cboGender.SelectedItem.ToString().Trim();
+                    a.PhoneNumber1 = txtPhoneNumber.Text.Trim();
+                    a.AddressPatients1 = txtAddressPatients.Text.Trim();
+                    a.SocialSecurityNumber1 = txtSocialSecurityNumber.Text.Trim();
+
+                    PatientsDAL PatientsDAL_ = new PatientsDAL();
+                    PatientsDAL_.Insert(a);
+                    MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    if (UTIL.Language.Lang.Equals("vn"))
+                    {
+                        UTIL.UTIL.showDataToDataGridview(dgvManagePatients, "getALlPatients", headTitleVN);
+                    }
+                    else
+                    {
+                        UTIL.UTIL.showDataToDataGridview(dgvManagePatients, "getALlPatients", headTitleEng);
+                    }
                 }
             }
         }
@@ -158,6 +168,50 @@ namespace CMS.GUI
         private void dgvManagePatients_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnEditPatients_Click(object sender, EventArgs e)
+        {
+            PatientsBLL PatientsBLL_ = new PatientsBLL();
+            if (PatientsBLL_.checkPatientsByID(int.Parse(txtPatientId.Text.Trim())))
+            {
+                try
+                {
+                    PatientsDML t = new PatientsDML();
+                    t.PatientId1 = int.Parse(txtPatientId.Text.Trim());
+                    t.SocialSecurityNumber1 = txtSocialSecurityNumber.Text.Trim();
+                    t.FirstName1 = txtFirstName.Text.Trim();
+                    t.LastName1 = txtLastName.Text.Trim();
+                    //DateTime date = dtpDateOfBirth.Value;
+                    //string formatDate = date.ToString("MM-dd-yyyy");
+                    t.DateOfBirth1 = dtpDateOfBirth.Value;
+                    t.Gender1 = cboGender.Text.Trim();
+                    t.PhoneNumber1 = txtPhoneNumber.Text.Trim();
+                    t.AddressPatients1 = txtAddressPatients.Text.Trim();
+
+                    PatientsDAL u = new PatientsDAL();
+                    u.Update(t);
+                    MessageBox.Show("Chỉnh sửa thành công bệnh nhân \"" + txtPatientId.Text.Trim() + "\"", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //thiết lập ngôn ngữ cho header datagridview và load dữ liệu lên form khi form load
+                    if (UTIL.Language.Lang.Equals("vn"))
+                    {
+                        UTIL.UTIL.showDataToDataGridview(dgvManagePatients, "getALlPatients", headTitleVN);
+                    }
+                    else
+                    {
+                        UTIL.UTIL.showDataToDataGridview(dgvManagePatients, "getALlPatients", headTitleEng);
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Chưa có benh nhan \"" + txtSocialSecurityNumber.Text.Trim() + "\" trong database", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

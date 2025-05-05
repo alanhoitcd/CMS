@@ -17,7 +17,7 @@ namespace CMS.VIEW
 {
     public partial class frmLogin : Form
     {
-        private readonly Users_BLL _usersBLL = new Users_BLL();
+        private readonly UsersBLL _usersBLL = new UsersBLL();
         private static int countSaiPass = 0;
         private void UpdateLanguage()
         {
@@ -96,7 +96,7 @@ namespace CMS.VIEW
             }
             else
             {
-                Users_BLL NguoiDung_BLL_ = new Users_BLL();
+                UsersBLL NguoiDung_BLL_ = new UsersBLL();
                 if (NguoiDung_BLL_.checkUser(txtUserName.Text))//kiểm tra id có trong database chưa
                 {
                     try

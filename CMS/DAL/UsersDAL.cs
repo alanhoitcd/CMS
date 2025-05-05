@@ -9,7 +9,7 @@ using CMS.DML;
 
 namespace CMS.DAL
 {
-    class Users_DAL
+    class UsersDAL
     {
         /*
          3. Data Access Layer (Lớp truy cập dữ liệu)
@@ -48,7 +48,7 @@ namespace CMS.DAL
             }
         }
 
-        public bool CreateUser(Users_DML t)
+        public bool CreateUser(UsersDML t)
         {
             using (SqlConnection conn = new SqlConnection(DAL.sqlDatabase.getConnectString()))
             {
@@ -84,7 +84,7 @@ namespace CMS.DAL
             }
         }
 
-        public Users_DML GetUserByUsername(string userName)
+        public UsersDML GetUserByUsername(string userName)
         {
             using (SqlConnection conn = new SqlConnection(DAL.sqlDatabase.getConnectString()))
             {
@@ -98,7 +98,7 @@ namespace CMS.DAL
                     SqlDataReader reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
-                        return new Users_DML
+                        return new UsersDML
                         {
                             UserId1 = Convert.ToInt32(reader["UserId"]),
                             Username1 = reader["Username"].ToString(),
@@ -124,7 +124,7 @@ namespace CMS.DAL
             }
         }
 
-        public Users_DML GetUserByEmail(string email)
+        public UsersDML GetUserByEmail(string email)
         {
             using (SqlConnection conn = new SqlConnection(DAL.sqlDatabase.getConnectString()))
             {
@@ -138,7 +138,7 @@ namespace CMS.DAL
                     SqlDataReader reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
-                        return new Users_DML
+                        return new UsersDML
                         {
                             UserId1 = Convert.ToInt32(reader["UserId"]),
                             Username1 = reader["Username"].ToString(),

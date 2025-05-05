@@ -32,6 +32,7 @@
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pnlHead = new System.Windows.Forms.Panel();
             this.panelBody = new System.Windows.Forms.Panel();
+            this.dtpDateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.cboGender = new System.Windows.Forms.ComboBox();
             this.lblSocialSecurityNumber = new System.Windows.Forms.Label();
             this.txtSocialSecurityNumber = new System.Windows.Forms.TextBox();
@@ -53,7 +54,6 @@
             this.btnAddPatients = new Guna.UI2.WinForms.Guna2Button();
             this.panelFoot = new System.Windows.Forms.Panel();
             this.dgvManagePatients = new System.Windows.Forms.DataGridView();
-            this.dtpDateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.pnlHead.SuspendLayout();
             this.panelBody.SuspendLayout();
             this.panelFoot.SuspendLayout();
@@ -131,6 +131,14 @@
             this.panelBody.Name = "panelBody";
             this.panelBody.Size = new System.Drawing.Size(1593, 278);
             this.panelBody.TabIndex = 27;
+            // 
+            // dtpDateOfBirth
+            // 
+            this.dtpDateOfBirth.Font = new System.Drawing.Font("Times New Roman", 16.2F);
+            this.dtpDateOfBirth.Location = new System.Drawing.Point(226, 150);
+            this.dtpDateOfBirth.Name = "dtpDateOfBirth";
+            this.dtpDateOfBirth.Size = new System.Drawing.Size(506, 39);
+            this.dtpDateOfBirth.TabIndex = 51;
             // 
             // cboGender
             // 
@@ -275,6 +283,7 @@
             this.txtPatientId.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPatientId.Location = new System.Drawing.Point(226, 6);
             this.txtPatientId.Name = "txtPatientId";
+            this.txtPatientId.ReadOnly = true;
             this.txtPatientId.Size = new System.Drawing.Size(506, 39);
             this.txtPatientId.TabIndex = 33;
             // 
@@ -325,6 +334,7 @@
             this.btnEditPatients.Size = new System.Drawing.Size(141, 50);
             this.btnEditPatients.TabIndex = 30;
             this.btnEditPatients.Text = "Edit";
+            this.btnEditPatients.Click += new System.EventHandler(this.btnEditPatients_Click);
             // 
             // btnAddPatients
             // 
@@ -368,14 +378,6 @@
             this.dgvManagePatients.TabIndex = 61;
             this.dgvManagePatients.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvManagePatients_CellClick);
             this.dgvManagePatients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvManagePatients_CellContentClick);
-            // 
-            // dtpDateOfBirth
-            // 
-            this.dtpDateOfBirth.Font = new System.Drawing.Font("Times New Roman", 16.2F);
-            this.dtpDateOfBirth.Location = new System.Drawing.Point(226, 150);
-            this.dtpDateOfBirth.Name = "dtpDateOfBirth";
-            this.dtpDateOfBirth.Size = new System.Drawing.Size(506, 39);
-            this.dtpDateOfBirth.TabIndex = 51;
             // 
             // frmManagePatients
             // 

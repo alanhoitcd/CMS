@@ -28,7 +28,9 @@ CREATE TABLE Patients (
     Gender NVARCHAR(6) NOT NULL CHECK (Gender IN ('Male', 'Female', 'Nam', 'Nữ')),
     PhoneNumber NVARCHAR(15) NOT NULL CHECK (PhoneNumber LIKE '[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]'),
     AddressPatients NVARCHAR(100) NOT NULL,
-    SocialSecurityNumber NVARCHAR(11) NULL CHECK (SocialSecurityNumber LIKE '[0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9][0-9][0-9]' OR SocialSecurityNumber IS NULL),
+    SocialSecurityNumber NVARCHAR(12) NOT NULL
+        CHECK (SocialSecurityNumber LIKE '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]')
+        UNIQUE, -- Thêm ràng buộc UNIQUE ở đây
     IsEncrypted BIT DEFAULT 0 NOT NULL
 );
 
@@ -254,25 +256,25 @@ INSERT INTO Users (Username, PasswordHash, RoleUsers, Email, SecurityQuestion, S
 VALUES ('user10', 'hashedpass10', 'User', 'user10@example.com', 'What is your dream destination?', 'hashedanswer10', NULL, 1, GETDATE());
 
 INSERT INTO Patients (FirstName, LastName, DateOfBirth, Gender, PhoneNumber, AddressPatients, SocialSecurityNumber, IsEncrypted) 
-VALUES ('John', 'Doe', '1980-05-15', 'Male', '123-456-7890', '123 Main St', '123-45-6789', 0);
+VALUES ('John', 'Doe', '1980-05-15', 'Male', '123-456-7890', '123 Main St', '111111111111', 0);
 INSERT INTO Patients (FirstName, LastName, DateOfBirth, Gender, PhoneNumber, AddressPatients, SocialSecurityNumber, IsEncrypted) 
-VALUES ('Jane', 'Smith', '1990-08-22', 'Female', '234-567-8901', '456 Oak St', '234-56-7890', 0);
+VALUES ('Jane', 'Smith', '1990-08-22', 'Female', '234-567-8901', '456 Oak St', '222222222222', 0);
 INSERT INTO Patients (FirstName, LastName, DateOfBirth, Gender, PhoneNumber, AddressPatients, SocialSecurityNumber, IsEncrypted) 
-VALUES ('Alex', 'Brown', '1975-03-10', 'Female', '345-678-9012', '789 Pine St', NULL, 0);
+VALUES ('Alex', 'Brown', '1975-03-10', 'Female', '345-678-9012', '789 Pine St', '333333333333', 0);
 INSERT INTO Patients (FirstName, LastName, DateOfBirth, Gender, PhoneNumber, AddressPatients, SocialSecurityNumber, IsEncrypted) 
-VALUES ('Mary', 'Johnson', '1985-12-01', 'Female', '456-789-0123', '101 Maple St', '345-67-8901', 0);
+VALUES ('Mary', 'Johnson', '1985-12-01', 'Female', '456-789-0123', '101 Maple St', '444444444444', 0);
 INSERT INTO Patients (FirstName, LastName, DateOfBirth, Gender, PhoneNumber, AddressPatients, SocialSecurityNumber, IsEncrypted) 
-VALUES ('Peter', 'Parker', '1995-07-19', 'Male', '567-890-1234', '202 Cedar St', '456-78-9012', 0);
+VALUES ('Peter', 'Parker', '1995-07-19', 'Male', '567-890-1234', '202 Cedar St', '555555555555', 0);
 INSERT INTO Patients (FirstName, LastName, DateOfBirth, Gender, PhoneNumber, AddressPatients, SocialSecurityNumber, IsEncrypted) 
-VALUES ('Lisa', 'Davis', '1988-09-25', 'Female', '678-901-2345', '303 Birch St', NULL, 0);
+VALUES ('Lisa', 'Davis', '1988-09-25', 'Female', '678-901-2345', '303 Birch St', '666666666666', 0);
 INSERT INTO Patients (FirstName, LastName, DateOfBirth, Gender, PhoneNumber, AddressPatients, SocialSecurityNumber, IsEncrypted) 
-VALUES ('Tom', 'Wilson', '1970-11-30', 'Male', '789-012-3456', '404 Elm St', '567-89-0123', 0);
+VALUES ('Tom', 'Wilson', '1970-11-30', 'Male', '789-012-3456', '404 Elm St', '777777777777', 0);
 INSERT INTO Patients (FirstName, LastName, DateOfBirth, Gender, PhoneNumber, AddressPatients, SocialSecurityNumber, IsEncrypted) 
-VALUES ('Emma', 'Taylor', '1992-02-14', 'Female', '890-123-4567', '505 Spruce St', '678-90-1234', 0);
+VALUES ('Emma', 'Taylor', '1992-02-14', 'Female', '890-123-4567', '505 Spruce St', '888888888888', 0);
 INSERT INTO Patients (FirstName, LastName, DateOfBirth, Gender, PhoneNumber, AddressPatients, SocialSecurityNumber, IsEncrypted) 
-VALUES ('James', 'Moore', '1983-06-08', 'Male', '901-234-5678', '606 Willow St', NULL, 0);
+VALUES ('James', 'Moore', '1983-06-08', 'Male', '901-234-5678', '606 Willow St', '999999999999', 0);
 INSERT INTO Patients (FirstName, LastName, DateOfBirth, Gender, PhoneNumber, AddressPatients, SocialSecurityNumber, IsEncrypted) 
-VALUES ('Sarah', 'Lee', '1998-04-17', 'Female', '012-345-6789', '707 Ash St', '789-01-2345', 0);
+VALUES ('Sarah', 'Lee', '1998-04-17', 'Female', '012-345-6789', '707 Ash St', '000000000000', 0);
 
 INSERT INTO Doctors (UserId, FirstName, LastName, Specialty, LicenseNumber, Schedule) 
 VALUES (2, 'Robert', 'Miller', 'Cardiology', 'LIC001', 'Mon-Fri 9-5');
@@ -643,34 +645,31 @@ INSERT INTO LabRequests (VisitId, LabId, TestType, RequestDate, ResultDate, Resu
 VALUES (10, 10, 'Ultrasound', '2025-03-18 11:00', '2025-03-18 13:00', 'Normal', 'Completed');
 
 --
---tạo các procedure
+--tạo các procedure------------------------------------------------------------------------------
+go --procedure select all patient
 create procedure getALlPatients
 as begin 
 select PatientId, FirstName, LastName, DateOfBirth, Gender, PhoneNumber, AddressPatients, SocialSecurityNumber from Patients
 end
+------------------------------------------------------------------------------
 
-getALlPatients
-
-CREATE TABLE Patients (
-    PatientId INT IDENTITY(1,1) PRIMARY KEY,
-    FirstName NVARCHAR(50) NOT NULL,
-    LastName NVARCHAR(50) NOT NULL,
-    DateOfBirth DATE NOT NULL,
-    Gender NVARCHAR(6) NOT NULL CHECK (Gender IN ('Male', 'Female', 'Nam', 'Nữ')),
-    PhoneNumber NVARCHAR(15) NOT NULL CHECK (PhoneNumber LIKE '[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]'),
-    AddressPatients NVARCHAR(100) NOT NULL,
-    SocialSecurityNumber NVARCHAR(11) NULL CHECK (SocialSecurityNumber LIKE '[0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9][0-9][0-9]' OR SocialSecurityNumber IS NULL),
-    IsEncrypted BIT DEFAULT 0 NOT NULL
-);
-
+go --procedure check patient  by ssn
 create procedure checkPatientsBySSN
-@SocialSecurityNumber NVARCHAR(11)
+@SocialSecurityNumber NVARCHAR(12)
 as begin
 select count(SocialSecurityNumber) from Patients where SocialSecurityNumber = @SocialSecurityNumber
 end
+------------------------------------------------------------------------------
 
-checkPatientsBySSN '123-45-6789'
+go --procedure check patient by id
+create procedure checkPatientsByID
+@PatientId INT
+as begin
+select count(PatientId) from Patients where PatientId = @PatientId
+end
+------------------------------------------------------------------------------
 
+go --procedure insert patient
 CREATE PROCEDURE insertPatient (
     @FirstName NVARCHAR(50),
     @LastName NVARCHAR(50),
@@ -678,17 +677,48 @@ CREATE PROCEDURE insertPatient (
     @Gender NVARCHAR(6),
     @PhoneNumber NVARCHAR(15),
     @AddressPatients NVARCHAR(100),
-    @SocialSecurityNumber NVARCHAR(11) = NULL, -- Cho phép giá trị NULL
-    @IsEncrypted BIT = 0                     -- Giá trị mặc định là 0
+    @SocialSecurityNumber NVARCHAR(12),
+    @IsEncrypted BIT = 0
 )
 AS
 BEGIN
     INSERT INTO Patients (FirstName, LastName, DateOfBirth, Gender, PhoneNumber, AddressPatients, SocialSecurityNumber, IsEncrypted)
     VALUES (@FirstName, @LastName, @DateOfBirth, @Gender, @PhoneNumber, @AddressPatients, @SocialSecurityNumber, @IsEncrypted);
 END;
+------------------------------------------------------------------------------
 
+go --procedure update patient by ssn(CCCD)	
+CREATE PROCEDURE updatePatientBySSN (
+	@PatientId INT,
+    @SocialSecurityNumber NVARCHAR(12), -- Tham số đầu vào là SocialSecurityNumber để xác định bệnh nhân
+    @FirstName NVARCHAR(50) = NULL,    -- Tham số đầu vào cho FirstName (cho phép giá trị NULL nếu không muốn cập nhật)
+    @LastName NVARCHAR(50) = NULL,     -- Tham số đầu vào cho LastName (cho phép giá trị NULL nếu không muốn cập nhật)
+    @DateOfBirth DATE = NULL,        -- Tham số đầu vào cho DateOfBirth (cho phép giá trị NULL nếu không muốn cập nhật)
+    @Gender NVARCHAR(6) = NULL,        -- Tham số đầu vào cho Gender (cho phép giá trị NULL nếu không muốn cập nhật)
+    @PhoneNumber NVARCHAR(15) = NULL,   -- Tham số đầu vào cho PhoneNumber (cho phép giá trị NULL nếu không muốn cập nhật)
+    @AddressPatients NVARCHAR(100) = NULL,-- Tham số đầu vào cho AddressPatients (cho phép giá trị NULL nếu không muốn cập nhật)
+    @IsEncrypted BIT = NULL           -- Tham số đầu vào cho IsEncrypted (cho phép giá trị NULL nếu không muốn cập nhật)
+)
+AS
+BEGIN
+        -- Thực hiện cập nhật các trường nếu giá trị tương ứng được cung cấp (không phải là NULL)
+        UPDATE Patients
+        SET
+            FirstName = ISNULL(@FirstName, FirstName),       -- Nếu @FirstName là NULL, giữ nguyên giá trị hiện tại
+            LastName = ISNULL(@LastName, LastName),         -- Tương tự cho các trường khác
+            DateOfBirth = ISNULL(@DateOfBirth, DateOfBirth),
+            Gender = ISNULL(@Gender, Gender),
+            PhoneNumber = ISNULL(@PhoneNumber, PhoneNumber),
+            AddressPatients = ISNULL(@AddressPatients, AddressPatients),
+            IsEncrypted = ISNULL(@IsEncrypted, IsEncrypted),
+			SocialSecurityNumber = ISNULL(@SocialSecurityNumber, SocialSecurityNumber)
+        WHERE
+            PatientId = @PatientId;
+END
+------------------------------------------------------------------------------
 
+--select * from Patients where SocialSecurityNumber = '123-45-6789'
+-- EXEC insertPatient @FirstName = 'aaa',@LastName = 'Văn A',@DateOfBirth = '2000-01-15',
+-- @Gender = 'Nam',@PhoneNumber = '090-123-4567',@AddressPatients = '123 Đường ABC, Quận XYZ, Thành phố HCM',
+-- @SocialSecurityNumber = '123-45-6789'
 
- EXEC insertPatient @FirstName = 'aaa',@LastName = 'Văn A',@DateOfBirth = '2000-01-15',
- @Gender = 'Nam',@PhoneNumber = '090-123-4567',@AddressPatients = '123 Đường ABC, Quận XYZ, Thành phố HCM',
- @SocialSecurityNumber = '111-11-1111'
