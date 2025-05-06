@@ -660,7 +660,6 @@ as begin
 select count(SocialSecurityNumber) from Patients where SocialSecurityNumber = @SocialSecurityNumber
 end
 ------------------------------------------------------------------------------
-
 go --procedure check patient by id
 create procedure checkPatientsByID
 @PatientId INT
@@ -716,6 +715,75 @@ BEGIN
             PatientId = @PatientId;
 END
 ------------------------------------------------------------------------------
+
+go --procedure delete patient
+CREATE PROCEDURE deletePatient (
+	@PatientId INT
+)
+AS
+BEGIN
+	delete Patients where PatientId = @PatientId;
+END;
+------------------------------------------------------------------------------
+
+go --procedure Select patient by ssn
+CREATE PROCEDURE SelectPatietBySSN (
+	@SocialSecurityNumber NVARCHAR(12)
+)
+AS
+BEGIN
+	select * from Patients where SocialSecurityNumber = @SocialSecurityNumber;
+END;
+------------------------------------------------------------------------------
+
+go --procedure Select check Patient sBy FirstName
+CREATE PROCEDURE checkPatientsByFirstName (
+	@FirstName NVARCHAR(50)
+)
+AS
+BEGIN
+	select count(PatientId) from Patients where FirstName = @FirstName;
+END;
+------------------------------------------------------------------------------
+
+go --procedure Select check Patient sBy Phone
+CREATE PROCEDURE checkPatientsByPhoneNumber (
+	@PhoneNumber NVARCHAR(15)
+)
+AS
+BEGIN
+	select count(PatientId) from Patients where PhoneNumber = @PhoneNumber;
+END;
+------------------------------------------------------------------------------
+
+go --procedure Select all by firstname
+CREATE PROCEDURE getALlPatientsByFirstName (
+    @FirstName NVARCHAR(50)
+)
+AS
+BEGIN
+	select * from Patients where FirstName = @FirstName;
+END;
+------------------------------------------------------------------------------
+
+go --procedure Select all by firstname
+CREATE PROCEDURE SelectPatietByPhoneNumber (
+    @PhoneNumber NVARCHAR(15)
+)
+AS
+BEGIN
+	select * from Patients where PhoneNumber = @PhoneNumber;
+END;
+
+
+
+
+
+
+
+
+
+
 
 --select * from Patients where SocialSecurityNumber = '123-45-6789'
 -- EXEC insertPatient @FirstName = 'aaa',@LastName = 'Văn A',@DateOfBirth = '2000-01-15',

@@ -19,5 +19,13 @@ namespace CMS.BLL
         {
             return t.checkPatientsByID(patientID) > 0;
         }
+        public bool checkPatientsByFirstName(string firstName)
+        {
+            return t.checkPatientsByFirstName(firstName) > 0;
+        }
+        public bool checkPatientsByPhoneNumber(string phoneNumber)
+        {
+            return t.checkPatientsByPhoneNumber(phoneNumber) > 0;
+        }
     }
 }

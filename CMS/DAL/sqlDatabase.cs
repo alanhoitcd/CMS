@@ -11,10 +11,10 @@ namespace CMS.DAL
     //class  sqlDatabase  chứa chuổi kết nối, hàm lấy kết nối và hủy kết nối
     public class sqlDatabase
     {   // Chuổi kết nối
-        private static string sql_serverName = "ALANHO\\SQLEXPRESS";
-        private static string sql_databaseName = "CMS";
-        private static string sql_username = "sa";
-        private static string sql_password = "@dm1n123";
+        //private static string sql_serverName = "ALANHO\\SQLEXPRESS";
+        //private static string sql_databaseName = "CMS";
+        //private static string sql_username = "sa";
+        //private static string sql_password = "@dm1n123";
         //private static string sql_connectString = $"Data Source={sql_serverName};Initial Catalog={sql_databaseName};User ID=" +
         //        $"{sql_username};Password={sql_password};";
         private static string sql_connectString;

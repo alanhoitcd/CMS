@@ -32,6 +32,8 @@
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pnlHead = new System.Windows.Forms.Panel();
             this.panelBody = new System.Windows.Forms.Panel();
+            this.txtFindText = new System.Windows.Forms.TextBox();
+            this.cboKindFind = new System.Windows.Forms.ComboBox();
             this.dtpDateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.cboGender = new System.Windows.Forms.ComboBox();
             this.lblSocialSecurityNumber = new System.Windows.Forms.Label();
@@ -54,6 +56,7 @@
             this.btnAddPatients = new Guna.UI2.WinForms.Guna2Button();
             this.panelFoot = new System.Windows.Forms.Panel();
             this.dgvManagePatients = new System.Windows.Forms.DataGridView();
+            this.btnReload = new Guna.UI2.WinForms.Guna2Button();
             this.pnlHead.SuspendLayout();
             this.panelBody.SuspendLayout();
             this.panelFoot.SuspendLayout();
@@ -106,6 +109,9 @@
             // 
             // panelBody
             // 
+            this.panelBody.Controls.Add(this.btnReload);
+            this.panelBody.Controls.Add(this.txtFindText);
+            this.panelBody.Controls.Add(this.cboKindFind);
             this.panelBody.Controls.Add(this.dtpDateOfBirth);
             this.panelBody.Controls.Add(this.cboGender);
             this.panelBody.Controls.Add(this.lblSocialSecurityNumber);
@@ -132,6 +138,26 @@
             this.panelBody.Size = new System.Drawing.Size(1593, 278);
             this.panelBody.TabIndex = 27;
             // 
+            // txtFindText
+            // 
+            this.txtFindText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtFindText.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFindText.Location = new System.Drawing.Point(1055, 218);
+            this.txtFindText.Name = "txtFindText";
+            this.txtFindText.Size = new System.Drawing.Size(372, 39);
+            this.txtFindText.TabIndex = 53;
+            // 
+            // cboKindFind
+            // 
+            this.cboKindFind.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboKindFind.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboKindFind.Font = new System.Drawing.Font("Times New Roman", 16.2F);
+            this.cboKindFind.FormattingEnabled = true;
+            this.cboKindFind.Location = new System.Drawing.Point(1433, 218);
+            this.cboKindFind.Name = "cboKindFind";
+            this.cboKindFind.Size = new System.Drawing.Size(148, 39);
+            this.cboKindFind.TabIndex = 52;
+            // 
             // dtpDateOfBirth
             // 
             this.dtpDateOfBirth.Font = new System.Drawing.Font("Times New Roman", 16.2F);
@@ -143,11 +169,12 @@
             // cboGender
             // 
             this.cboGender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboGender.Font = new System.Drawing.Font("Times New Roman", 16.2F);
             this.cboGender.FormattingEnabled = true;
             this.cboGender.Location = new System.Drawing.Point(1055, 6);
             this.cboGender.Name = "cboGender";
-            this.cboGender.Size = new System.Drawing.Size(148, 39);
+            this.cboGender.Size = new System.Drawing.Size(526, 39);
             this.cboGender.TabIndex = 50;
             // 
             // lblSocialSecurityNumber
@@ -157,9 +184,9 @@
             this.lblSocialSecurityNumber.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSocialSecurityNumber.Location = new System.Drawing.Point(900, 159);
             this.lblSocialSecurityNumber.Name = "lblSocialSecurityNumber";
-            this.lblSocialSecurityNumber.Size = new System.Drawing.Size(92, 33);
+            this.lblSocialSecurityNumber.Size = new System.Drawing.Size(67, 33);
             this.lblSocialSecurityNumber.TabIndex = 48;
-            this.lblSocialSecurityNumber.Text = "CCCD";
+            this.lblSocialSecurityNumber.Text = "SSN";
             this.lblSocialSecurityNumber.Click += new System.EventHandler(this.lblSocialSecurityNumber_Click);
             // 
             // txtSocialSecurityNumber
@@ -293,7 +320,7 @@
             // 
             // btnFindPatients
             // 
-            this.btnFindPatients.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnFindPatients.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFindPatients.BorderRadius = 18;
             this.btnFindPatients.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnFindPatients.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -301,31 +328,32 @@
             this.btnFindPatients.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnFindPatients.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFindPatients.ForeColor = System.Drawing.Color.White;
-            this.btnFindPatients.Location = new System.Drawing.Point(1305, 212);
+            this.btnFindPatients.Location = new System.Drawing.Point(906, 212);
             this.btnFindPatients.Name = "btnFindPatients";
-            this.btnFindPatients.Size = new System.Drawing.Size(141, 50);
+            this.btnFindPatients.Size = new System.Drawing.Size(99, 50);
             this.btnFindPatients.TabIndex = 32;
             this.btnFindPatients.Text = "Find";
+            this.btnFindPatients.Click += new System.EventHandler(this.btnFindPatients_Click);
             // 
             // btnDeletePatients
             // 
-            this.btnDeletePatients.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnDeletePatients.BorderRadius = 18;
             this.btnDeletePatients.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDeletePatients.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDeletePatients.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnDeletePatients.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDeletePatients.FillColor = System.Drawing.Color.Red;
             this.btnDeletePatients.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletePatients.ForeColor = System.Drawing.Color.White;
-            this.btnDeletePatients.Location = new System.Drawing.Point(906, 212);
+            this.btnDeletePatients.Location = new System.Drawing.Point(398, 212);
             this.btnDeletePatients.Name = "btnDeletePatients";
             this.btnDeletePatients.Size = new System.Drawing.Size(141, 50);
             this.btnDeletePatients.TabIndex = 31;
             this.btnDeletePatients.Text = "Delete";
+            this.btnDeletePatients.Click += new System.EventHandler(this.btnDeletePatients_Click);
             // 
             // btnEditPatients
             // 
-            this.btnEditPatients.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnEditPatients.BorderRadius = 18;
             this.btnEditPatients.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnEditPatients.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -333,7 +361,7 @@
             this.btnEditPatients.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnEditPatients.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditPatients.ForeColor = System.Drawing.Color.White;
-            this.btnEditPatients.Location = new System.Drawing.Point(507, 212);
+            this.btnEditPatients.Location = new System.Drawing.Point(205, 212);
             this.btnEditPatients.Name = "btnEditPatients";
             this.btnEditPatients.Size = new System.Drawing.Size(141, 50);
             this.btnEditPatients.TabIndex = 30;
@@ -342,7 +370,6 @@
             // 
             // btnAddPatients
             // 
-            this.btnAddPatients.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnAddPatients.BorderRadius = 18;
             this.btnAddPatients.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAddPatients.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -350,7 +377,7 @@
             this.btnAddPatients.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnAddPatients.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddPatients.ForeColor = System.Drawing.Color.White;
-            this.btnAddPatients.Location = new System.Drawing.Point(108, 212);
+            this.btnAddPatients.Location = new System.Drawing.Point(12, 212);
             this.btnAddPatients.Name = "btnAddPatients";
             this.btnAddPatients.Size = new System.Drawing.Size(141, 50);
             this.btnAddPatients.TabIndex = 29;
@@ -382,6 +409,22 @@
             this.dgvManagePatients.TabIndex = 61;
             this.dgvManagePatients.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvManagePatients_CellClick);
             this.dgvManagePatients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvManagePatients_CellContentClick);
+            // 
+            // btnReload
+            // 
+            this.btnReload.BorderRadius = 18;
+            this.btnReload.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReload.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReload.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReload.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReload.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReload.ForeColor = System.Drawing.Color.White;
+            this.btnReload.Location = new System.Drawing.Point(591, 212);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(141, 50);
+            this.btnReload.TabIndex = 54;
+            this.btnReload.Text = "Reload";
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
             // frmManagePatients
             // 
@@ -434,5 +477,8 @@
         private System.Windows.Forms.Panel panelFoot;
         private System.Windows.Forms.DataGridView dgvManagePatients;
         private System.Windows.Forms.DateTimePicker dtpDateOfBirth;
+        private System.Windows.Forms.ComboBox cboKindFind;
+        private System.Windows.Forms.TextBox txtFindText;
+        private Guna.UI2.WinForms.Guna2Button btnReload;
     }
 }

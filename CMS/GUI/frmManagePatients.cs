@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,10 @@ namespace CMS.GUI
         private string[] genderVN = { "Nam", "Nữ" };
         private string[] headTitleEng = { "Patient ID", "First Name", "Last Name", "Date Of Birth", "Gender", "Phone Number", "Address", "Social Security Number" };
         private string[] headTitleVN = { "Mã Bệnh Nhân", "Tên", "Họ Lót", "Ngày Sinh", "Giới Tính", "Số Điện Thoại", "Địa Chỉ", "Số Căn Cước" };
+        private static string[] kindFindEng = { "SSN", "Firt name", "Phone" };
+        private static string[] kindFindVN = { "CCCD", "Tên", "Điện thoại" };
+
+
         public frmManagePatients(TabPage parentTab, TabControl tabControl)
         {
             InitializeComponent();
@@ -69,6 +74,24 @@ namespace CMS.GUI
             }
             //thiết lập combobox mặc định cho gender
             cboGender.SelectedIndex = 0;
+
+            //add data combobox kind find
+            if (UTIL.Language.Lang.Equals("vn"))
+            {
+                for (int i = 0; i < kindFindVN.Length; i++)
+                {
+                    cboKindFind.Items.Add(kindFindVN[i]);
+                }
+            }
+            else
+            {
+                for (int i = 0; i < kindFindEng.Length; i++)
+                {
+                    cboKindFind.Items.Add(kindFindEng[i]);
+                }
+            }
+            //thiết lập combobox mặc định cho gender
+            cboKindFind.SelectedIndex = 0;
         }
         //
 
@@ -93,8 +116,8 @@ namespace CMS.GUI
 
         private void btnAddPatients_Click(object sender, EventArgs e)
         {
-            PatientsBLL t = new PatientsBLL();
-            if (t.checkPatientsBySSN(txtSocialSecurityNumber.Text.Trim()))
+            PatientsBLL bll = new PatientsBLL();
+            if (bll.checkPatientsBySSN(txtSocialSecurityNumber.Text.Trim()))
             {
                 MessageBox.Show(txtSocialSecurityNumber.Text + " is available", "Notif");
             }
@@ -106,23 +129,23 @@ namespace CMS.GUI
                 }
                 else
                 {
-                    PatientsDML a = new PatientsDML();
-                    a.FirstName1 = txtFirstName.Text.Trim();
-                    a.LastName1 = txtLastName.Text.Trim();
+                    PatientsDML dml = new PatientsDML();
+                    dml.FirstName1 = txtFirstName.Text.Trim();
+                    dml.LastName1 = txtLastName.Text.Trim();
 
                     // Lấy giá trị DateTime từ DateTimePicker và gán co ngày sinh
                     DateTime selectedDateTime = dtpDateOfBirth.Value;
                     //// Chuyển đổi DateTime thành chuỗi với định dạng mong muốn
                     //string formattedDateTime = selectedDateTime.ToString("yyyy-MM-dd");
-                    a.DateOfBirth1 = selectedDateTime;
+                    dml.DateOfBirth1 = selectedDateTime;
 
-                    a.Gender1 = cboGender.SelectedItem.ToString().Trim();
-                    a.PhoneNumber1 = txtPhoneNumber.Text.Trim();
-                    a.AddressPatients1 = txtAddressPatients.Text.Trim();
-                    a.SocialSecurityNumber1 = txtSocialSecurityNumber.Text.Trim();
+                    dml.Gender1 = cboGender.SelectedItem.ToString().Trim();
+                    dml.PhoneNumber1 = txtPhoneNumber.Text.Trim();
+                    dml.AddressPatients1 = txtAddressPatients.Text.Trim();
+                    dml.SocialSecurityNumber1 = txtSocialSecurityNumber.Text.Trim();
 
-                    PatientsDAL PatientsDAL_ = new PatientsDAL();
-                    PatientsDAL_.Insert(a);
+                    PatientsDAL dal = new PatientsDAL();
+                    dal.Insert(dml);
                     MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     if (UTIL.Language.Lang.Equals("vn"))
@@ -172,25 +195,25 @@ namespace CMS.GUI
 
         private void btnEditPatients_Click(object sender, EventArgs e)
         {
-            PatientsBLL PatientsBLL_ = new PatientsBLL();
-            if (PatientsBLL_.checkPatientsByID(int.Parse(txtPatientId.Text.Trim())))
+            PatientsBLL bll = new PatientsBLL();
+            if (bll.checkPatientsByID(int.Parse(txtPatientId.Text.Trim())))
             {
                 try
                 {
-                    PatientsDML t = new PatientsDML();
-                    t.PatientId1 = int.Parse(txtPatientId.Text.Trim());
-                    t.SocialSecurityNumber1 = txtSocialSecurityNumber.Text.Trim();
-                    t.FirstName1 = txtFirstName.Text.Trim();
-                    t.LastName1 = txtLastName.Text.Trim();
+                    PatientsDML dml = new PatientsDML();
+                    dml.PatientId1 = int.Parse(txtPatientId.Text.Trim());
+                    dml.SocialSecurityNumber1 = txtSocialSecurityNumber.Text.Trim();
+                    dml.FirstName1 = txtFirstName.Text.Trim();
+                    dml.LastName1 = txtLastName.Text.Trim();
                     //DateTime date = dtpDateOfBirth.Value;
                     //string formatDate = date.ToString("MM-dd-yyyy");
-                    t.DateOfBirth1 = dtpDateOfBirth.Value;
-                    t.Gender1 = cboGender.Text.Trim();
-                    t.PhoneNumber1 = txtPhoneNumber.Text.Trim();
-                    t.AddressPatients1 = txtAddressPatients.Text.Trim();
+                    dml.DateOfBirth1 = dtpDateOfBirth.Value;
+                    dml.Gender1 = cboGender.Text.Trim();
+                    dml.PhoneNumber1 = txtPhoneNumber.Text.Trim();
+                    dml.AddressPatients1 = txtAddressPatients.Text.Trim();
 
-                    PatientsDAL u = new PatientsDAL();
-                    u.Update(t);
+                    PatientsDAL dal = new PatientsDAL();
+                    dal.Update(dml);
                     MessageBox.Show("Chỉnh sửa thành công bệnh nhân \"" + txtPatientId.Text.Trim() + "\"", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //thiết lập ngôn ngữ cho header datagridview và load dữ liệu lên form khi form load
                     if (UTIL.Language.Lang.Equals("vn"))
@@ -260,6 +283,235 @@ namespace CMS.GUI
                 // Nếu đã đạt giới hạn và ký tự vừa nhập không phải là phím điều khiển (ví dụ: Backspace),
                 // thì hủy bỏ sự kiện KeyPress, ngăn không cho ký tự được nhập vào TextBox.
                 e.Handled = true;
+            }
+        }
+
+        private void btnDeletePatients_Click(object sender, EventArgs e)
+        {
+            PatientsBLL bll = new PatientsBLL();
+            if (bll.checkPatientsByID(int.Parse(txtPatientId.Text.Trim())))
+            {
+                try
+                {
+                    if (MessageBox.Show("Xác nhận xóa?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        PatientsDML dml = new PatientsDML();
+                        dml.PatientId1 = int.Parse(txtPatientId.Text.Trim());
+
+                        PatientsDAL dal = new PatientsDAL();
+                        dal.Delete(dml);
+                        MessageBox.Show("Xóa thành công", "Thông báo");
+                        //thiết lập ngôn ngữ cho header datagridview và load dữ liệu lên form khi form load
+                        if (UTIL.Language.Lang.Equals("vn"))
+                        {
+                            UTIL.UTIL.showDataToDataGridview(dgvManagePatients, "getALlPatients", headTitleVN);
+                        }
+                        else
+                        {
+                            UTIL.UTIL.showDataToDataGridview(dgvManagePatients, "getALlPatients", headTitleEng);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("đã ra hóa đơn thanh toán, không thể xóa: ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Không có mã benh nhan \"" + txtPatientId.Text.Trim() + "\" trong database", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnFindPatients_Click(object sender, EventArgs e)
+        {
+            string[] kindFind = { };
+
+            if (UTIL.Language.Lang.Equals("vn"))
+            {
+                kindFind = kindFindVN;
+            }
+            else
+            {
+                kindFind = kindFindEng;
+            }
+            //tim
+            //lấy vị trí combobox loại tìm kiếm được chọn
+            int currentFindText = cboKindFind.SelectedIndex;
+            switch (currentFindText)
+            {
+                case 0: // tim kiem theo cccd
+                    PatientsBLL bll = new PatientsBLL();
+                    //kiem tra ma sinh vien null
+                    if (string.IsNullOrEmpty(txtFindText.Text)) // kiem tra textbox tim kiem co nhap khong
+                    {
+                        MessageBox.Show("Vui lòng nhập cccd để tìm benh nhan!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    else
+                    {
+                        if (bll.checkPatientsBySSN(txtFindText.Text.Trim()))
+                        {
+                            try
+                            {
+                                PatientsDML dml = new PatientsDML();
+                                dml.SocialSecurityNumber1 = txtFindText.Text.Trim();
+
+                                //khai báo 1 mdoel sinh vien khác để lưu thông tin sinh vien có mã sv là g đã set ở trên
+                                PatientsDAL dal = new PatientsDAL();
+                                PatientsDML dmlResult = dal.SelectBySSN(dml);
+
+                                txtPatientId.Text = dmlResult.PatientId1.ToString();
+                                txtFirstName.Text = dmlResult.FirstName1.ToString();
+                                txtLastName.Text = dmlResult.LastName1.ToString();
+                                dtpDateOfBirth.Value = DateTime.Parse(dmlResult.DateOfBirth1.ToString().Trim());
+                                cboGender.SelectedItem = dmlResult.Gender1.ToString();
+                                txtPhoneNumber.Text = dmlResult.PhoneNumber1.ToString();
+                                txtAddressPatients.Text = dmlResult.AddressPatients1.ToString();
+                                txtSocialSecurityNumber.Text = dmlResult.SocialSecurityNumber1.ToString();
+
+
+
+                                // Tìm và chọn dòng trong DataGridView
+                                foreach (DataGridViewRow row in dgvManagePatients.Rows)
+                                {
+                                    if (row.Cells["PatientId"].Value?.ToString() == dmlResult.PatientId1.ToString()) // Giả sử cột MaSv tên là "MaSv"
+                                    {
+                                        row.Selected = true; // Chọn dòng
+                                        dgvManagePatients.CurrentCell = row.Cells[0]; // Đặt con trỏ vào ô đầu tiên của dòng
+                                        dgvManagePatients.FirstDisplayedScrollingRowIndex = row.Index; // Cuộn đến dòng được chọn
+                                        break;
+                                    }
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine("Lỗi tại class frmPatients.cs hàm btnTimKiem_Click(object sender, EventArgs e): " + ex.Message);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Không có mã benh nhan \"" + txtSocialSecurityNumber.Text.Trim() + "\" trong database", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    break;
+                case 1: // tim kiem theo tên
+                    PatientsBLL bll1 = new PatientsBLL();
+                    //kiem tra ma sinh vien null
+                    if (string.IsNullOrEmpty(txtFindText.Text)) // kiem tra textbox tim kiem co nhap khong
+                    {
+                        MessageBox.Show("Vui lòng nhập ten để tìm benh nhan!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    else
+                    {
+                        if (bll1.checkPatientsByFirstName(txtFindText.Text.Trim()))
+                        {
+                            PatientsDML dml = new PatientsDML();
+                            dml.FirstName1 = txtFindText.Text.Trim();
+
+
+                            txtPatientId.Text = "";
+                            txtFirstName.Text = "";
+                            txtLastName.Text = "";
+                            cboGender.SelectedItem = "";
+                            txtPhoneNumber.Text = "";
+                            txtAddressPatients.Text = "";
+                            txtSocialSecurityNumber.Text = "";
+
+                            if (UTIL.Language.Lang.Equals("vn"))
+                            {
+                                string storedProcedureName = "getALlPatientsByFirstName";
+                                // Tạo chuỗi truy vấn để gọi stored procedure
+                                string chuoiQuery = $"EXEC {storedProcedureName} @FirstName = '{txtFindText.Text.Trim()}'";
+
+                                UTIL.UTIL.showDataToDataGridview(dgvManagePatients, chuoiQuery, headTitleVN);
+                            }
+                            else
+                            {
+                                string storedProcedureName = "getALlPatientsByFirstName";
+                                // Tạo chuỗi truy vấn để gọi stored procedure
+                                string chuoiQuery = $"EXEC {storedProcedureName} @FirstName = '{txtFindText.Text.Trim()}'";
+
+                                UTIL.UTIL.showDataToDataGridview(dgvManagePatients, chuoiQuery, headTitleEng);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Không có mã benh nhan co ten\"" + txtFindText.Text.Trim() + "\" trong database", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    break;
+                case 2: // tim kiem theo số điện thoại
+                    PatientsBLL bll2 = new PatientsBLL();
+                    //kiem tra ma sinh vien null
+                    if (string.IsNullOrEmpty(txtFindText.Text)) // kiem tra textbox tim kiem co nhap khong
+                    {
+                        MessageBox.Show("Vui lòng nhập so phone để tìm benh nhan!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    else
+                    {
+                        if (bll2.checkPatientsByPhoneNumber(txtFindText.Text.Trim()))
+                        {
+                            try
+                            {
+                                PatientsDML dml = new PatientsDML();
+                                dml.PhoneNumber1 = txtFindText.Text.Trim();
+
+                                //khai báo 1 mdoel sinh vien khác để lưu thông tin sinh vien có mã sv là g đã set ở trên
+                                PatientsDAL dal = new PatientsDAL();
+                                PatientsDML dmlResult = dal.SelectByPhoneNumber(dml);
+
+                                txtPatientId.Text = dmlResult.PatientId1.ToString();
+                                txtFirstName.Text = dmlResult.FirstName1.ToString();
+                                txtLastName.Text = dmlResult.LastName1.ToString();
+                                dtpDateOfBirth.Value = DateTime.Parse(dmlResult.DateOfBirth1.ToString().Trim());
+                                cboGender.SelectedItem = dmlResult.Gender1.ToString();
+                                txtPhoneNumber.Text = dmlResult.PhoneNumber1.ToString();
+                                txtAddressPatients.Text = dmlResult.AddressPatients1.ToString();
+                                txtSocialSecurityNumber.Text = dmlResult.SocialSecurityNumber1.ToString();
+
+
+
+                                // Tìm và chọn dòng trong DataGridView
+                                foreach (DataGridViewRow row in dgvManagePatients.Rows)
+                                {
+                                    if (row.Cells["PhoneNumber"].Value?.ToString() == dmlResult.PhoneNumber1.ToString()) // Giả sử cột MaSv tên là "MaSv"
+                                    {
+                                        row.Selected = true; // Chọn dòng
+                                        dgvManagePatients.CurrentCell = row.Cells[0]; // Đặt con trỏ vào ô đầu tiên của dòng
+                                        dgvManagePatients.FirstDisplayedScrollingRowIndex = row.Index; // Cuộn đến dòng được chọn
+                                        break;
+                                    }
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine("Lỗi tại class frmPatients.cs hàm btnTimKiem_Click(object sender, EventArgs e): " + ex.Message);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Không có sdt cua benh nhan \"" + txtFindText.Text.Trim() + "\" trong database", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    break;
+                default:
+                    break;
+            }
+
+        }
+
+        private void btnReload_Click(object sender, EventArgs e)
+        {
+            if (UTIL.Language.Lang.Equals("vn"))
+            {
+                UTIL.UTIL.showDataToDataGridview(dgvManagePatients, "getALlPatients", headTitleVN);
+            }
+            else
+            {
+                UTIL.UTIL.showDataToDataGridview(dgvManagePatients, "getALlPatients", headTitleEng);
             }
         }
     }
