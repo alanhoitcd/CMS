@@ -170,6 +170,7 @@
             this.txtSocialSecurityNumber.Name = "txtSocialSecurityNumber";
             this.txtSocialSecurityNumber.Size = new System.Drawing.Size(526, 39);
             this.txtSocialSecurityNumber.TabIndex = 47;
+            this.txtSocialSecurityNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSocialSecurityNumber_KeyPress);
             // 
             // AddressPatients
             // 
@@ -190,6 +191,7 @@
             this.txtAddressPatients.Name = "txtAddressPatients";
             this.txtAddressPatients.Size = new System.Drawing.Size(526, 39);
             this.txtAddressPatients.TabIndex = 45;
+            this.txtAddressPatients.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddressPatients_KeyPress);
             // 
             // lblPhoneNumber
             // 
@@ -249,6 +251,7 @@
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(506, 39);
             this.txtLastName.TabIndex = 37;
+            this.txtLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // lblFirstName
             // 
@@ -267,6 +270,7 @@
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(506, 39);
             this.txtFirstName.TabIndex = 35;
+            this.txtFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFirstName_KeyPress);
             // 
             // lblPatientId
             // 
