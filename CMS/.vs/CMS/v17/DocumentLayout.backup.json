@@ -3,27 +3,7 @@
   "WorkspaceRootPath": "D:\\_DuAn_\\CMS\\CMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|d:\\_duan_\\cms\\cms\\gui\\frmpatientlistreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:gui\\frmpatientlistreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|D:\\_DuAn_\\CMS\\CMS\\gui\\frmpatientlistreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:gui\\frmpatientlistreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|d:\\_duan_\\cms\\cms\\gui\\frmmanagepatients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:gui\\frmmanagepatients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|D:\\_DuAn_\\CMS\\CMS\\gui\\frmmanagepatients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:gui\\frmmanagepatients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|D:\\_DuAn_\\CMS\\CMS\\gui\\frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:gui\\frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|D:\\_DuAn_\\CMS\\CMS\\gui\\frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|d:\\_duan_\\cms\\cms\\gui\\frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:gui\\frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -34,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,77 +22,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmManagePatients.cs",
-              "DocumentMoniker": "D:\\_DuAn_\\CMS\\CMS\\GUI\\frmManagePatients.cs",
-              "RelativeDocumentMoniker": "GUI\\frmManagePatients.cs",
-              "ToolTip": "D:\\_DuAn_\\CMS\\CMS\\GUI\\frmManagePatients.cs",
-              "RelativeToolTip": "GUI\\frmManagePatients.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAhwG0AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T05:15:42.631Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmPatientListReport.cs",
-              "DocumentMoniker": "D:\\_DuAn_\\CMS\\CMS\\GUI\\frmPatientListReport.cs",
-              "RelativeDocumentMoniker": "GUI\\frmPatientListReport.cs",
-              "ToolTip": "D:\\_DuAn_\\CMS\\CMS\\GUI\\frmPatientListReport.cs",
-              "RelativeToolTip": "GUI\\frmPatientListReport.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAawEkAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T03:38:05.195Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmPatientListReport.cs [Design]",
-              "DocumentMoniker": "D:\\_DuAn_\\CMS\\CMS\\GUI\\frmPatientListReport.cs",
-              "RelativeDocumentMoniker": "GUI\\frmPatientListReport.cs",
-              "ToolTip": "D:\\_DuAn_\\CMS\\CMS\\GUI\\frmPatientListReport.cs [Design]",
-              "RelativeToolTip": "GUI\\frmPatientListReport.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T03:37:46.213Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmManagePatients.cs [Design]",
-              "DocumentMoniker": "D:\\_DuAn_\\CMS\\CMS\\GUI\\frmManagePatients.cs",
-              "RelativeDocumentMoniker": "GUI\\frmManagePatients.cs",
-              "ToolTip": "D:\\_DuAn_\\CMS\\CMS\\GUI\\frmManagePatients.cs [Design]",
-              "RelativeToolTip": "GUI\\frmManagePatients.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T03:32:57.985Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmMainForm.cs",
-              "DocumentMoniker": "D:\\_DuAn_\\CMS\\CMS\\GUI\\frmMainForm.cs",
-              "RelativeDocumentMoniker": "GUI\\frmMainForm.cs",
-              "ToolTip": "D:\\_DuAn_\\CMS\\CMS\\GUI\\frmMainForm.cs",
-              "RelativeToolTip": "GUI\\frmMainForm.cs",
-              "ViewState": "AgIAAEsBAAAAAAAAAAAhwFkBAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T03:01:16.955Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "frmMainForm.cs [Design]",
               "DocumentMoniker": "D:\\_DuAn_\\CMS\\CMS\\GUI\\frmMainForm.cs",
               "RelativeDocumentMoniker": "GUI\\frmMainForm.cs",
               "ToolTip": "D:\\_DuAn_\\CMS\\CMS\\GUI\\frmMainForm.cs [Design]",
               "RelativeToolTip": "GUI\\frmMainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T02:58:45.033Z",
+              "WhenOpened": "2025-05-07T05:19:51.439Z",
               "EditorCaption": " [Design]"
             }
           ]

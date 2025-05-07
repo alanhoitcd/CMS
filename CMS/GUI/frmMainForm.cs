@@ -241,8 +241,8 @@ namespace CMS
             tabControlMain.TabPages.Remove(tabPageAppointments);
             tabControlMain.TabPages.Remove(tabPageMedicineInventory);
             tabControlMain.TabPages.Remove(tabPagePatientListReport);
-            tabControlMain.TabPages.Remove(tabPage1);
-            tabControlMain.TabPages.Remove(tabPage2);
+            tabControlMain.TabPages.Remove(tabPageExamination);
+            tabControlMain.TabPages.Remove(tabPagePrescriptions);
 
         }
         //********************************************************************************************//

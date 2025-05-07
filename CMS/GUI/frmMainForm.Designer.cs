@@ -67,8 +67,8 @@
             this.tabPageDoctors = new System.Windows.Forms.TabPage();
             this.tabPageAppointments = new System.Windows.Forms.TabPage();
             this.tabPageMedicineInventory = new System.Windows.Forms.TabPage();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPageExamination = new System.Windows.Forms.TabPage();
+            this.tabPagePrescriptions = new System.Windows.Forms.TabPage();
             this.tabPagePatientListReport = new System.Windows.Forms.TabPage();
             this.menuStripMain.SuspendLayout();
             this.pnlHead.SuspendLayout();
@@ -416,8 +416,8 @@
             this.tabControlMain.Controls.Add(this.tabPageDoctors);
             this.tabControlMain.Controls.Add(this.tabPageAppointments);
             this.tabControlMain.Controls.Add(this.tabPageMedicineInventory);
-            this.tabControlMain.Controls.Add(this.tabPage1);
-            this.tabControlMain.Controls.Add(this.tabPage2);
+            this.tabControlMain.Controls.Add(this.tabPageExamination);
+            this.tabControlMain.Controls.Add(this.tabPagePrescriptions);
             this.tabControlMain.Controls.Add(this.tabPagePatientListReport);
             this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlMain.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -467,25 +467,25 @@
             this.tabPageMedicineInventory.Text = "Medicine Inventory";
             this.tabPageMedicineInventory.UseVisualStyleBackColor = true;
             // 
-            // tabPage1
+            // tabPageExamination
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 28);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1432, 728);
-            this.tabPage1.TabIndex = 4;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPageExamination.Location = new System.Drawing.Point(4, 28);
+            this.tabPageExamination.Name = "tabPageExamination";
+            this.tabPageExamination.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageExamination.Size = new System.Drawing.Size(1432, 728);
+            this.tabPageExamination.TabIndex = 4;
+            this.tabPageExamination.Text = "Manage Examination";
+            this.tabPageExamination.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // tabPagePrescriptions
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 28);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1432, 728);
-            this.tabPage2.TabIndex = 5;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPagePrescriptions.Location = new System.Drawing.Point(4, 28);
+            this.tabPagePrescriptions.Name = "tabPagePrescriptions";
+            this.tabPagePrescriptions.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPagePrescriptions.Size = new System.Drawing.Size(1432, 728);
+            this.tabPagePrescriptions.TabIndex = 5;
+            this.tabPagePrescriptions.Text = "Prescriptions";
+            this.tabPagePrescriptions.UseVisualStyleBackColor = true;
             // 
             // tabPagePatientListReport
             // 
@@ -566,8 +566,8 @@
         private System.Windows.Forms.TabPage tabPageDoctors;
         private System.Windows.Forms.TabPage tabPageAppointments;
         private System.Windows.Forms.TabPage tabPageMedicineInventory;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPageExamination;
+        private System.Windows.Forms.TabPage tabPagePrescriptions;
         private System.Windows.Forms.TabPage tabPagePatientListReport;
     }
 }
