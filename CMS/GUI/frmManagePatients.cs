@@ -391,7 +391,7 @@ namespace CMS.GUI
                         }
                         else
                         {
-                            MessageBox.Show("Không có mã benh nhan \"" + txtSocialSecurityNumber.Text.Trim() + "\" trong database", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Không có mã benh nhan \"" + txtFindText.Text.Trim() + "\" trong database", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                     break;
