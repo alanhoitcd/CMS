@@ -240,7 +240,9 @@ namespace CMS
             tabControlMain.TabPages.Remove(tabPageDoctors);
             tabControlMain.TabPages.Remove(tabPageAppointments);
             tabControlMain.TabPages.Remove(tabPageMedicineInventory);
-
+            tabControlMain.TabPages.Remove(tabPagePatientListReport);
+            tabControlMain.TabPages.Remove(tabPage1);
+            tabControlMain.TabPages.Remove(tabPage2);
 
         }
         //********************************************************************************************//
@@ -251,8 +253,7 @@ namespace CMS
 
         private void frmMainForm_Load(object sender, EventArgs e)
         {
-            //frmMainForm_Load_(true);
-            frmMainForm_Load_(false);
+            frmMainForm_Load_(true);
         }
 
         private void btnScreenMode_Click(object sender, EventArgs e)
@@ -273,17 +274,17 @@ namespace CMS
 
         private void tsmiLogin_Click(object sender, EventArgs e)
         {
-            //frmLogin f = new frmLogin();
-            //if (f.ShowDialog() == DialogResult.OK)
-            //{
-            //    frmMainForm_Load_(false);
-            //    this.userName = "Hồ Huyền Anh";
-            //    lblHello.Text = LanguageManager.GetString("lblHello") + " " + this.userName;
-            //}
-            //else
-            //{
-            //    frmMainForm_Load_(true);
-            //}
+            frmLogin f = new frmLogin();
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                frmMainForm_Load_(false);
+                this.userName = "Hồ Huyền Anh";
+                lblHello.Text = LanguageManager.GetString("lblHello") + " " + this.userName;
+            }
+            else
+            {
+                frmMainForm_Load_(true);
+            }
         }
 
         private void tsmiLogout_Click(object sender, EventArgs e)
@@ -295,20 +296,19 @@ namespace CMS
 
         private void tsmiManagePatient_Click(object sender, EventArgs e)
         {
-            //Xóa nội dung các tabpage
+            //Xóa nội dung tabpage
             tabPagePatients.Controls.Clear();
-            tabPageDoctors.Controls.Clear();
 
             //tạo các đối tượng form và truyền vào các tabpage của tabcontrol
-            frmManagePatients frmManagePatients = new frmManagePatients(tabPagePatients, tabControlMain);
+            frmManagePatients frm = new frmManagePatients(tabPagePatients, tabControlMain);
 
             //thiết lập nhúng các form vào các tabpage
-            frmManagePatients.TopLevel = false;
-            frmManagePatients.Dock = DockStyle.Fill;
-            frmManagePatients.Visible = true;
+            frm.TopLevel = false;
+            frm.Dock = DockStyle.Fill;
+            frm.Visible = true;
 
             //Thêm các form vào tabpage
-            tabPagePatients.Controls.Add(frmManagePatients);
+            tabPagePatients.Controls.Add(frm);
 
             //chuyển focus sang tabpage được chọn
             tabControlMain.SelectedTab = tabPagePatients;
@@ -327,6 +327,31 @@ namespace CMS
         private void tsmiManageDoctors_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tsmiPatientListReport_Click(object sender, EventArgs e)
+        {
+            //Xóa nội dung tabpage
+            tabPagePatientListReport.Controls.Clear();
+
+            //tạo các đối tượng form và truyền vào các tabpage của tabcontrol
+            frmPatientListReport frm = new frmPatientListReport(tabPagePatientListReport, tabControlMain);
+
+            //thiết lập nhúng các form vào các tabpage
+            frm.TopLevel = false;
+            frm.Dock = DockStyle.Fill;
+            frm.Visible = true;
+
+            //Thêm các form vào tabpage
+            tabPagePatientListReport.Controls.Add(frm);
+
+            //chuyển focus sang tabpage được chọn
+            tabControlMain.SelectedTab = tabPagePatientListReport;
+            //Kiểm tra nếu tabpage bị ẩn thì mở lại
+            if (!tabControlMain.TabPages.Contains(tabPagePatientListReport))
+            {
+                tabControlMain.TabPages.Add(tabPagePatientListReport);
+            }
         }
     }
 }

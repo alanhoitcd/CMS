@@ -119,6 +119,12 @@
     <Compile Include="GUI\frmManagePatients.Designer.cs">
       <DependentUpon>frmManagePatients.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmPatientListReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmPatientListReport.Designer.cs">
+      <DependentUpon>frmPatientListReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmManagePatients.resx">
       <DependentUpon>frmManagePatients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmPatientListReport.resx">
+      <DependentUpon>frmPatientListReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmTest.resx">
       <DependentUpon>frmTest.cs</DependentUpon>
@@ -158,6 +167,7 @@
       <DependentUpon>frmMainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.vi.resx" />
+    <EmbeddedResource Include="Report\PatientListReport.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -106,7 +106,7 @@ namespace CMS.VIEW
                         {
                             string frmLoginCap_LoginSuccessful = LanguageManager.GetString("notif_frmLogin_LoginSuccessful");
                             string notification = LanguageManager.GetString("notif_");
-                            MessageBox.Show(frmLoginCap_LoginSuccessful, notification);
+                            //MessageBox.Show(frmLoginCap_LoginSuccessful, notification);
                             this.DialogResult = DialogResult.OK;
                             countSaiPass = 0;
                         }

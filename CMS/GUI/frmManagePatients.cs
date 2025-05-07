@@ -107,11 +107,10 @@ namespace CMS.GUI
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-            //if (parentTab != null && tabControl != null)
-            //{
-            //    tabControl.TabPages.Remove(parentTab); // Xóa tab khỏi TabControl nhưng không dispose
-            //}
+            if (parentTab != null && tabControl != null)
+            {
+                tabControl.TabPages.Remove(parentTab); // Xóa tab khỏi TabControl nhưng không dispose
+            }
         }
 
         private void btnAddPatients_Click(object sender, EventArgs e)

@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblManagePatients = new System.Windows.Forms.Label();
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pnlHead = new System.Windows.Forms.Panel();
             this.panelBody = new System.Windows.Forms.Panel();
+            this.btnReload = new Guna.UI2.WinForms.Guna2Button();
             this.txtFindText = new System.Windows.Forms.TextBox();
             this.cboKindFind = new System.Windows.Forms.ComboBox();
             this.dtpDateOfBirth = new System.Windows.Forms.DateTimePicker();
@@ -56,23 +57,22 @@
             this.btnAddPatients = new Guna.UI2.WinForms.Guna2Button();
             this.panelFoot = new System.Windows.Forms.Panel();
             this.dgvManagePatients = new System.Windows.Forms.DataGridView();
-            this.btnReload = new Guna.UI2.WinForms.Guna2Button();
             this.pnlHead.SuspendLayout();
             this.panelBody.SuspendLayout();
             this.panelFoot.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvManagePatients)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblManagePatients
             // 
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 28.2F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1587, 57);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Manage Patients";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblManagePatients.Font = new System.Drawing.Font("Times New Roman", 28.2F, System.Drawing.FontStyle.Bold);
+            this.lblManagePatients.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblManagePatients.Location = new System.Drawing.Point(3, 0);
+            this.lblManagePatients.Name = "lblManagePatients";
+            this.lblManagePatients.Size = new System.Drawing.Size(1587, 57);
+            this.lblManagePatients.TabIndex = 0;
+            this.lblManagePatients.Text = "Manage Patients";
+            this.lblManagePatients.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnClose
             // 
@@ -100,7 +100,7 @@
             // 
             this.pnlHead.BackColor = System.Drawing.Color.Transparent;
             this.pnlHead.Controls.Add(this.btnClose);
-            this.pnlHead.Controls.Add(this.label1);
+            this.pnlHead.Controls.Add(this.lblManagePatients);
             this.pnlHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHead.Location = new System.Drawing.Point(0, 0);
             this.pnlHead.Name = "pnlHead";
@@ -137,6 +137,22 @@
             this.panelBody.Name = "panelBody";
             this.panelBody.Size = new System.Drawing.Size(1593, 278);
             this.panelBody.TabIndex = 27;
+            // 
+            // btnReload
+            // 
+            this.btnReload.BorderRadius = 18;
+            this.btnReload.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReload.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReload.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReload.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReload.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReload.ForeColor = System.Drawing.Color.White;
+            this.btnReload.Location = new System.Drawing.Point(591, 212);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(141, 50);
+            this.btnReload.TabIndex = 54;
+            this.btnReload.Text = "Reload";
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
             // txtFindText
             // 
@@ -410,22 +426,6 @@
             this.dgvManagePatients.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvManagePatients_CellClick);
             this.dgvManagePatients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvManagePatients_CellContentClick);
             // 
-            // btnReload
-            // 
-            this.btnReload.BorderRadius = 18;
-            this.btnReload.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnReload.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnReload.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnReload.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnReload.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReload.ForeColor = System.Drawing.Color.White;
-            this.btnReload.Location = new System.Drawing.Point(591, 212);
-            this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(141, 50);
-            this.btnReload.TabIndex = 54;
-            this.btnReload.Text = "Reload";
-            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
-            // 
             // frmManagePatients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -451,7 +451,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblManagePatients;
         private Guna.UI2.WinForms.Guna2CircleButton btnClose;
         private System.Windows.Forms.Panel pnlHead;
         private System.Windows.Forms.Panel panelBody;
