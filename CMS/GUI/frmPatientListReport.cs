@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CMS.BLL;
 using Microsoft.Reporting.WinForms;
 
 namespace CMS.GUI
@@ -81,6 +82,11 @@ namespace CMS.GUI
         {
             frmPatientListReport_Load_();
             this.reportViewer1.RefreshReport();
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            PatientsBLL.ExportReport(reportViewer1);
         }
     }
 }

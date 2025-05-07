@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "D:\\_DuAn_\\CMS\\CMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|d:\\_duan_\\cms\\cms\\gui\\frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:gui\\frmmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|d:\\_duan_\\cms\\cms\\gui\\frmpatientlistreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:gui\\frmpatientlistreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|d:\\_duan_\\cms\\cms\\report\\patientlistreport.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
+      "RelativeMoniker": "D:0:0:{FE830C51-D94F-4246-AAE4-8E786A07C037}|CMS.csproj|solutionrelative:report\\patientlistreport.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,13 +27,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmMainForm.cs [Design]",
-              "DocumentMoniker": "D:\\_DuAn_\\CMS\\CMS\\GUI\\frmMainForm.cs",
-              "RelativeDocumentMoniker": "GUI\\frmMainForm.cs",
-              "ToolTip": "D:\\_DuAn_\\CMS\\CMS\\GUI\\frmMainForm.cs [Design]",
-              "RelativeToolTip": "GUI\\frmMainForm.cs [Design]",
+              "Title": "frmPatientListReport.cs [Design]",
+              "DocumentMoniker": "D:\\_DuAn_\\CMS\\CMS\\GUI\\frmPatientListReport.cs",
+              "RelativeDocumentMoniker": "GUI\\frmPatientListReport.cs",
+              "ToolTip": "D:\\_DuAn_\\CMS\\CMS\\GUI\\frmPatientListReport.cs [Design]",
+              "RelativeToolTip": "GUI\\frmPatientListReport.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T05:19:51.439Z",
+              "WhenOpened": "2025-05-07T05:43:20.306Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PatientListReport.rdlc [Design]",
+              "DocumentMoniker": "D:\\_DuAn_\\CMS\\CMS\\Report\\PatientListReport.rdlc",
+              "RelativeDocumentMoniker": "Report\\PatientListReport.rdlc",
+              "ToolTip": "D:\\_DuAn_\\CMS\\CMS\\Report\\PatientListReport.rdlc [Design]",
+              "RelativeToolTip": "Report\\PatientListReport.rdlc [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
+              "WhenOpened": "2025-05-07T05:37:23.692Z",
               "EditorCaption": " [Design]"
             }
           ]

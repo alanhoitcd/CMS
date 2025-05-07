@@ -109,6 +109,7 @@
             this.btnExport.Size = new System.Drawing.Size(141, 38);
             this.btnExport.TabIndex = 30;
             this.btnExport.Text = "Export";
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // reportViewer1
             // 
