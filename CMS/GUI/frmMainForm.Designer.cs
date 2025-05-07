@@ -70,6 +70,8 @@
             this.tabPageExamination = new System.Windows.Forms.TabPage();
             this.tabPagePrescriptions = new System.Windows.Forms.TabPage();
             this.tabPagePatientListReport = new System.Windows.Forms.TabPage();
+            this.tabPageAppointmentScheduleReport = new System.Windows.Forms.TabPage();
+            this.tabPageInventoryAndMedicineRevenueReport = new System.Windows.Forms.TabPage();
             this.menuStripMain.SuspendLayout();
             this.pnlHead.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -419,6 +421,8 @@
             this.tabControlMain.Controls.Add(this.tabPageExamination);
             this.tabControlMain.Controls.Add(this.tabPagePrescriptions);
             this.tabControlMain.Controls.Add(this.tabPagePatientListReport);
+            this.tabControlMain.Controls.Add(this.tabPageAppointmentScheduleReport);
+            this.tabControlMain.Controls.Add(this.tabPageInventoryAndMedicineRevenueReport);
             this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlMain.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlMain.Location = new System.Drawing.Point(0, 0);
@@ -497,6 +501,26 @@
             this.tabPagePatientListReport.Text = "Patient List Report";
             this.tabPagePatientListReport.UseVisualStyleBackColor = true;
             // 
+            // tabPageAppointmentScheduleReport
+            // 
+            this.tabPageAppointmentScheduleReport.Location = new System.Drawing.Point(4, 28);
+            this.tabPageAppointmentScheduleReport.Name = "tabPageAppointmentScheduleReport";
+            this.tabPageAppointmentScheduleReport.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageAppointmentScheduleReport.Size = new System.Drawing.Size(1432, 728);
+            this.tabPageAppointmentScheduleReport.TabIndex = 7;
+            this.tabPageAppointmentScheduleReport.Text = "Appointment Schedule Report";
+            this.tabPageAppointmentScheduleReport.UseVisualStyleBackColor = true;
+            // 
+            // tabPageInventoryAndMedicineRevenueReport
+            // 
+            this.tabPageInventoryAndMedicineRevenueReport.Location = new System.Drawing.Point(4, 28);
+            this.tabPageInventoryAndMedicineRevenueReport.Name = "tabPageInventoryAndMedicineRevenueReport";
+            this.tabPageInventoryAndMedicineRevenueReport.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageInventoryAndMedicineRevenueReport.Size = new System.Drawing.Size(1432, 728);
+            this.tabPageInventoryAndMedicineRevenueReport.TabIndex = 8;
+            this.tabPageInventoryAndMedicineRevenueReport.Text = "Inventory And Medicine Revenue Report";
+            this.tabPageInventoryAndMedicineRevenueReport.UseVisualStyleBackColor = true;
+            // 
             // frmMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -569,6 +593,8 @@
         private System.Windows.Forms.TabPage tabPageExamination;
         private System.Windows.Forms.TabPage tabPagePrescriptions;
         private System.Windows.Forms.TabPage tabPagePatientListReport;
+        private System.Windows.Forms.TabPage tabPageAppointmentScheduleReport;
+        private System.Windows.Forms.TabPage tabPageInventoryAndMedicineRevenueReport;
     }
 }
 

@@ -243,7 +243,8 @@ namespace CMS
             tabControlMain.TabPages.Remove(tabPagePatientListReport);
             tabControlMain.TabPages.Remove(tabPageExamination);
             tabControlMain.TabPages.Remove(tabPagePrescriptions);
-
+            tabControlMain.TabPages.Remove(tabPageAppointmentScheduleReport);
+            tabControlMain.TabPages.Remove(tabPageInventoryAndMedicineRevenueReport);
         }
         //********************************************************************************************//
         public frmMainForm()
