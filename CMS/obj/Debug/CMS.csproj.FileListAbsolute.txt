@@ -133,3 +133,4 @@ D:\_DuAn_\CMS\CMS\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 D:\_DuAn_\CMS\CMS\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 D:\_DuAn_\CMS\CMS\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 D:\_DuAn_\CMS\CMS\obj\Debug\CMS.GUI.frmPatientListReport.resources
+D:\_DuAn_\CMS\CMS\obj\Debug\CMS.GUI.frmManageDoctors.resources

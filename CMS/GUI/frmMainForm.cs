@@ -327,7 +327,27 @@ namespace CMS
 
         private void tsmiManageDoctors_Click(object sender, EventArgs e)
         {
+            // Xóa nội dung tabpage
+            tabPageDoctors.Controls.Clear();
 
+            //tạo các đối tượng form và truyền vào các tabpage của tabcontrol
+            frmManageDoctors frm = new frmManageDoctors(tabPageDoctors, tabControlMain);
+
+            //thiết lập nhúng các form vào các tabpage
+            frm.TopLevel = false;
+            frm.Dock = DockStyle.Fill;
+            frm.Visible = true;
+
+            //Thêm các form vào tabpage
+            tabPageDoctors.Controls.Add(frm);
+
+            //chuyển focus sang tabpage được chọn
+            tabControlMain.SelectedTab = tabPageDoctors;
+            //Kiểm tra nếu tabpage bị ẩn thì mở lại
+            if (!tabControlMain.TabPages.Contains(tabPageDoctors))
+            {
+                tabControlMain.TabPages.Add(tabPageDoctors);
+            }
         }
 
         private void tsmiPatientListReport_Click(object sender, EventArgs e)

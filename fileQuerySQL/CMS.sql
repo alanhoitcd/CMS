@@ -10,6 +10,8 @@ GO
 CREATE TABLE Users (
     UserId INT IDENTITY(1,1) PRIMARY KEY,
     Username VARCHAR(50) NOT NULL UNIQUE,
+	--Fullname NVARCHAR(100) NOT NULL,
+	--SSN NVARCHAR(12) NOT NULL,
     PasswordHash NVARCHAR(256) NOT NULL,
     RoleUsers NVARCHAR(50) NOT NULL,
     Email NVARCHAR(100) NOT NULL UNIQUE,
@@ -36,24 +38,20 @@ CREATE TABLE Patients (
 
 CREATE TABLE Doctors (
     DoctorId INT IDENTITY(1,1) PRIMARY KEY,
-	UserId INT NULL,
     FirstName NVARCHAR(50) NOT NULL,
     LastName NVARCHAR(50) NOT NULL,
     Specialty NVARCHAR(50) NOT NULL,
     LicenseNumber NVARCHAR(20) UNIQUE NOT NULL,
     Schedule NVARCHAR(100) NOT NULL,
-	FOREIGN KEY (UserId) REFERENCES Users(UserId)
 );
 
 CREATE TABLE Staff (
     StaffId INT IDENTITY(1,1) PRIMARY KEY,
-	UserId INT NULL,
     FirstName NVARCHAR(50) NOT NULL,
     LastName NVARCHAR(50) NOT NULL,
     RoleStaff NVARCHAR(50) NOT NULL,
     Contact NVARCHAR(15) NOT NULL CHECK (Contact LIKE '[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]'),
-    HireDate DATE NOT NULL CHECK (HireDate <= GETDATE()),
-	FOREIGN KEY (UserId) REFERENCES Users(UserId)
+    HireDate DATE NOT NULL CHECK (HireDate <= GETDATE())
 );
 
 CREATE TABLE Suppliers (
@@ -68,18 +66,6 @@ CREATE TABLE Labs (
     LabId INT IDENTITY(1,1) PRIMARY KEY,
     LabName NVARCHAR(100) NOT NULL,
     LabAddress NVARCHAR(200) NOT NULL
-);
-
-CREATE TABLE UserSessions (
-    SessionId INT IDENTITY(1,1) PRIMARY KEY,
-    UserId INT NOT NULL,
-    LoginTime DATETIME NOT NULL DEFAULT GETDATE(),
-    LogoutTime DATETIME NULL, -- Bỏ CHECK ở cấp cột
-    IpAddress NVARCHAR(45) NULL,
-    Token NVARCHAR(256) NULL,
-    IsActive BIT DEFAULT 1 NOT NULL,
-    FOREIGN KEY (UserId) REFERENCES Users(UserId),
-    CONSTRAINT Check_LogoutTime CHECK (LogoutTime >= LoginTime OR LogoutTime IS NULL) -- Định nghĩa CHECK ở cấp bảng
 );
 
 CREATE TABLE Appointments (
@@ -276,47 +262,47 @@ VALUES ('James', 'Moore', '1983-06-08', 'Male', '901-234-5678', '606 Willow St',
 INSERT INTO Patients (FirstName, LastName, DateOfBirth, Gender, PhoneNumber, AddressPatients, SocialSecurityNumber, IsEncrypted) 
 VALUES ('Sarah', 'Lee', '1998-04-17', 'Female', '012-345-6789', '707 Ash St', '000000000000', 0);
 
-INSERT INTO Doctors (UserId, FirstName, LastName, Specialty, LicenseNumber, Schedule) 
-VALUES (2, 'Robert', 'Miller', 'Cardiology', 'LIC001', 'Mon-Fri 9-5');
-INSERT INTO Doctors (UserId, FirstName, LastName, Specialty, LicenseNumber, Schedule) 
-VALUES (5, 'Susan', 'Clark', 'Pediatrics', 'LIC002', 'Tue-Sat 10-6');
-INSERT INTO Doctors (UserId, FirstName, LastName, Specialty, LicenseNumber, Schedule) 
-VALUES (8, 'David', 'Lewis', 'Neurology', 'LIC003', 'Mon-Wed 8-4');
-INSERT INTO Doctors (UserId, FirstName, LastName, Specialty, LicenseNumber, Schedule) 
-VALUES (NULL, 'Emily', 'Walker', 'Orthopedics', 'LIC004', 'Wed-Fri 9-5');
-INSERT INTO Doctors (UserId, FirstName, LastName, Specialty, LicenseNumber, Schedule) 
-VALUES (NULL, 'Michael', 'Hall', 'Dermatology', 'LIC005', 'Mon-Fri 10-6');
-INSERT INTO Doctors (UserId, FirstName, LastName, Specialty, LicenseNumber, Schedule) 
-VALUES (NULL, 'Laura', 'Allen', 'Oncology', 'LIC006', 'Tue-Thu 8-4');
-INSERT INTO Doctors (UserId, FirstName, LastName, Specialty, LicenseNumber, Schedule) 
-VALUES (NULL, 'Chris', 'Young', 'Psychiatry', 'LIC007', 'Mon-Fri 9-5');
-INSERT INTO Doctors (UserId, FirstName, LastName, Specialty, LicenseNumber, Schedule) 
-VALUES (NULL, 'Anna', 'King', 'Gastroenterology', 'LIC008', 'Wed-Sat 10-6');
-INSERT INTO Doctors (UserId, FirstName, LastName, Specialty, LicenseNumber, Schedule) 
-VALUES (NULL, 'Mark', 'Wright', 'Urology', 'LIC009', 'Mon-Thu 8-4');
-INSERT INTO Doctors (UserId, FirstName, LastName, Specialty, LicenseNumber, Schedule) 
-VALUES (NULL, 'Kelly', 'Scott', 'Endocrinology', 'LIC010', 'Tue-Fri 9-5');
+INSERT INTO Doctors (FirstName, LastName, Specialty, LicenseNumber, Schedule) 
+VALUES ('Robert', 'Miller', 'Cardiology', 'LIC001', 'Mon-Fri 9-5');
+INSERT INTO Doctors (FirstName, LastName, Specialty, LicenseNumber, Schedule) 
+VALUES ('Susan', 'Clark', 'Pediatrics', 'LIC002', 'Tue-Sat 10-6');
+INSERT INTO Doctors (FirstName, LastName, Specialty, LicenseNumber, Schedule) 
+VALUES ('David', 'Lewis', 'Neurology', 'LIC003', 'Mon-Wed 8-4');
+INSERT INTO Doctors (FirstName, LastName, Specialty, LicenseNumber, Schedule) 
+VALUES ('Emily', 'Walker', 'Orthopedics', 'LIC004', 'Wed-Fri 9-5');
+INSERT INTO Doctors (FirstName, LastName, Specialty, LicenseNumber, Schedule) 
+VALUES ('Michael', 'Hall', 'Dermatology', 'LIC005', 'Mon-Fri 10-6');
+INSERT INTO Doctors (FirstName, LastName, Specialty, LicenseNumber, Schedule) 
+VALUES ('Laura', 'Allen', 'Oncology', 'LIC006', 'Tue-Thu 8-4');
+INSERT INTO Doctors (FirstName, LastName, Specialty, LicenseNumber, Schedule) 
+VALUES ('Chris', 'Young', 'Psychiatry', 'LIC007', 'Mon-Fri 9-5');
+INSERT INTO Doctors (FirstName, LastName, Specialty, LicenseNumber, Schedule) 
+VALUES ('Anna', 'King', 'Gastroenterology', 'LIC008', 'Wed-Sat 10-6');
+INSERT INTO Doctors (FirstName, LastName, Specialty, LicenseNumber, Schedule) 
+VALUES ('Mark', 'Wright', 'Urology', 'LIC009', 'Mon-Thu 8-4');
+INSERT INTO Doctors (FirstName, LastName, Specialty, LicenseNumber, Schedule) 
+VALUES ('Kelly', 'Scott', 'Endocrinology', 'LIC010', 'Tue-Fri 9-5');
 
-INSERT INTO Staff (UserId, FirstName, LastName, RoleStaff, Contact, HireDate) 
-VALUES (3, 'Nancy', 'Green', 'Nurse', '123-456-7890', '2020-01-15');
-INSERT INTO Staff (UserId, FirstName, LastName, RoleStaff, Contact, HireDate) 
-VALUES (6, 'Brian', 'Adams', 'Receptionist', '234-567-8901', '2021-03-22');
-INSERT INTO Staff (UserId, FirstName, LastName, RoleStaff, Contact, HireDate) 
-VALUES (9, 'Linda', 'Baker', 'Technician', '345-678-9012', '2019-07-10');
-INSERT INTO Staff (UserId, FirstName, LastName, RoleStaff, Contact, HireDate) 
-VALUES (NULL, 'Paul', 'Gonzalez', 'Nurse', '456-789-0123', '2022-05-01');
-INSERT INTO Staff (UserId, FirstName, LastName, RoleStaff, Contact, HireDate) 
-VALUES (NULL, 'Diana', 'Nelson', 'Receptionist', '567-890-1234', '2023-02-19');
-INSERT INTO Staff (UserId, FirstName, LastName, RoleStaff, Contact, HireDate) 
-VALUES (NULL, 'Steve', 'Carter', 'Technician', '678-901-2345', '2020-11-30');
-INSERT INTO Staff (UserId, FirstName, LastName, RoleStaff, Contact, HireDate) 
-VALUES (NULL, 'Julia', 'Mitchell', 'Nurse', '789-012-3456', '2021-09-14');
-INSERT INTO Staff (UserId, FirstName, LastName, RoleStaff, Contact, HireDate) 
-VALUES (NULL, 'Kevin', 'Perez', 'Receptionist', '890-123-4567', '2022-12-08');
-INSERT INTO Staff (UserId, FirstName, LastName, RoleStaff, Contact, HireDate) 
-VALUES (NULL, 'Rachel', 'Roberts', 'Technician', '901-234-5678', '2018-06-17');
-INSERT INTO Staff (UserId, FirstName, LastName, RoleStaff, Contact, HireDate) 
-VALUES (NULL, 'George', 'Turner', 'Nurse', '012-345-6789', '2023-04-01');
+INSERT INTO Staff (FirstName, LastName, RoleStaff, Contact, HireDate) 
+VALUES ('Nancy', 'Green', 'Nurse', '123-456-7890', '2020-01-15');
+INSERT INTO Staff (FirstName, LastName, RoleStaff, Contact, HireDate) 
+VALUES ('Brian', 'Adams', 'Receptionist', '234-567-8901', '2021-03-22');
+INSERT INTO Staff (FirstName, LastName, RoleStaff, Contact, HireDate) 
+VALUES ('Linda', 'Baker', 'Technician', '345-678-9012', '2019-07-10');
+INSERT INTO Staff (FirstName, LastName, RoleStaff, Contact, HireDate) 
+VALUES ('Paul', 'Gonzalez', 'Nurse', '456-789-0123', '2022-05-01');
+INSERT INTO Staff (FirstName, LastName, RoleStaff, Contact, HireDate) 
+VALUES ('Diana', 'Nelson', 'Receptionist', '567-890-1234', '2023-02-19');
+INSERT INTO Staff (FirstName, LastName, RoleStaff, Contact, HireDate) 
+VALUES ('Steve', 'Carter', 'Technician', '678-901-2345', '2020-11-30');
+INSERT INTO Staff (FirstName, LastName, RoleStaff, Contact, HireDate) 
+VALUES ('Julia', 'Mitchell', 'Nurse', '789-012-3456', '2021-09-14');
+INSERT INTO Staff (FirstName, LastName, RoleStaff, Contact, HireDate) 
+VALUES ('Kevin', 'Perez', 'Receptionist', '890-123-4567', '2022-12-08');
+INSERT INTO Staff (FirstName, LastName, RoleStaff, Contact, HireDate) 
+VALUES ('Rachel', 'Roberts', 'Technician', '901-234-5678', '2018-06-17');
+INSERT INTO Staff (FirstName, LastName, RoleStaff, Contact, HireDate) 
+VALUES ('George', 'Turner', 'Nurse', '012-345-6789', '2023-04-01');
 
 INSERT INTO Suppliers (SupplierName, ContactPerson, Phone, Email) 
 VALUES ('MediSupply', 'Tom Hardy', '123-456-7890', 'tom@medisupply.com');
@@ -349,27 +335,6 @@ INSERT INTO Labs (LabName, LabAddress) VALUES ('LifeLab', '404 Life St, City');
 INSERT INTO Labs (LabName, LabAddress) VALUES ('PureLab', '505 Pure Rd, Town');
 INSERT INTO Labs (LabName, LabAddress) VALUES ('WellLab', '606 Well Ave, Village');
 INSERT INTO Labs (LabName, LabAddress) VALUES ('ProLab', '707 Pro St, City');
-
-INSERT INTO UserSessions (UserId, LoginTime, LogoutTime, IpAddress, Token, IsActive) 
-VALUES (1, GETDATE(), NULL, '192.168.1.1', 'token1', 1);
-INSERT INTO UserSessions (UserId, LoginTime, LogoutTime, IpAddress, Token, IsActive) 
-VALUES (2, GETDATE(), NULL, '192.168.1.2', 'token2', 1);
-INSERT INTO UserSessions (UserId, LoginTime, LogoutTime, IpAddress, Token, IsActive) 
-VALUES (3, GETDATE(), NULL, '192.168.1.3', 'token3', 1);
-INSERT INTO UserSessions (UserId, LoginTime, LogoutTime, IpAddress, Token, IsActive) 
-VALUES (4, GETDATE(), NULL, '192.168.1.4', 'token4', 1);
-INSERT INTO UserSessions (UserId, LoginTime, LogoutTime, IpAddress, Token, IsActive) 
-VALUES (5, GETDATE(), NULL, '192.168.1.5', 'token5', 1);
-INSERT INTO UserSessions (UserId, LoginTime, LogoutTime, IpAddress, Token, IsActive) 
-VALUES (6, GETDATE(), NULL, '192.168.1.6', 'token6', 1);
-INSERT INTO UserSessions (UserId, LoginTime, LogoutTime, IpAddress, Token, IsActive) 
-VALUES (7, GETDATE(), NULL, '192.168.1.7', 'token7', 1);
-INSERT INTO UserSessions (UserId, LoginTime, LogoutTime, IpAddress, Token, IsActive) 
-VALUES (8, GETDATE(), NULL, '192.168.1.8', 'token8', 1);
-INSERT INTO UserSessions (UserId, LoginTime, LogoutTime, IpAddress, Token, IsActive) 
-VALUES (9, GETDATE(), NULL, '192.168.1.9', 'token9', 1);
-INSERT INTO UserSessions (UserId, LoginTime, LogoutTime, IpAddress, Token, IsActive) 
-VALUES (10, GETDATE(), NULL, '192.168.1.10', 'token10', 1);
 
 INSERT INTO Appointments (PatientId, DoctorId, AppointmentDate, AppointmentsStatus) 
 VALUES (1, 1, '2026-03-20 10:00', 'Scheduled');
@@ -774,19 +739,294 @@ AS
 BEGIN
 	select * from Patients where PhoneNumber = @PhoneNumber;
 END;
+------------------------------------------------------------------------------
+---- Procedure kiểm tra bác sĩ theo DoctorId
+--GO
+--CREATE PROCEDURE checkDoctorsByDoctorId
+--    @DoctorId INT
+--AS
+--BEGIN
+--    SELECT COUNT(DoctorId) FROM Doctors WHERE DoctorId = @DoctorId
+--END;
+
+---- Procedure kiểm tra bác sĩ theo LicenseNumber
+--GO
+--CREATE PROCEDURE checkDoctorsByLicenseNumber
+--    @LicenseNumber NVARCHAR(20)
+--AS
+--BEGIN
+--    SELECT COUNT(LicenseNumber) FROM Doctors WHERE LicenseNumber = @LicenseNumber
+--END;
+
+---- Procedure kiểm tra bác sĩ theo FirstName
+--GO
+--CREATE PROCEDURE checkDoctorsByFirstName
+--    @FirstName NVARCHAR(50)
+--AS
+--BEGIN
+--    SELECT COUNT(DoctorId) FROM Doctors WHERE FirstName = @FirstName
+--END;
+
+---- Procedure kiểm tra bác sĩ theo Specialty
+--GO
+--CREATE PROCEDURE checkDoctorsBySpecialty
+--    @Specialty NVARCHAR(50)
+--AS
+--BEGIN
+--    SELECT COUNT(DoctorId) FROM Doctors WHERE Specialty = @Specialty
+--END;
+
+---- Procedure kiểm tra bác sĩ theo Schedule
+--GO
+--CREATE PROCEDURE checkDoctorsBySchedule
+--    @Schedule NVARCHAR(100)
+--AS
+--BEGIN
+--    SELECT COUNT(DoctorId) FROM Doctors WHERE Schedule = @Schedule
+--END;
+
+---- Procedure lấy danh sách tất cả bác sĩ
+--GO
+--CREATE PROCEDURE getALlDoctors
+--AS
+--BEGIN
+--    SELECT * FROM Doctors
+--END;
+
+---- Procedure thêm bác sĩ mới
+--GO
+--CREATE PROCEDURE insertDoctors
+--    @UserId INT NULL,
+--    @FirstName NVARCHAR(50),
+--    @LastName NVARCHAR(50),
+--    @Specialty NVARCHAR(50),
+--    @LicenseNumber NVARCHAR(20),
+--    @Schedule NVARCHAR(100)
+--AS
+--BEGIN
+--    INSERT INTO Doctors (UserId, FirstName, LastName, Specialty, LicenseNumber, Schedule)
+--    VALUES (@UserId, @FirstName, @LastName, @Specialty, @LicenseNumber, @Schedule);
+--END;
+
+---- Procedure cập nhật bác sĩ theo DoctorId
+--GO
+--CREATE PROCEDURE updateDoctorById
+--    @DoctorId INT,
+--    @UserId INT = NULL,
+--    @FirstName NVARCHAR(50) = NULL,
+--    @LastName NVARCHAR(50) = NULL,
+--    @Specialty NVARCHAR(50) = NULL,
+--    @LicenseNumber NVARCHAR(20) = NULL,
+--    @Schedule NVARCHAR(100) = NULL
+--AS
+--BEGIN
+--    UPDATE Doctors
+--    SET
+--        UserId = ISNULL(@UserId, UserId),
+--        FirstName = ISNULL(@FirstName, FirstName),
+--        LastName = ISNULL(@LastName, LastName),
+--        Specialty = ISNULL(@Specialty, Specialty),
+--        LicenseNumber = ISNULL(@LicenseNumber, LicenseNumber),
+--        Schedule = ISNULL(@Schedule, Schedule)
+--    WHERE DoctorId = @DoctorId;
+--END;
+
+---- Procedure xóa bác sĩ theo DoctorId
+--GO
+--CREATE PROCEDURE deleteDoctorById
+--    @DoctorId INT
+--AS
+--BEGIN
+--    DELETE FROM Doctors WHERE DoctorId = @DoctorId;
+--END;
+
+---- Procedure tìm kiếm bác sĩ theo DoctorId
+--GO
+--CREATE PROCEDURE getDoctorById
+--    @DoctorId INT
+--AS
+--BEGIN
+--    SELECT * FROM Doctors WHERE DoctorId = @DoctorId;
+--END;
+
+---- Procedure tìm kiếm bác sĩ theo FirstName
+--GO
+--CREATE PROCEDURE getDoctorsByFirstName
+--    @FirstName NVARCHAR(50)
+--AS
+--BEGIN
+--    SELECT * FROM Doctors WHERE FirstName = @FirstName;
+--END;
+
+---- Procedure tìm kiếm bác sĩ theo Specialty
+--GO
+--CREATE PROCEDURE getDoctorsBySpecialty
+--    @Specialty NVARCHAR(50)
+--AS
+--BEGIN
+--    SELECT * FROM Doctors WHERE Specialty = @Specialty;
+--END;
+
+---- Procedure tìm kiếm bác sĩ theo LicenseNumber
+--GO
+--CREATE PROCEDURE getDoctorsByLicenseNumber
+--    @LicenseNumber NVARCHAR(20)
+--AS
+--BEGIN
+--    SELECT * FROM Doctors WHERE LicenseNumber = @LicenseNumber;
+--END;
+
+---- Procedure tìm kiếm bác sĩ theo Schedule
+--GO
+--CREATE PROCEDURE getDoctorsBySchedule
+--    @Schedule NVARCHAR(100)
+--AS
+--BEGIN
+--    SELECT * FROM Doctors WHERE Schedule = @Schedule;
+--END;
 
 
 
+-- Procedure kiểm tra bác sĩ theo DoctorId
+GO
+CREATE PROCEDURE checkDoctorsByDoctorId
+    @DoctorId INT
+AS
+BEGIN
+    SELECT COUNT(DoctorId) FROM Doctors WHERE DoctorId = @DoctorId
+END;
 
+-- Procedure kiểm tra bác sĩ theo LicenseNumber
+GO
+CREATE PROCEDURE checkDoctorsByLicenseNumber
+    @LicenseNumber NVARCHAR(20)
+AS
+BEGIN
+    SELECT COUNT(LicenseNumber) FROM Doctors WHERE LicenseNumber = @LicenseNumber
+END;
 
+-- Procedure kiểm tra bác sĩ theo FirstName
+GO
+CREATE PROCEDURE checkDoctorsByFirstName
+    @FirstName NVARCHAR(50)
+AS
+BEGIN
+    SELECT COUNT(DoctorId) FROM Doctors WHERE FirstName = @FirstName
+END;
 
+-- Procedure kiểm tra bác sĩ theo Specialty
+GO
+CREATE PROCEDURE checkDoctorsBySpecialty
+    @Specialty NVARCHAR(50)
+AS
+BEGIN
+    SELECT COUNT(DoctorId) FROM Doctors WHERE Specialty = @Specialty
+END;
 
+-- Procedure kiểm tra bác sĩ theo Schedule
+GO
+CREATE PROCEDURE checkDoctorsBySchedule
+    @Schedule NVARCHAR(100)
+AS
+BEGIN
+    SELECT COUNT(DoctorId) FROM Doctors WHERE Schedule = @Schedule
+END;
 
+-- Procedure lấy danh sách tất cả bác sĩ
+GO
+CREATE PROCEDURE getALlDoctors
+AS
+BEGIN
+    SELECT * FROM Doctors
+END;
 
+-- Procedure thêm bác sĩ mới
+GO
+CREATE PROCEDURE insertDoctors
+    @FirstName NVARCHAR(50),
+    @LastName NVARCHAR(50),
+    @Specialty NVARCHAR(50),
+    @LicenseNumber NVARCHAR(20),
+    @Schedule NVARCHAR(100)
+AS
+BEGIN
+    INSERT INTO Doctors (FirstName, LastName, Specialty, LicenseNumber, Schedule)
+    VALUES (@FirstName, @LastName, @Specialty, @LicenseNumber, @Schedule);
+END;
 
+-- Procedure cập nhật bác sĩ theo DoctorId (bỏ @UserId)
+GO
+CREATE PROCEDURE updateDoctorById
+    @DoctorId INT,
+    @FirstName NVARCHAR(50) = NULL,
+    @LastName NVARCHAR(50) = NULL,
+    @Specialty NVARCHAR(50) = NULL,
+    @LicenseNumber NVARCHAR(20) = NULL,
+    @Schedule NVARCHAR(100) = NULL
+AS
+BEGIN
+    UPDATE Doctors
+    SET
+        FirstName = ISNULL(@FirstName, FirstName),
+        LastName = ISNULL(@LastName, LastName),
+        Specialty = ISNULL(@Specialty, Specialty),
+        LicenseNumber = ISNULL(@LicenseNumber, LicenseNumber),
+        Schedule = ISNULL(@Schedule, Schedule)
+    WHERE DoctorId = @DoctorId;
+END;
 
---select * from Patients where SocialSecurityNumber = '123-45-6789'
--- EXEC insertPatient @FirstName = 'aaa',@LastName = 'Văn A',@DateOfBirth = '2000-01-15',
--- @Gender = 'Nam',@PhoneNumber = '090-123-4567',@AddressPatients = '123 Đường ABC, Quận XYZ, Thành phố HCM',
--- @SocialSecurityNumber = '123-45-6789'
+-- Procedure xóa bác sĩ theo DoctorId
+GO
+CREATE PROCEDURE deleteDoctorById
+    @DoctorId INT
+AS
+BEGIN
+    DELETE FROM Doctors WHERE DoctorId = @DoctorId;
+END;
+
+-- Procedure tìm kiếm bác sĩ theo DoctorId
+GO
+CREATE PROCEDURE getDoctorById
+    @DoctorId INT
+AS
+BEGIN
+    SELECT * FROM Doctors WHERE DoctorId = @DoctorId;
+END;
+
+-- Procedure tìm kiếm bác sĩ theo FirstName
+GO
+CREATE PROCEDURE getDoctorsByFirstName
+    @FirstName NVARCHAR(50)
+AS
+BEGIN
+    SELECT * FROM Doctors WHERE FirstName = @FirstName;
+END;
+
+-- Procedure tìm kiếm bác sĩ theo Specialty
+GO
+CREATE PROCEDURE getDoctorsBySpecialty
+    @Specialty NVARCHAR(50)
+AS
+BEGIN
+    SELECT * FROM Doctors WHERE Specialty = @Specialty;
+END;
+
+-- Procedure tìm kiếm bác sĩ theo LicenseNumber
+GO
+CREATE PROCEDURE getDoctorsByLicenseNumber
+    @LicenseNumber NVARCHAR(20)
+AS
+BEGIN
+    SELECT * FROM Doctors WHERE LicenseNumber = @LicenseNumber;
+END;
+
+-- Procedure tìm kiếm bác sĩ theo Schedule
+GO
+CREATE PROCEDURE getDoctorsBySchedule
+    @Schedule NVARCHAR(100)
+AS
+BEGIN
+    SELECT * FROM Doctors WHERE Schedule = @Schedule;
+END;
+
 
